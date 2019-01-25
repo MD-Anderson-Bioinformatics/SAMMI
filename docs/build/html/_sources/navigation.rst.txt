@@ -1,7 +1,7 @@
 Graph Navigation
 ==================
 
-While generating multiple subgraphs can lead to more digestible visualizations, and making multiple copies of selected nodes can help produce more visually appealing maps, these representations can hinder the visualization of data continuity. For instance, if a metabolite is produced in a given reaction in a given subgraph, and consumed in another reaction in another subgraph, the continuity of the production and consumption of the given metabolite can be lost in the given visualization. To ameliorate this issue, SAMMI offers two map navigation options.
+While the generation multiple subgraphs can lead to more digestible visualizations, and making multiple copies of selected nodes can help produce more visually appealing maps, these representations can hinder the visualization of data continuity. For instance, if a metabolite is produced in a given reaction in a given subgraph, and consumed in another reaction in another subgraph, the continuity of the production and consumption of the given metabolite can be lost in the given visualization. To ameliorate this issue, SAMMI offers two map navigation options.
 
 Node Searching
 -----------------
