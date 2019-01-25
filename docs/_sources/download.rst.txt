@@ -1,0 +1,18 @@
+Downloads
+=============
+
+SAMMI maps can be downloaded in a SAMMI specific format, static images, as well as Escher and MetExploreViz compatible formats. All of these options are available in the **Upload/Download** tab in the top menu.
+
+- **Download SAMMI**: Download all subgraphs, as well as associated data, colorscales, and simulation parameters of the current SAMMI map. This file can be uploaded using the **Load SAMMI Model** option in the home screen once SAMMI is restarted. Note that map commits will NOT be saved under this option. To do so, please download each commit as a separate file. This is done in order to limit file size.
+- **Download Current**: Downloads only the current graph, and not all other subgraphs present in the current map. This single map can also be uploaded under the **Load SAMMI Model** option once SAMMI is restarted.
+- **Download ESCHER**: Downloads a JSON file of the current graph compatible with `Escher <https://escher.github.io/>`_. To view this file in Escher, click on *Load Map* in the Escher home page. Next, select *Load Map JSON* under the *Map* tab and upload the JSON file. To set parameters for this download please refer to the end of this section.
+- **Download MetExploreViz**: Download a version of the current graph compatible with `MetExploreViz <https://metexplore.toulouse.inra.fr/metexploreViz/doc/index.php>`_. Once you have a working version of MetExploreViz, under *Load network from* in the home screen, select *JSON file* and uploaded the JSON file. MetExploreViz also offers force-directing layout with an option of fixing nodes. To download a dynamic version of the current graph, check the *Animated* checkbox next to this option. If left unchecked, nodes will be fixed to the position displayed in SAMMI. To set other parameters for this download please refer to the end of this section.
+- **Download PNG/PDF**: Downloads a PNG or PDF image of the current graph view. This option will download the graph as it currently displayed on the screen, and not an image of the entire map. If downloading a PDF, the *Download Scales* option will download a second PDF page displaying size and color scales of the current graph.
+
+Some parameters might need to be defined when downloading versions of the map compatible with Escher or MetExploreViz. These parameters are displayed under **Model Download Parameters**, also in the *Upload/Download* tab. These are:
+
+- **Scale**: Scaling factor for node positioning. These different platforms might operate under different ranges of values for node positioning. Define this parameter to expand or contract the network in the next platform. Used by Escher and MetExploreViz downloads.
+- **LB Field**: Reactions are determined to be reversible or not using the lower bound value of each reaction. That is, a reaction is considered reversible if it has a negative lower bound, and is considered irreversible otherwise. Different model annotations may define the lower bound by different fields (e.g. *lower_bound* or *lb*). Define in this option the name of the field used to determine the reaction lower bound in the current map. This field will also affect how reaction arrows are drawn in SAMMI. To visualize all node fields use the *tooltip* option (refer to *floating menu* documentation). Used by Escher and MetExploreViz downloads.
+- **Name Field**: Name of the field used to define reaction and metabolite names in MetExploreViz. Used by MetExploreViz download only.
+- **Pathway Field**: Name of the field used to define reaction pathway in MetExploreViz. Used by MetExploreViz download only.
+- **Compartment Field**: Name of the field used to define metabolite compartment in MetExploreViz. Used by MetExploreViz download only.
