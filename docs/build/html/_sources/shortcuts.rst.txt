@@ -17,6 +17,7 @@ A number of keyboard shortcuts are available for easy editing and navigation. Th
 - **h**: Highlight selected metabolite node.
 - **i**: If a single reaction node is selected, isolate the reaction. If multiple nodes, or a single metabolite node, are selected, isolates metabolites.
 - **j**: Join Metabolites.
+- **m**: Toggle move labels functionality.
 - **p**: Finds shortest path between selected nodes.
 - **q**: If all selected metabolite nodes of degree one are secondary, makes those nodes primary. Otherwise makes all metabolites nodes of degree one secondary.
 - **s**: Shelve selected metabolite nodes.

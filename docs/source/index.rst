@@ -11,6 +11,18 @@ Welcome to SAMMI, the Semi-Automated Metabolic Map Illustrator. SAMMI is a tool 
 
 SAMMI renders metabolic maps as interactive, constantly updated force-directed graphs, allowing for efficient automated node positioning. The tool has also been developed to allow a wide array of node editing and positioning functionalities, as well as easy graph parsing and navigation. SAMMI can be used for both context-specific visualizations, where users can upload their own reaction and/or metabolite data in order to visualize the context of their own network, or to generate visually appealing models that can be easily shared among SAMMI users.
 
+Introductory video
+=====================
+
+The following video provides a quick introduction to some of the main functionalities of SAMMI.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YJ-0J4DysY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
 Documentation
 =================
 

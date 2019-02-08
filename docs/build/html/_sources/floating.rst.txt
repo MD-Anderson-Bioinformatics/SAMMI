@@ -9,7 +9,7 @@ Modes
 - **Arrows**: Defines whether or not to add arrows to the ends of edges indicating reaction directionality. Besides the visual component, removing arrows from the map will allow the force-directing to render faster, which might be desirable for larger graphs.
 - **Tooltips**: If this option is turned on, hovering over nodes will display a tooltip with all the data related to that node.
 - **Hide Rxns**: Hide reaction nodes. This option makes reaction nodes invisible, but they can still be clicked, dragged, and rearranged.
-- **Move Labels**: By default, node labels are not clickable in order to make the rearranging of node easier. By turning this option on, labels can be dragged and repositioned. The label will then remain in the same position relative to the node once the node is dragged.
+- **Move Labels**: By default, node labels are not clickable in order to make the rearranging of node easier. By turning this option on, labels can be dragged and repositioned. The label will then remain in the same position relative to the node once the node is dragged. Toggle this functionality with the shortcut key **m**.
 - **Link Strain**: Color all edges relative to their size. Longer edges will be colored relative to the color defined in the *Coloring* tab in the top menu. This option allows users to quickly identify which edges are longer, identifying nodes and connections that might be straining the graph.
 
 Graph Manipulations
