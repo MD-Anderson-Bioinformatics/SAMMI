@@ -199,6 +199,7 @@
 <p class="caption"><span class="caption-text">(Top) <em>Isolate Reaction</em> example. The Biomass reaction is connected to multiple metabolites in the map. By isolating the reaction, an additional copy of each metabolite present in the biomass reaction is made, and that copy becomes the copy associated with the Biomass reaction node, isolating the reaction in its own component. (Bottom) <em>Isolate Metabolite</em> example. Metabolites <em>pep_c</em> and <em>pyr_c</em> as well as reactions <em>FRUpts2</em> and <em>GLCpts</em> are selected. By isolating the metabolites, a second copy of each metabolite is made, and that copy becomes the node associated with the selected reactions. For both isolating functions, all unselected reactions where the copied metabolites take place remain connected to the original metabolite node.</span></p>
 </div>
 <ul class="simple">
+<li><strong>Select Neighbors</strong>: Select all nodes connected to all nodes already selected. shortcut key <strong>n</strong>.</li>
 <li><strong>Break Metabolite</strong>: Makes one copy of all selected metabolites for each reaction the metabolite participates. That is, if a selected metabolite node is connected to five reaction nodes, five copies of the metabolite will be made and connected to each reaction node it participates in. This functionality is meant to split up secondary metabolites such as hydrogen, water, and ATP. Shortcut key <strong>b</strong>.</li>
 <li><strong>Join Metabolite</strong>: Joins into one node all selected metabolites with matching <em>class</em>. For the difference between node <em>id</em> and <em>class</em> please refer to the <em>SAMMI Map Format</em> section of the documentation. For instance, if two glucose metabolites are selected, these will be joined into a single node which will be connected to all reactions connected to the original two glucose nodes. Shortcut key <strong>j</strong>.</li>
 <li><strong>Shelve Metabolite</strong>: Temporarily removes metabolites from the graph. These metabolites can be added back to the map under the <em>Shelved Metabolites</em> subsection of the floating menu described below. Metabolites can also be shelved by uploading a list of regular expressions under the <em>Load Metabolites to Shelve</em> option, or from a standard list of metabolites under the <em>Shelve Standard Metabolites</em> option, both in the <em>Upload/Download</em> tab in the top menu. For more details please refer to the <em>Secondary Metabolites</em> section of the documentation. Shortcut key <strong>s</strong>.</li>
@@ -348,11 +349,20 @@ scale the selected nodes around the defined center.</p>
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
     
 
   
