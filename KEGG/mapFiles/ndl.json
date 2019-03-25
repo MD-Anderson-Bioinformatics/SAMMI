@@ -1,0 +1,543 @@
+{
+"Biosynthesis of amino acids":{
+"reactions": [
+{
+"id":"rn:R01518_14",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_9": -1,
+"cpd:C00197_8": 1
+}
+},
+{
+"id":"rn:R00946 rn:R04405_100",
+"class": "rn:R00946 rn:R04405",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00155_84": -1,
+"cpd:C00073_85": 1
+}
+},
+{
+"id":"rn:R01071_206",
+"class": "rn:R01071",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00119_27": -1,
+"cpd:C02739_197": 1
+}
+},
+{
+"id":"rn:R04037_208",
+"class": "rn:R04037",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02741_198": -1,
+"cpd:C04896_199": 1
+}
+},
+{
+"id":"rn:R04640_209",
+"class": "rn:R04640",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04896_199": -1,
+"cpd:C04916_200": 1
+}
+},
+{
+"id":"rn:R03457_210",
+"class": "rn:R03457",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04666_201": -1,
+"cpd:C01267_202": 1
+}
+},
+{
+"id":"rn:R03243_211",
+"class": "rn:R03243",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01267_202": -1,
+"cpd:C01100_203": 1
+}
+},
+{
+"id":"rn:R04558_213",
+"class": "rn:R04558",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04916_200": -1,
+"cpd:C04666_201": 1
+}
+},
+{
+"id":"rn:R01158_214",
+"class": "rn:R01158",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00860_204": -1,
+"cpd:C00135_205": 1
+}
+}
+]
+},
+"Biosynthesis of antibiotics":{
+"reactions": [
+{
+"id":"rn:R01518_860",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1023": -1,
+"cpd:C00197_1028": 1
+}
+},
+{
+"id":"rn:R00688 rn:R00692 rn:R00694_932",
+"class": "rn:R00688 rn:R00692 rn:R00694",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00079_1065": -1,
+"cpd:C00166_1067": 1
+}
+},
+{
+"id":"rn:R00734_763",
+"class": "rn:R00734",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00082_1638": -1,
+"cpd:C01179_1637": 1
+}
+}
+]
+},
+"Biosynthesis of secondary metabolites":{
+"reactions": [
+{
+"id":"rn:R01518_572",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1060": -1,
+"cpd:C00197_1065": 1
+}
+},
+{
+"id":"rn:R00688 rn:R00692 rn:R00694_595",
+"class": "rn:R00688 rn:R00692 rn:R00694",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00079_1076": -1,
+"cpd:C00166_2024": 1
+}
+},
+{
+"id":"rn:R00734 rn:R00729 rn:R09254 rn:R09830_597",
+"class": "rn:R00734 rn:R00729 rn:R09254 rn:R09830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00082_1612": -1,
+"cpd:C01179_995": 1
+}
+},
+{
+"id":"rn:R00650 rn:R00946 rn:R04405_545",
+"class": "rn:R00650 rn:R00946 rn:R04405",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00155_1037": -1,
+"cpd:C00073_1514": 1
+}
+},
+{
+"id":"rn:R01071_456",
+"class": "rn:R01071",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02739_1548": -1,
+"cpd:C00119_1074": 1
+}
+},
+{
+"id":"rn:R04037_458",
+"class": "rn:R04037",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02741_1549": -1,
+"cpd:C04896_1550": 1
+}
+},
+{
+"id":"rn:R04640_459",
+"class": "rn:R04640",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04896_1550": -1,
+"cpd:C04916_1551": 1
+}
+},
+{
+"id":"rn:R04558_460",
+"class": "rn:R04558",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04916_1551": -1,
+"cpd:C04666_1552": 1
+}
+},
+{
+"id":"rn:R03457_461",
+"class": "rn:R03457",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04666_1552": -1,
+"cpd:C01267_1553": 1
+}
+},
+{
+"id":"rn:R03243_462",
+"class": "rn:R03243",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01100_1554": -1,
+"cpd:C01267_1553": 1
+}
+},
+{
+"id":"rn:R03012_464",
+"class": "rn:R03012",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00860_1555": -1,
+"cpd:C01929_1556": 1
+}
+},
+{
+"id":"rn:R01163_465",
+"class": "rn:R01163",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01929_1556": -1,
+"cpd:C00135_1562": 1
+}
+},
+{
+"id":"rn:R00066_237",
+"class": "rn:R00066",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04332_2344": -1,
+"cpd:C00255_2345": 1
+}
+}
+]
+},
+"Carbon metabolism":{
+"reactions": [
+{
+"id":"rn:R01518_12",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_112": -1,
+"cpd:C00197_29": 1
+}
+},
+{
+"id":"rn:R07168_99",
+"class": "rn:R07168",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00143_171": -1,
+"cpd:C00440_170": 1
+}
+}
+]
+},
+"Cysteine and methionine metabolism":{
+"reactions": [
+{
+"id":"rn:R01288_53",
+"class": "rn:R01288",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01118_198": -1,
+"cpd:C00155_106": 1
+}
+},
+{
+"id":"rn:R04405_90",
+"class": "rn:R04405",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00155_106": -1,
+"cpd:C00073_107": 1
+}
+}
+]
+},
+"Folate biosynthesis":{
+"reactions": [
+{
+"id":"rn:R04639_79",
+"class": "rn:R04639",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C06148_37": -1,
+"cpd:C04895_14": 1
+}
+},
+{
+"id":"rn:R05048_80",
+"class": "rn:R05048",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05923_34": -1,
+"cpd:C06148_37": 1
+}
+},
+{
+"id":"rn:R05046_81",
+"class": "rn:R05046",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05922_35": -1,
+"cpd:C05923_34": 1
+}
+},
+{
+"id":"rn:R00428_180",
+"class": "rn:R00428",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00044_13": -1,
+"cpd:C05922_35": 1
+}
+}
+]
+},
+"Histidine metabolism":{
+"reactions": [
+{
+"id":"rn:R01071_58",
+"class": "rn:R01071",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02739_81": -1,
+"cpd:C00119_80": 1
+}
+},
+{
+"id":"rn:R01163_59",
+"class": "rn:R01163",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01929_99": -1,
+"cpd:C00135_103": 1
+}
+},
+{
+"id":"rn:R03012_60",
+"class": "rn:R03012",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00860_89": -1,
+"cpd:C01929_99": 1
+}
+},
+{
+"id":"rn:R03243_62",
+"class": "rn:R03243",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01100_88": -1,
+"cpd:C01267_87": 1
+}
+},
+{
+"id":"rn:R03457_63",
+"class": "rn:R03457",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04666_86": -1,
+"cpd:C01267_87": 1
+}
+},
+{
+"id":"rn:R04640_65",
+"class": "rn:R04640",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04896_83": -1,
+"cpd:C04916_84": 1
+}
+},
+{
+"id":"rn:R04037_66",
+"class": "rn:R04037",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02741_82": -1,
+"cpd:C04896_83": 1
+}
+},
+{
+"id":"rn:R04558_69",
+"class": "rn:R04558",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04916_84": -1,
+"cpd:C04677_85": 1,
+"cpd:C04666_86": 1
+}
+}
+]
+},
+"Microbial metabolism in diverse environments":{
+"reactions": [
+{
+"id":"rn:R01518_1436",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1835": -1,
+"cpd:C00197_1437": 1
+}
+},
+{
+"id":"rn:R01224 rn:R07168_903",
+"class": "rn:R01224 rn:R07168",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00440_2097": -1,
+"cpd:C00143_1977": 1
+}
+},
+{
+"id":"rn:R00858 rn:R00859 rn:R00861 rn:R10146_208",
+"class": "rn:R00858 rn:R00859 rn:R00861 rn:R10146",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_2114": -1,
+"cpd:C00094_2113": 1
+}
+},
+{
+"id":"rn:R02021_1420",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_1425": -1,
+"cpd:C00094_2113": 1
+}
+}
+]
+},
+"Phenylalanine, tyrosine and tryptophan biosynthesis":{
+"reactions": [
+{
+"id":"rn:R00694_88",
+"class": "rn:R00694",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00166_113": -1,
+"cpd:C00079_101": 1
+}
+},
+{
+"id":"rn:R00734_89",
+"class": "rn:R00734",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00082_109": -1,
+"cpd:C01179_110": 1
+}
+}
+]
+},
+"Selenocompound metabolism":{
+"reactions": [
+{
+"id":"rn:R03596_11",
+"class": "rn:R03596",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05684_18": -1,
+"cpd:C01528_16": 1
+}
+},
+{
+"id":"rn:R09365_82",
+"class": "rn:R09365",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05698_26": -1,
+"cpd:C05335_27": 1
+}
+},
+{
+"id":"rn:R09372_89",
+"class": "rn:R09372",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C18902_41": -1,
+"cpd:C05703_38": 1
+}
+}
+]
+},
+"Sulfur metabolism":{
+"reactions": [
+{
+"id":"rn:R00858_31",
+"class": "rn:R00858",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_33": -1,
+"cpd:C00094_25": 1
+}
+},
+{
+"id":"rn:R02021_48",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_45": -1,
+"cpd:C00094_25": 1
+}
+},
+{
+"id":"rn:R01288_120",
+"class": "rn:R01288",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01118_122": -1,
+"cpd:C00283_33": -1,
+"cpd:C00155_119": 1,
+"cpd:C00042_123": 1
+}
+},
+{
+"id":"rn:R00858_153",
+"class": "rn:R00858",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_187": -1,
+"cpd:C00094_157": 1
+}
+},
+{
+"id":"rn:R02021_150",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_155": -1,
+"cpd:C00094_157": 1
+}
+}
+]
+}}

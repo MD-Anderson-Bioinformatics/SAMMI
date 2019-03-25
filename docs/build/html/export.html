@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>COBRA Exports &mdash; SAMMI 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Copyright and License" href="copyright.html" />
+    <link rel="prev" title="SAMMI Map Format" href="format.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAMMI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="loading.html">Loading a Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">SAMMI Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphSettings.html">Graph Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Associated Graph Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html#node-and-edge-coloring">Node and Edge Coloring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html#node-and-edge-sizing">Node and Edge Sizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="secondaries.html">Secondary Metabolites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Graph Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="floating.html">Floating Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="format.html">SAMMI Map Format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">COBRA Exports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#matlab">MATLAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright and License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html#acknowledgments">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAMMI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>COBRA Exports</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/export.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cobra-exports">
+<h1>COBRA Exports<a class="headerlink" href="#cobra-exports" title="Permalink to this headline">¶</a></h1>
+<p>The COnstraint-Based Reconstruction and Analysis (COBRA) toolbox is one of the most popular toolboxes for modeling metabolic networks. COBRA has been developed for MATLAB (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30787451">Heirendt et. al.</a>), Python (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23927696">Ebrahim et. al.</a>) and Julia (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28453682">Heirendt et. al. (b)</a>) programming languages, all of which can be accessed through <a class="reference external" href="https://opencobra.github.io/.">this link</a>.</p>
+<p>The MATLAB and Python versions of COBRA offer tools for exporting metabolic models in versions compatible with SAMMI. In this section we cover these options and offer alternative scripts to do so. Support for Julia will be added once the toolbox is made compatible with Julia 1.0. It is worth noting that all of these options export models in version that should first be loaded as SBML models, not SAMMI specific formats (e.g. using the “Load Single Model” or “Load Model to Parse” options in the SAMMI home page).</p>
+<div class="section" id="matlab">
+<h2>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
+<p>MATLAB COBRA models are defined by a struct variable. The COBRA toolbox offers the function <code class="docutils literal notranslate"><span class="pre">writeCbModel</span></code> to export models in a variety of formats. Files can be exported in the SBML format for SAMMI compatibility:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">writeCbModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;format&#39;</span><span class="p">,</span><span class="s">&#39;sbml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will generate an XML file that can be uploaded in the SAMMI interface. To define other function call arguments please refer to the <code class="docutils literal notranslate"><span class="pre">writeCbModel</span></code> documentation.</p>
+<p>While this option provides an SBML compatible model, user defined fields are not exported, and reaction and metabolite IDs may be altered in the export process. To account for these issues, we provide the following script defining the <code class="docutils literal notranslate"><span class="pre">sammiJson</span></code> function, which exports the model to a SAMMI compatible JSON file. Here, all struct fields with the same size as the <code class="docutils literal notranslate"><span class="pre">rxns</span></code> field are exported as reaction-associated data, and all fields with the same size as the <code class="docutils literal notranslate"><span class="pre">mets</span></code> field are exported as metabolite associated data.</p>
+<p>Download script here: <a class="reference download internal" href="_downloads/sammiJson.m" download=""><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.m</span></code></a></p>
+<p>You can test the given function with following bit of code that will generate the <code class="docutils literal notranslate"><span class="pre">e_coli_core.json</span></code> file:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Get COBRA directory</span>
+<span class="k">global</span> <span class="n">CBTDIR</span><span class="p">;</span>
+<span class="c">%Load models to test</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Add random field</span>
+<span class="n">model</span><span class="p">.</span><span class="n">newMetField</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">model</span><span class="p">.</span><span class="n">newRxnField</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>
+<span class="c">%Write to file</span>
+<span class="n">sammiJson</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;e_coli_core&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Metabolic models is COBRApy are defined by a toolbox specific <code class="docutils literal notranslate"><span class="pre">cobra.DictList</span></code> class variable. COBRApy offers the function <code class="docutils literal notranslate"><span class="pre">save_json_model</span></code> that exports models to a SAMMI compatible JSON file with the function call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cobra</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">save_json_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;test.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function call also does not export user-defined fields, however. For that we provide the following alternative script defining the <code class="docutils literal notranslate"><span class="pre">sammiJson</span></code> function that exports to a JSON file all reaction and metabolite fields defined by a string, float, int or bool. It is worth noting that this approach will generate larger files with perhaps unwanted fields.</p>
+<p>Download script here: <a class="reference download internal" href="_downloads/sammiJson.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.py</span></code></a></p>
+<p>Once the function is loaded you can test it with the following bit of script.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Read in model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">cobra</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">create_test_model</span><span class="p">(</span><span class="s2">&quot;salmonella&quot;</span><span class="p">)</span>
+<span class="c1">#Add random reaction fields</span>
+<span class="k">for</span> <span class="n">rx</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">reactions</span><span class="p">:</span>
+    <span class="n">rx</span><span class="o">.</span><span class="n">addedFieldNum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+    <span class="n">rx</span><span class="o">.</span><span class="n">addedFieldString</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="c1">#Add random metabolite fields</span>
+<span class="k">for</span> <span class="n">met</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">metabolites</span><span class="p">:</span>
+    <span class="n">met</span><span class="o">.</span><span class="n">addedFieldNum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+    <span class="n">met</span><span class="o">.</span><span class="n">addedFieldString</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="c1">#Write to file</span>
+<span class="n">sammiJson</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;core.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="copyright.html" class="btn btn-neutral float-right" title="Copyright and License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="format.html" class="btn btn-neutral" title="SAMMI Map Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; <a href="copyright.html">Copyright</a> 2019, Andre Schultz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -7,5 +7,6 @@
         "latex",
         "plaintext",
         "rst"
-    ]
+    ],
+    "python.linting.pylintEnabled": true
 }

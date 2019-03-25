@@ -1,0 +1,3968 @@
+{
+"Alanine, aspartate and glutamate metabolism":{
+"reactions": [
+{
+"id":"rn:R01086_51",
+"class": "rn:R01086",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03406_47": -1,
+"cpd:C00122_15": 1
+}
+},
+{
+"id":"rn:R00575_101",
+"class": "rn:R00575",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00064_92": -1,
+"cpd:C00169_102": 1
+}
+}
+]
+},
+"Amino sugar and nucleotide sugar metabolism":{
+"reactions": [
+{
+"id":"rn:R02630_276",
+"class": "rn:R02630",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00159_361": -1,
+"cpd:C00275_360": 1
+}
+},
+{
+"id":"rn:R02740_261",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_325": -1,
+"cpd:C05345_100": 1
+}
+}
+]
+},
+"Arginine biosynthesis":{
+"reactions": [
+{
+"id":"rn:R01086_47",
+"class": "rn:R01086",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03406_3": -1,
+"cpd:C00062_5": 1,
+"cpd:C00122_12": 1
+}
+},
+{
+"id":"rn:R01398_44",
+"class": "rn:R01398",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00169_8": -1,
+"cpd:C00077_6": -1,
+"cpd:C00327_4": 1
+}
+}
+]
+},
+"Biosynthesis of amino acids":{
+"reactions": [
+{
+"id":"rn:R01015_7",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_4": -1,
+"cpd:C00111_5": 1
+}
+},
+{
+"id":"rn:R01061 rn:R01063_12",
+"class": "rn:R01061 rn:R01063",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_4": -1,
+"cpd:C00236_6": 1
+}
+},
+{
+"id":"rn:R01512_13",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_8": -1,
+"cpd:C00236_6": 1
+}
+},
+{
+"id":"rn:R01518_14",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_9": -1,
+"cpd:C00197_8": 1
+}
+},
+{
+"id":"rn:R00658_15",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_9": -1,
+"cpd:C00074_10": 1
+}
+},
+{
+"id":"rn:R00200_16",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00074_10": -1,
+"cpd:C00022_11": 1
+}
+},
+{
+"id":"rn:R01070_19",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_17": -1,
+"cpd:C00111_5": 1,
+"cpd:C00118_4": 1
+}
+},
+{
+"id":"rn:R04779_21",
+"class": "rn:R04779",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_18": -1,
+"cpd:C05378_17": 1
+}
+},
+{
+"id":"rn:R01830_22",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_18": -1,
+"cpd:C00279_31": 1,
+"cpd:C00231_24": 1
+}
+},
+{
+"id":"rn:R01049_30",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_26": -1,
+"cpd:C00119_27": 1
+}
+},
+{
+"id":"rn:R04173_72",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01005_71": -1,
+"cpd:C03232_70": 1
+}
+},
+{
+"id":"rn:R00586_74",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_65": -1,
+"cpd:C00979_75": 1
+}
+},
+{
+"id":"rn:R02291_90",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03082_79": -1,
+"cpd:C00441_80": 1
+}
+},
+{
+"id":"rn:R01398_128",
+"class": "rn:R01398",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00169_136": -1,
+"cpd:C00077_121": -1,
+"cpd:C00327_130": 1
+}
+},
+{
+"id":"rn:R01086_134",
+"class": "rn:R01086",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03406_131": -1,
+"cpd:C00062_132": 1
+}
+},
+{
+"id":"rn:R10147_164",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_80": -1,
+"cpd:C20258_163": 1
+}
+},
+{
+"id":"rn:R04198 rn:R04199_172",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20258_163": -1,
+"cpd:C03972_173": 1
+}
+},
+{
+"id":"rn:R01641_195",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05382_193": -1,
+"cpd:C00231_24": 1,
+"cpd:C00117_26": 1
+}
+},
+{
+"id":"rn:R03084_225",
+"class": "rn:R03084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00944_216": -1,
+"cpd:C02637_217": 1
+}
+},
+{
+"id":"rn:R02413_226",
+"class": "rn:R02413",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02637_217": -1,
+"cpd:C00493_218": 1
+}
+},
+{
+"id":"rn:R02412_227",
+"class": "rn:R02412",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_218": -1,
+"cpd:C03175_219": 1
+}
+},
+{
+"id":"rn:R00985 rn:R00986_245",
+"class": "rn:R00985 rn:R00986",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00251_221": -1,
+"cpd:C00108_240": 1
+}
+},
+{
+"id":"rn:R01073_246",
+"class": "rn:R01073",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00108_240": -1,
+"cpd:C04302_241": 1
+}
+},
+{
+"id":"rn:R03509_247",
+"class": "rn:R03509",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_241": -1,
+"cpd:C01302_242": 1
+}
+},
+{
+"id":"rn:R03508_248",
+"class": "rn:R03508",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01302_242": -1,
+"cpd:C03506_243": 1
+}
+},
+{
+"id":"rn:R02722_249",
+"class": "rn:R02722",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_243": -1,
+"cpd:C00078_244": 1
+}
+}
+]
+},
+"Biosynthesis of antibiotics":{
+"reactions": [
+{
+"id":"rn:R02413 rn:R02415 rn:R06847_902",
+"class": "rn:R02413 rn:R02415 rn:R06847",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_983": -1,
+"cpd:C02637_982": 1
+}
+},
+{
+"id":"rn:R03084_901",
+"class": "rn:R03084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00944_984": -1,
+"cpd:C02637_982": 1
+}
+},
+{
+"id":"rn:R10147_898",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_979": -1,
+"cpd:C20258_980": 1
+}
+},
+{
+"id":"rn:R01015_892",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_989": -1,
+"cpd:C00111_1045": 1
+}
+},
+{
+"id":"rn:R02291_884",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_979": -1,
+"cpd:C03082_1038": 1
+}
+},
+{
+"id":"rn:R01049_880",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_1017": -1,
+"cpd:C00119_1571": 1
+}
+},
+{
+"id":"rn:R01641_877",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05382_1036": -1,
+"cpd:C00118_989": -1,
+"cpd:C00117_1017": 1,
+"cpd:C00231_1035": 1
+}
+},
+{
+"id":"rn:R03321_874",
+"class": "rn:R03321",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1048": -1,
+"cpd:C05345_1031": 1
+}
+},
+{
+"id":"rn:R01830_872",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_1031": -1,
+"cpd:C00118_989": -1,
+"cpd:C00279_978": 1,
+"cpd:C00231_1035": 1
+}
+},
+{
+"id":"rn:R02035_869",
+"class": "rn:R02035",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01236_1032": -1,
+"cpd:C00345_1033": 1
+}
+},
+{
+"id":"rn:R02736 rn:R10907_868",
+"class": "rn:R02736 rn:R10907",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1048": -1,
+"cpd:C01236_1032": 1
+}
+},
+{
+"id":"rn:R02739_867",
+"class": "rn:R02739",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_965": -1,
+"cpd:C01172_1048": 1
+}
+},
+{
+"id":"rn:R02740_866",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_965": -1,
+"cpd:C05345_1031": 1
+}
+},
+{
+"id":"rn:R02073 rn:R04779 rn:R04780 rn:R09084_865",
+"class": "rn:R02073 rn:R04779 rn:R04780 rn:R09084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_1031": -1,
+"cpd:C05378_1030": 1
+}
+},
+{
+"id":"rn:R01070_863",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_1030": -1,
+"cpd:C00111_1045": 1,
+"cpd:C00118_989": 1
+}
+},
+{
+"id":"rn:R01061 rn:R01063_862",
+"class": "rn:R01061 rn:R01063",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_989": -1,
+"cpd:C00236_1029": 1
+}
+},
+{
+"id":"rn:R01512_861",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_1028": -1,
+"cpd:C00236_1029": 1
+}
+},
+{
+"id":"rn:R01518_860",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1023": -1,
+"cpd:C00197_1028": 1
+}
+},
+{
+"id":"rn:R00658_855",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1023": -1,
+"cpd:C00074_977": 1
+}
+},
+{
+"id":"rn:R00200_854",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_988": -1,
+"cpd:C00074_977": 1
+}
+},
+{
+"id":"rn:R00209 rn:R01196 rn:R01197_853",
+"class": "rn:R00209 rn:R01196 rn:R01197",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_988": -1,
+"cpd:C00024_1828": 1
+}
+},
+{
+"id":"rn:R08549_849",
+"class": "rn:R08549",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00026_1015": -1,
+"cpd:C00091_1020": 1
+}
+},
+{
+"id":"rn:R00405 rn:R00432 rn:R00727 rn:R10343_848",
+"class": "rn:R00405 rn:R00432 rn:R00727 rn:R10343",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_1021": -1,
+"cpd:C00091_1020": 1
+}
+},
+{
+"id":"rn:R01221_837",
+"class": "rn:R01221",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00037_1014": -1,
+"cpd:C00014_973": 1
+}
+},
+{
+"id":"rn:R02412_928",
+"class": "rn:R02412",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_983": -1,
+"cpd:C03175_1063": 1
+}
+},
+{
+"id":"rn:R01398_941",
+"class": "rn:R01398",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00077_1068": -1,
+"cpd:C00327_1071": 1
+}
+},
+{
+"id":"rn:R01086_934",
+"class": "rn:R01086",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03406_1069": -1,
+"cpd:C00062_1072": 1,
+"cpd:C00122_1022": 1
+}
+},
+{
+"id":"rn:R04198 rn:R04199_952",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03972_996": -1,
+"cpd:C20258_980": 1
+}
+},
+{
+"id":"rn:R04173_804",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01005_1085": -1,
+"cpd:C03232_2101": 1
+}
+},
+{
+"id":"rn:R03171_702",
+"class": "rn:R03171",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00671_1261": -1,
+"cpd:C15980_1264": 1
+}
+},
+{
+"id":"rn:R00742_700",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_1828": -1,
+"cpd:C00083_2110": 1
+}
+},
+{
+"id":"rn:R06590_528",
+"class": "rn:R06590",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C12214_1465": -1,
+"cpd:C12215_1466": 1
+}
+},
+{
+"id":"rn:R00127 rn:R00333_1569",
+"class": "rn:R00127 rn:R00333",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00020_1594": -1,
+"cpd:C00008_1595": 1
+}
+},
+{
+"id":"rn:R00124 rn:R00200_1570",
+"class": "rn:R00124 rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00008_1595": -1,
+"cpd:C00002_1596": 1
+}
+},
+{
+"id":"rn:R00985 rn:R00986_2009",
+"class": "rn:R00985 rn:R00986",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00251_2013": -1,
+"cpd:C00108_2145": 1
+}
+},
+{
+"id":"rn:R01073_2018",
+"class": "rn:R01073",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_2014": -1,
+"cpd:C00108_2145": 1
+}
+},
+{
+"id":"rn:R03509_2010",
+"class": "rn:R03509",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_2014": -1,
+"cpd:C01302_2015": 1
+}
+},
+{
+"id":"rn:R03508_2011",
+"class": "rn:R03508",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01302_2015": -1,
+"cpd:C03506_2016": 1
+}
+},
+{
+"id":"rn:R02722_2012",
+"class": "rn:R02722",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_2016": -1,
+"cpd:C00078_2017": 1
+}
+},
+{
+"id":"rn:R11671_56",
+"class": "rn:R11671",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00083_2110": -1,
+"cpd:C05223_2159": 1
+}
+},
+{
+"id":"rn:R12049_55",
+"class": "rn:R12049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02247_2146": -1,
+"cpd:C21873_2170": 1
+}
+}
+]
+},
+"Biosynthesis of secondary metabolites":{
+"reactions": [
+{
+"id":"rn:R00405 rn:R00432 rn:R00727 rn:R10343_561",
+"class": "rn:R00405 rn:R00432 rn:R00727 rn:R10343",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_1058": -1,
+"cpd:C00091_1057": 1
+}
+},
+{
+"id":"rn:R08549_562",
+"class": "rn:R08549",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00026_1022": -1,
+"cpd:C00091_1057": 1
+}
+},
+{
+"id":"rn:R00209 rn:R01196_566",
+"class": "rn:R00209 rn:R01196",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_2191": -1,
+"cpd:C00024_1992": 1
+}
+},
+{
+"id":"rn:R00200_567",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_2191": -1,
+"cpd:C00074_1846": 1
+}
+},
+{
+"id":"rn:R00658_568",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1060": -1,
+"cpd:C00074_1846": 1
+}
+},
+{
+"id":"rn:R01518_572",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1060": -1,
+"cpd:C00197_1065": 1
+}
+},
+{
+"id":"rn:R01512_573",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_1065": -1,
+"cpd:C00236_1066": 1
+}
+},
+{
+"id":"rn:R01061 rn:R01063_574",
+"class": "rn:R01061 rn:R01063",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_2192": -1,
+"cpd:C00236_1066": 1
+}
+},
+{
+"id":"rn:R01015_1649",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_2192": -1,
+"cpd:C00111_2275": 1
+}
+},
+{
+"id":"rn:R01070_575",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_1067": -1,
+"cpd:C00118_2192": 1,
+"cpd:C00111_2275": 1
+}
+},
+{
+"id":"rn:R02073 rn:R04779 rn:R04780 rn:R09084_577",
+"class": "rn:R02073 rn:R04779 rn:R04780 rn:R09084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_1068": -1,
+"cpd:C05378_1067": 1
+}
+},
+{
+"id":"rn:R02740_578",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_1689": -1,
+"cpd:C05345_1068": 1
+}
+},
+{
+"id":"rn:R02739_579",
+"class": "rn:R02739",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_1689": -1,
+"cpd:C01172_1686": 1
+}
+},
+{
+"id":"rn:R03321_586",
+"class": "rn:R03321",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1686": -1,
+"cpd:C05345_1068": 1
+}
+},
+{
+"id":"rn:R02736 rn:R10907_580",
+"class": "rn:R02736 rn:R10907",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1686": -1,
+"cpd:C01236_1069": 1
+}
+},
+{
+"id":"rn:R02035_581",
+"class": "rn:R02035",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01236_1069": -1,
+"cpd:C00345_1070": 1
+}
+},
+{
+"id":"rn:R01830_584",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_2192": -1,
+"cpd:C05345_1068": -1,
+"cpd:C00279_1847": 1,
+"cpd:C00231_1072": 1
+}
+},
+{
+"id":"rn:R01641_589",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_2192": -1,
+"cpd:C05382_1073": -1,
+"cpd:C00117_1054": 1,
+"cpd:C00231_1072": 1
+}
+},
+{
+"id":"rn:R01049_592",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_1054": -1,
+"cpd:C00119_1074": 1
+}
+},
+{
+"id":"rn:R03084_2026",
+"class": "rn:R03084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00944_2035": -1,
+"cpd:C02637_2031": 1
+}
+},
+{
+"id":"rn:R02412_2028",
+"class": "rn:R02412",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_2032": -1,
+"cpd:C03175_2033": 1
+}
+},
+{
+"id":"rn:R00985 rn:R00986_598",
+"class": "rn:R00985 rn:R00986",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00251_2037": -1,
+"cpd:C00108_1077": 1
+}
+},
+{
+"id":"rn:R01073_599",
+"class": "rn:R01073",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_1078": -1,
+"cpd:C00108_1077": 1
+}
+},
+{
+"id":"rn:R03509_600",
+"class": "rn:R03509",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_1078": -1,
+"cpd:C01302_1079": 1
+}
+},
+{
+"id":"rn:R03508_601",
+"class": "rn:R03508",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01302_1079": -1,
+"cpd:C03506_1080": 1
+}
+},
+{
+"id":"rn:R02722_602",
+"class": "rn:R02722",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_1080": -1,
+"cpd:C00078_1081": 1
+}
+},
+{
+"id":"rn:R00674_603",
+"class": "rn:R00674",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00463_1082": -1,
+"cpd:C00078_1081": 1
+}
+},
+{
+"id":"rn:R02340_604",
+"class": "rn:R02340",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_1080": -1,
+"cpd:C00463_1082": 1
+}
+},
+{
+"id":"rn:R01398_754",
+"class": "rn:R01398",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00077_1028": -1,
+"cpd:C00327_1206": 1
+}
+},
+{
+"id":"rn:R01086_451",
+"class": "rn:R01086",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03406_1204": -1,
+"cpd:C00122_1059": 1,
+"cpd:C00062_1205": 1
+}
+},
+{
+"id":"rn:R02291_776",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_1851": -1,
+"cpd:C03082_1224": 1
+}
+},
+{
+"id":"rn:R04198 rn:R04199_777",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03972_1676": -1,
+"cpd:C20258_1852": 1
+}
+},
+{
+"id":"rn:R00127 rn:R00333_890",
+"class": "rn:R00127 rn:R00333",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00020_1316": -1,
+"cpd:C00008_1317": 1
+}
+},
+{
+"id":"rn:R00124 rn:R00200_891",
+"class": "rn:R00124 rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00008_1317": -1,
+"cpd:C00002_1318": 1
+}
+},
+{
+"id":"rn:R02413 rn:R02415 rn:R06847_2027",
+"class": "rn:R02413 rn:R02415 rn:R06847",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_2032": -1,
+"cpd:C02637_2031": 1
+}
+},
+{
+"id":"rn:R01122_450",
+"class": "rn:R01122",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00235_2327": -1,
+"cpd:C04432_1360": 1
+}
+},
+{
+"id":"rn:R05578_924",
+"class": "rn:R05578",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00025_996": -1,
+"cpd:C02987_1365": 1
+}
+},
+{
+"id":"rn:R00084_1439",
+"class": "rn:R00084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00931_1463": -1,
+"cpd:C01024_1464": 1
+}
+},
+{
+"id":"rn:R03165_1456",
+"class": "rn:R03165",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01024_1464": -1,
+"cpd:C01051_1465": 1
+}
+},
+{
+"id":"rn:R03194_1454",
+"class": "rn:R03194",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01051_1465": -1,
+"cpd:C02463_1479": 1
+}
+},
+{
+"id":"rn:R03947_1455",
+"class": "rn:R03947",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02463_1479": -1,
+"cpd:C05778_1480": 1
+}
+},
+{
+"id":"rn:R02864_61",
+"class": "rn:R02864",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00748_1481": -1,
+"cpd:C05778_1480": 1
+}
+},
+{
+"id":"rn:R06447_310",
+"class": "rn:R06447",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00448_2188": -1,
+"cpd:C04574_2086": 1
+}
+},
+{
+"id":"rn:R02473 rn:R02474_1582",
+"class": "rn:R02473 rn:R02474",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00522_1589": -1,
+"cpd:C00099_1587": -1,
+"cpd:C00864_1590": 1
+}
+},
+{
+"id":"rn:R01226_443",
+"class": "rn:R01226",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00141_1671": -1,
+"cpd:C00966_1588": 1
+}
+},
+{
+"id":"rn:R00742_1650",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_1992": -1,
+"cpd:C00083_1712": 1
+}
+},
+{
+"id":"rn:R01221_410",
+"class": "rn:R01221",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00037_1015": -1,
+"cpd:C00014_1724": 1
+}
+},
+{
+"id":"rn:R10147_1850",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_1851": -1,
+"cpd:C20258_1852": 1
+}
+},
+{
+"id":"rn:R00586_250",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_1011": -1,
+"cpd:C00979_2323": 1
+}
+},
+{
+"id":"rn:R04457_235",
+"class": "rn:R04457",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04732_2343": -1,
+"cpd:C15556_2338": -1,
+"cpd:C04332_2344": 1
+}
+},
+{
+"id":"rn:R00066_237",
+"class": "rn:R00066",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04332_2344": -1,
+"cpd:C00255_2345": 1
+}
+}
+]
+},
+"Biotin metabolism":{
+"reactions": [
+{
+"id":"rn:R05145_26",
+"class": "rn:R05145",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05921_13": -1,
+"cpd:C06250_14": 1
+}
+},
+{
+"id":"rn:R01074_28",
+"class": "rn:R01074",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00120_9": -1,
+"cpd:C05921_13": 1
+}
+},
+{
+"id":"rn:R10116_53",
+"class": "rn:R10116",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20372_51": -1,
+"cpd:C20373_54": 1
+}
+},
+{
+"id":"rn:R10118_59",
+"class": "rn:R10118",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20374_57": -1,
+"cpd:C20375_60": 1
+}
+},
+{
+"id":"rn:R10122_73",
+"class": "rn:R10122",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20378_71": -1,
+"cpd:C19846_43": 1
+}
+},
+{
+"id":"rn:R10120_67",
+"class": "rn:R10120",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20376_65": -1,
+"cpd:C20377_68": 1
+}
+},
+{
+"id":"rn:R10119_64",
+"class": "rn:R10119",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20375_60": -1,
+"cpd:C01209_46": -1,
+"cpd:C20376_65": 1
+}
+},
+{
+"id":"rn:R10115_94",
+"class": "rn:R10115",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01209_46": -1,
+"cpd:C19673_47": -1,
+"cpd:C20372_51": 1
+}
+}
+]
+},
+"Carbon metabolism":{
+"reactions": [
+{
+"id":"rn:R01518_12",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_112": -1,
+"cpd:C00197_29": 1
+}
+},
+{
+"id":"rn:R01512_13",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_29": -1,
+"cpd:C00236_109": 1
+}
+},
+{
+"id":"rn:R01061 rn:R01063_14",
+"class": "rn:R01061 rn:R01063",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_110": -1,
+"cpd:C00236_109": 1
+}
+},
+{
+"id":"rn:R01070_15",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_107": -1,
+"cpd:C00111_111": 1,
+"cpd:C00118_110": 1
+}
+},
+{
+"id":"rn:R01830_18",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_27": -1,
+"cpd:C00118_110": -1,
+"cpd:C00231_118": 1,
+"cpd:C00279_113": 1
+}
+},
+{
+"id":"rn:R01829_20",
+"class": "rn:R01829",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00111_111": -1,
+"cpd:C00279_113": -1,
+"cpd:C00447_114": 1
+}
+},
+{
+"id":"rn:R01641_23",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05382_115": -1,
+"cpd:C00118_110": -1,
+"cpd:C00231_118": 1,
+"cpd:C00117_116": 1
+}
+},
+{
+"id":"rn:R02740_32",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_105": -1,
+"cpd:C05345_27": 1
+}
+},
+{
+"id":"rn:R02736 rn:R10907_33",
+"class": "rn:R02736 rn:R10907",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_105": -1,
+"cpd:C01236_108": 1
+}
+},
+{
+"id":"rn:R02035_34",
+"class": "rn:R02035",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01236_108": -1,
+"cpd:C00345_106": 1
+}
+},
+{
+"id":"rn:R01015_38",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_110": -1,
+"cpd:C00111_111": 1
+}
+},
+{
+"id":"rn:R00658_41",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_112": -1,
+"cpd:C00074_124": 1
+}
+},
+{
+"id":"rn:R00200_42",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00074_124": -1,
+"cpd:C00022_123": 1
+}
+},
+{
+"id":"rn:R00209_44",
+"class": "rn:R00209",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_123": -1,
+"cpd:C00024_181": 1
+}
+},
+{
+"id":"rn:R01196 rn:R10866_45",
+"class": "rn:R01196 rn:R10866",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_181": -1,
+"cpd:C00022_123": 1
+}
+},
+{
+"id":"rn:R00405 rn:R00432 rn:R00727 rn:R00406 rn:R10343_52",
+"class": "rn:R00405 rn:R00432 rn:R00727 rn:R00406 rn:R10343",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_204": -1,
+"cpd:C00091_200": 1
+}
+},
+{
+"id":"rn:R00742_59",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_181": -1,
+"cpd:C00083_183": 1
+}
+},
+{
+"id":"rn:R04173_88",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03232_176": -1,
+"cpd:C01005_177": 1
+}
+},
+{
+"id":"rn:R01049_122",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_116": -1,
+"cpd:C00119_125": 1
+}
+},
+{
+"id":"rn:R01221_129",
+"class": "rn:R01221",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00037_175": -1,
+"cpd:C00014_128": 1,
+"cpd:C00143_171": 1
+}
+},
+{
+"id":"rn:R00586_210",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_178": -1,
+"cpd:C00979_214": 1
+}
+},
+{
+"id":"rn:R08549_224",
+"class": "rn:R08549",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00026_209": -1,
+"cpd:C00091_200": 1
+}
+},
+{
+"id":"rn:R01067_10",
+"class": "rn:R01067",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00085_27": -1,
+"cpd:C00279_113": 1
+}
+},
+{
+"id":"rn:R01068_9",
+"class": "rn:R01068",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_110": -1,
+"cpd:C00354_107": 1
+}
+},
+{
+"id":"rn:R00230_260",
+"class": "rn:R00230",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_181": -1,
+"cpd:C00227_259": 1
+}
+},
+{
+"id":"rn:R00315_261",
+"class": "rn:R00315",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00033_262": -1,
+"cpd:C00227_259": 1
+}
+}
+]
+},
+"Citrate cycle (TCA cycle)":{
+"reactions": [
+{
+"id":"rn:R07618_28",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_69": -1,
+"cpd:C15972_66": 1
+}
+},
+{
+"id":"rn:R00405_32",
+"class": "rn:R00405",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_64": -1,
+"cpd:C00091_70": 1
+}
+},
+{
+"id":"rn:R00014_75",
+"class": "rn:R00014",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_56": -1,
+"cpd:C00068_76": -1,
+"cpd:C05125_74": 1
+}
+},
+{
+"id":"rn:R03270_77",
+"class": "rn:R03270",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05125_74": -1,
+"cpd:C15972_78": -1,
+"cpd:C00068_76": 1,
+"cpd:C16255_81": 1
+}
+},
+{
+"id":"rn:R07618_80",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_88": -1,
+"cpd:C15972_78": 1
+}
+},
+{
+"id":"rn:R02569_82",
+"class": "rn:R02569",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_88": -1,
+"cpd:C00024_60": -1,
+"cpd:C16255_81": 1
+}
+},
+{
+"id":"rn:R01196_101",
+"class": "rn:R01196",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_60": -1,
+"cpd:C00022_56": 1
+}
+}
+]
+},
+"Cysteine and methionine metabolism":{
+"reactions": [
+{
+"id":"rn:R00586_124",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_121": -1,
+"cpd:C00979_125": 1
+}
+},
+{
+"id":"rn:R02291_214",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03082_215": -1,
+"cpd:C00441_212": 1
+}
+}
+]
+},
+"Fatty acid biosynthesis":{
+"reactions": [
+{
+"id":"rn:R07765_44",
+"class": "rn:R07765",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16221_26": -1,
+"cpd:C04088_25": 1
+}
+},
+{
+"id":"rn:R07763_54",
+"class": "rn:R07763",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16219_28": -1,
+"cpd:C16220_27": 1
+}
+},
+{
+"id":"rn:R04969 rn:R04970_70",
+"class": "rn:R04969 rn:R04970",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05763_186": -1,
+"cpd:C05764_185": 1
+}
+},
+{
+"id":"rn:R04543_75",
+"class": "rn:R04543",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05762_188": -1,
+"cpd:C04633_187": 1
+}
+},
+{
+"id":"rn:R04968_78",
+"class": "rn:R04968",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05761_183": -1,
+"cpd:C01209_157": -1,
+"cpd:C05762_188": 1
+}
+},
+{
+"id":"rn:R04966 rn:R04967_81",
+"class": "rn:R04966 rn:R04967",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05760_182": -1,
+"cpd:C05761_183": 1
+}
+},
+{
+"id":"rn:R04566_86",
+"class": "rn:R04566",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05759_180": -1,
+"cpd:C04688_181": 1
+}
+},
+{
+"id":"rn:R04726_89",
+"class": "rn:R04726",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05223_176": -1,
+"cpd:C01209_157": -1,
+"cpd:C05759_180": 1
+}
+},
+{
+"id":"rn:R04724 rn:R04725_92",
+"class": "rn:R04724 rn:R04725",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05758_177": -1,
+"cpd:C05223_176": 1
+}
+},
+{
+"id":"rn:R04964_97",
+"class": "rn:R04964",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05756_179": -1,
+"cpd:C05757_178": 1
+}
+},
+{
+"id":"rn:R04963_100",
+"class": "rn:R04963",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05755_175": -1,
+"cpd:C01209_157": -1,
+"cpd:C05756_179": 1
+}
+},
+{
+"id":"rn:R04961 rn:R04962_103",
+"class": "rn:R04961 rn:R04962",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05754_174": -1,
+"cpd:C05755_175": 1
+}
+},
+{
+"id":"rn:R04534_108",
+"class": "rn:R04534",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05753_172": -1,
+"cpd:C04619_173": 1
+}
+},
+{
+"id":"rn:R04960_111",
+"class": "rn:R04960",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05752_168": -1,
+"cpd:C01209_157": -1,
+"cpd:C05753_172": 1
+}
+},
+{
+"id":"rn:R04958 rn:R04959_114",
+"class": "rn:R04958 rn:R04959",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05751_169": -1,
+"cpd:C05752_168": 1
+}
+},
+{
+"id":"rn:R04536_119",
+"class": "rn:R04536",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05750_171": -1,
+"cpd:C04620_170": 1
+}
+},
+{
+"id":"rn:R04957_122",
+"class": "rn:R04957",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05749_167": -1,
+"cpd:C01209_157": -1,
+"cpd:C05750_171": 1
+}
+},
+{
+"id":"rn:R04955 rn:R04956_125",
+"class": "rn:R04955 rn:R04956",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05748_166": -1,
+"cpd:C05749_167": 1
+}
+},
+{
+"id":"rn:R04953_130",
+"class": "rn:R04953",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05746_164": -1,
+"cpd:C05747_165": 1
+}
+},
+{
+"id":"rn:R04952_133",
+"class": "rn:R04952",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05745_162": -1,
+"cpd:C01209_157": -1,
+"cpd:C05746_164": 1
+}
+},
+{
+"id":"rn:R04429 rn:R04430_136",
+"class": "rn:R04429 rn:R04430",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04246_161": -1,
+"cpd:C05745_162": 1
+}
+},
+{
+"id":"rn:R04428_139",
+"class": "rn:R04428",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04618_160": -1,
+"cpd:C04246_161": 1
+}
+},
+{
+"id":"rn:R04533_142",
+"class": "rn:R04533",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04618_160": -1,
+"cpd:C05744_159": 1
+}
+},
+{
+"id":"rn:R01626_147",
+"class": "rn:R01626",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00083_156": -1,
+"cpd:C01209_157": 1
+}
+},
+{
+"id":"rn:R00742_153",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_155": -1,
+"cpd:C00083_156": 1
+}
+},
+{
+"id":"rn:R07762_256",
+"class": "rn:R07762",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05764_185": -1,
+"cpd:C01209_157": -1,
+"cpd:C16219_28": 1
+}
+},
+{
+"id":"rn:R04355_258",
+"class": "rn:R04355",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03939_158": -1,
+"cpd:C01209_157": -1,
+"cpd:C05744_159": 1
+}
+},
+{
+"id":"rn:R04954_269",
+"class": "rn:R04954",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05747_165": -1,
+"cpd:C05748_166": 1
+}
+},
+{
+"id":"rn:R04537_275",
+"class": "rn:R04537",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04620_170": -1,
+"cpd:C05751_169": 1
+}
+},
+{
+"id":"rn:R04535_277",
+"class": "rn:R04535",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04619_173": -1,
+"cpd:C05754_174": 1
+}
+},
+{
+"id":"rn:R04965_279",
+"class": "rn:R04965",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05757_178": -1,
+"cpd:C05758_177": 1
+}
+},
+{
+"id":"rn:R04568_282",
+"class": "rn:R04568",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04688_181": -1,
+"cpd:C05760_182": 1
+}
+},
+{
+"id":"rn:R04544_285",
+"class": "rn:R04544",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04633_187": -1,
+"cpd:C05763_186": 1
+}
+},
+{
+"id":"rn:R07639_293",
+"class": "rn:R07639",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05754_174": -1,
+"cpd:C04180_290": 1
+}
+}
+]
+},
+"Fatty acid metabolism":{
+"reactions": [
+{
+"id":"rn:R04355_6",
+"class": "rn:R04355",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03939_10": -1,
+"cpd:C01209_14": -1,
+"cpd:C05744_11": 1
+}
+},
+{
+"id":"rn:R04533_8",
+"class": "rn:R04533",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05744_11": -1,
+"cpd:C04618_12": 1
+}
+},
+{
+"id":"rn:R04428_9",
+"class": "rn:R04428",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04618_12": -1,
+"cpd:C04246_15": 1
+}
+},
+{
+"id":"rn:R04429 rn:R04430_16",
+"class": "rn:R04429 rn:R04430",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04246_15": -1,
+"cpd:C05745_17": 1
+}
+},
+{
+"id":"rn:R01626_18",
+"class": "rn:R01626",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00083_13": -1,
+"cpd:C01209_14": 1
+}
+},
+{
+"id":"rn:R04952_19",
+"class": "rn:R04952",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05745_17": -1,
+"cpd:C05746_20": 1
+}
+},
+{
+"id":"rn:R04953_21",
+"class": "rn:R04953",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05746_20": -1,
+"cpd:C05747_22": 1
+}
+},
+{
+"id":"rn:R04954_23",
+"class": "rn:R04954",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05747_22": -1,
+"cpd:C05748_24": 1
+}
+},
+{
+"id":"rn:R04955 rn:R04956_25",
+"class": "rn:R04955 rn:R04956",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05748_24": -1,
+"cpd:C05749_26": 1
+}
+},
+{
+"id":"rn:R04957_27",
+"class": "rn:R04957",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05749_26": -1,
+"cpd:C05750_28": 1
+}
+},
+{
+"id":"rn:R04960_35",
+"class": "rn:R04960",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05752_34": -1,
+"cpd:C05753_36": 1
+}
+},
+{
+"id":"rn:R04958 rn:R04959_33",
+"class": "rn:R04958 rn:R04959",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05751_32": -1,
+"cpd:C05752_34": 1
+}
+},
+{
+"id":"rn:R04537_31",
+"class": "rn:R04537",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04620_30": -1,
+"cpd:C05751_32": 1
+}
+},
+{
+"id":"rn:R04536_29",
+"class": "rn:R04536",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05750_28": -1,
+"cpd:C04620_30": 1
+}
+},
+{
+"id":"rn:R04963_43",
+"class": "rn:R04963",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05755_42": -1,
+"cpd:C05756_44": 1
+}
+},
+{
+"id":"rn:R04961 rn:R04962_41",
+"class": "rn:R04961 rn:R04962",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05754_40": -1,
+"cpd:C05755_42": 1
+}
+},
+{
+"id":"rn:R04535_39",
+"class": "rn:R04535",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04619_38": -1,
+"cpd:C05754_40": 1
+}
+},
+{
+"id":"rn:R04534_37",
+"class": "rn:R04534",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05753_36": -1,
+"cpd:C04619_38": 1
+}
+},
+{
+"id":"rn:R04726_51",
+"class": "rn:R04726",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05223_50": -1,
+"cpd:C05759_52": 1
+}
+},
+{
+"id":"rn:R04724 rn:R04725_49",
+"class": "rn:R04724 rn:R04725",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05758_48": -1,
+"cpd:C05223_50": 1
+}
+},
+{
+"id":"rn:R04965_47",
+"class": "rn:R04965",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05757_46": -1,
+"cpd:C05758_48": 1
+}
+},
+{
+"id":"rn:R04964_45",
+"class": "rn:R04964",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05756_44": -1,
+"cpd:C05757_46": 1
+}
+},
+{
+"id":"rn:R04968_59",
+"class": "rn:R04968",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05761_58": -1,
+"cpd:C05762_60": 1
+}
+},
+{
+"id":"rn:R04966 rn:R04967_57",
+"class": "rn:R04966 rn:R04967",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05760_56": -1,
+"cpd:C05761_58": 1
+}
+},
+{
+"id":"rn:R04568_55",
+"class": "rn:R04568",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04688_54": -1,
+"cpd:C05760_56": 1
+}
+},
+{
+"id":"rn:R04566_53",
+"class": "rn:R04566",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05759_52": -1,
+"cpd:C04688_54": 1
+}
+},
+{
+"id":"rn:R04969 rn:R04970_65",
+"class": "rn:R04969 rn:R04970",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05763_64": -1,
+"cpd:C05764_66": 1
+}
+},
+{
+"id":"rn:R04544_63",
+"class": "rn:R04544",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04633_62": -1,
+"cpd:C05763_64": 1
+}
+},
+{
+"id":"rn:R04543_61",
+"class": "rn:R04543",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05762_60": -1,
+"cpd:C04633_62": 1
+}
+},
+{
+"id":"rn:R07762_69",
+"class": "rn:R07762",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05764_66": -1,
+"cpd:C16219_70": 1
+}
+},
+{
+"id":"rn:R07763_71",
+"class": "rn:R07763",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16219_70": -1,
+"cpd:C16220_72": 1
+}
+},
+{
+"id":"rn:R07765_75",
+"class": "rn:R07765",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16221_74": -1,
+"cpd:C04088_76": 1
+}
+},
+{
+"id":"rn:R00742_289",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_3": -1,
+"cpd:C00083_13": 1
+}
+}
+]
+},
+"Fructose and mannose metabolism":{
+"reactions": [
+{
+"id":"rn:R02630_72",
+"class": "rn:R02630",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00159_122": -1,
+"cpd:C00275_123": 1
+}
+},
+{
+"id":"rn:R04779_88",
+"class": "rn:R04779",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_143": -1,
+"cpd:C05378_158": 1
+}
+},
+{
+"id":"rn:R01015_93",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_141": -1,
+"cpd:C00111_169": 1
+}
+},
+{
+"id":"rn:R02568_94",
+"class": "rn:R02568",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01094_121": -1,
+"cpd:C00577_134": 1,
+"cpd:C00111_169": 1
+}
+},
+{
+"id":"rn:R01070_96",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_158": -1,
+"cpd:C00118_141": 1
+}
+}
+]
+},
+"Glycine, serine and threonine metabolism":{
+"reactions": [
+{
+"id":"rn:R04173_78",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01005_136": -1,
+"cpd:C03232_132": 1
+}
+},
+{
+"id":"rn:R02291_93",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03082_140": -1,
+"cpd:C00441_146": 1
+}
+},
+{
+"id":"rn:R03815_113",
+"class": "rn:R03815",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02972_118": -1,
+"cpd:C02051_119": 1
+}
+},
+{
+"id":"rn:R02722_177",
+"class": "rn:R02722",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_141": -1,
+"cpd:C00078_176": 1
+}
+},
+{
+"id":"rn:R01518_192",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_189": -1,
+"cpd:C00197_124": 1
+}
+}
+]
+},
+"Glycolysis / Gluconeogenesis":{
+"reactions": [
+{
+"id":"rn:R00014_48",
+"class": "rn:R00014",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00068_136": -1,
+"cpd:C00022_98": -1,
+"cpd:C05125_99": 1
+}
+},
+{
+"id":"rn:R03270_49",
+"class": "rn:R03270",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05125_99": -1,
+"cpd:C15972_96": -1,
+"cpd:C16255_102": 1,
+"cpd:C00068_136": 1
+}
+},
+{
+"id":"rn:R02569_50",
+"class": "rn:R02569",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_100": -1,
+"cpd:C15973_103": -1,
+"cpd:C16255_102": 1
+}
+},
+{
+"id":"rn:R00200_53",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00074_92": -1,
+"cpd:C00022_98": 1
+}
+},
+{
+"id":"rn:R00658_55",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_85": -1,
+"cpd:C00074_92": 1
+}
+},
+{
+"id":"rn:R01518_56",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_85": -1,
+"cpd:C00197_93": 1
+}
+},
+{
+"id":"rn:R01061_57",
+"class": "rn:R01061",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_130": -1,
+"cpd:C00236_94": 1
+}
+},
+{
+"id":"rn:R01015_58",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_130": -1,
+"cpd:C00111_88": 1
+}
+},
+{
+"id":"rn:R01070_14",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_104": -1,
+"cpd:C00118_130": 1,
+"cpd:C00111_88": 1
+}
+},
+{
+"id":"rn:R04779_59",
+"class": "rn:R04779",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_91": -1,
+"cpd:C05378_104": 1
+}
+},
+{
+"id":"rn:R02740_62",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_90": -1,
+"cpd:C05345_91": 1
+}
+},
+{
+"id":"rn:R03321_64",
+"class": "rn:R03321",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_89": -1,
+"cpd:C05345_91": 1
+}
+},
+{
+"id":"rn:R02739_67",
+"class": "rn:R02739",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_90": -1,
+"cpd:C01172_89": 1
+}
+},
+{
+"id":"rn:R07618_75",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_103": -1,
+"cpd:C15972_96": 1
+}
+},
+{
+"id":"rn:R01512_76",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_93": -1,
+"cpd:C00236_94": 1
+}
+},
+{
+"id":"rn:R01196_124",
+"class": "rn:R01196",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_100": -1,
+"cpd:C00022_98": 1
+}
+}
+]
+},
+"Inositol phosphate metabolism":{
+"reactions": [
+{
+"id":"rn:R01186_64",
+"class": "rn:R01186",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03546_98": -1,
+"cpd:C00137_147": 1
+}
+},
+{
+"id":"rn:R01187_65",
+"class": "rn:R01187",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04006_97": -1,
+"cpd:C00137_147": 1
+}
+},
+{
+"id":"rn:R01185_75",
+"class": "rn:R01185",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01177_100": -1,
+"cpd:C00137_147": 1
+}
+},
+{
+"id":"rn:R01015_129",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00111_121": -1,
+"cpd:C00118_122": 1
+}
+}
+]
+},
+"Lipoic acid metabolism":{
+"reactions": [
+{
+"id":"rn:R07768_5",
+"class": "rn:R07768",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05752_12": -1,
+"cpd:C16239_7": 1
+}
+},
+{
+"id":"rn:R07769_6",
+"class": "rn:R07769",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16239_7": -1,
+"cpd:C16237_16": 1
+}
+},
+{
+"id":"rn:R07767_10",
+"class": "rn:R07767",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C16236_15": -1,
+"cpd:C16237_16": 1
+}
+},
+{
+"id":"rn:R07766_11",
+"class": "rn:R07766",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05752_12": -1,
+"cpd:C16236_15": 1
+}
+}
+]
+},
+"Lipopolysaccharide biosynthesis":{
+"reactions": [
+{
+"id":"rn:R03350_44",
+"class": "rn:R03350",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04478_41": -1,
+"cpd:C01187_40": 1
+}
+},
+{
+"id":"rn:R04657_45",
+"class": "rn:R04657",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04932_50": -1,
+"cpd:C04919_49": 1
+}
+},
+{
+"id":"rn:R04606_53",
+"class": "rn:R04606",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04652_57": -1,
+"cpd:C04824_51": -1,
+"cpd:C04932_50": 1
+}
+},
+{
+"id":"rn:R04549_86",
+"class": "rn:R04549",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04652_57": -1,
+"cpd:C04824_51": 1
+}
+},
+{
+"id":"rn:R04550_88",
+"class": "rn:R04550",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C06022_60": -1,
+"cpd:C04652_57": 1
+}
+},
+{
+"id":"rn:R04587_89",
+"class": "rn:R04587",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04738_59": -1,
+"cpd:C06022_60": 1
+}
+},
+{
+"id":"rn:R04567_90",
+"class": "rn:R04567",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00043_61": -1,
+"cpd:C04738_59": 1
+}
+}
+]
+},
+"Lysine biosynthesis":{
+"reactions": [
+{
+"id":"rn:R02291_51",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03082_79": -1,
+"cpd:C00441_81": 1
+}
+},
+{
+"id":"rn:R10147_53",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_81": -1,
+"cpd:C20258_121": 1
+}
+},
+{
+"id":"rn:R04198 rn:R04199_54",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20258_121": -1,
+"cpd:C03972_82": 1
+}
+}
+]
+},
+"Methane metabolism":{
+"reactions": [
+{
+"id":"rn:R00658_142",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_143": -1,
+"cpd:C00074_140": 1
+}
+},
+{
+"id":"rn:R01518_145",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_143": -1,
+"cpd:C00197_146": 1
+}
+},
+{
+"id":"rn:R04173_151",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03232_147": -1,
+"cpd:C01005_150": 1
+}
+},
+{
+"id":"rn:R01068_194",
+"class": "rn:R01068",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00354_179": -1,
+"cpd:C00118_192": 1,
+"cpd:C00111_189": 1
+}
+},
+{
+"id":"rn:R00756_182",
+"class": "rn:R00756",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00085_180": -1,
+"cpd:C00354_179": 1
+}
+},
+{
+"id":"rn:R00230_204",
+"class": "rn:R00230",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_135": -1,
+"cpd:C00227_201": 1
+}
+},
+{
+"id":"rn:R00315_203",
+"class": "rn:R00315",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00033_205": -1,
+"cpd:C00227_201": 1
+}
+}
+]
+},
+"Microbial metabolism in diverse environments":{
+"reactions": [
+{
+"id":"rn:R01061 rn:R01063_1936",
+"class": "rn:R01061 rn:R01063",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_1937": -1,
+"cpd:C00236_1938": 1
+}
+},
+{
+"id":"rn:R01512_924",
+"class": "rn:R01512",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00197_1437": -1,
+"cpd:C00236_1938": 1
+}
+},
+{
+"id":"rn:R01518_1436",
+"class": "rn:R01518",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1835": -1,
+"cpd:C00197_1437": 1
+}
+},
+{
+"id":"rn:R00658_525",
+"class": "rn:R00658",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00631_1835": -1,
+"cpd:C00074_1998": 1
+}
+},
+{
+"id":"rn:R00199 rn:R00200 rn:R00206_526",
+"class": "rn:R00199 rn:R00200 rn:R00206",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_1995": -1,
+"cpd:C00074_1998": 1
+}
+},
+{
+"id":"rn:R00209 rn:R01196 rn:R10866 rn:R00212_1968",
+"class": "rn:R00209 rn:R01196 rn:R10866 rn:R00212",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_1995": -1,
+"cpd:C00024_2102": 1
+}
+},
+{
+"id":"rn:R02740_527",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_1042": -1,
+"cpd:C05345_1660": 1
+}
+},
+{
+"id":"rn:R02073 rn:R04779 rn:R04780 rn:R09084_528",
+"class": "rn:R02073 rn:R04779 rn:R04780 rn:R09084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_1660": -1,
+"cpd:C05378_1041": 1
+}
+},
+{
+"id":"rn:R01070_529",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_1041": -1,
+"cpd:C00118_1937": 1,
+"cpd:C00111_2142": 1
+}
+},
+{
+"id":"rn:R01015_532",
+"class": "rn:R01015",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_1937": -1,
+"cpd:C00111_2142": 1
+}
+},
+{
+"id":"rn:R08549 rn:R01197_1439",
+"class": "rn:R08549 rn:R01197",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00026_2129": -1,
+"cpd:C00091_1988": 1
+}
+},
+{
+"id":"rn:R00405 rn:R00406 rn:R00727 rn:R10343_1930",
+"class": "rn:R00405 rn:R00406 rn:R00727 rn:R10343",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_2173": -1,
+"cpd:C00091_1988": 1
+}
+},
+{
+"id":"rn:R01830_522",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_1937": -1,
+"cpd:C05345_1660": -1,
+"cpd:C00231_1039": 1,
+"cpd:C00279_1044": 1
+}
+},
+{
+"id":"rn:R01641_535",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_1937": -1,
+"cpd:C05382_1045": -1,
+"cpd:C00231_1039": 1,
+"cpd:C00117_1046": 1
+}
+},
+{
+"id":"rn:R02736 rn:R10907_539",
+"class": "rn:R02736 rn:R10907",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1040": -1,
+"cpd:C01236_1048": 1
+}
+},
+{
+"id":"rn:R02035_540",
+"class": "rn:R02035",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01236_1048": -1,
+"cpd:C00345_1049": 1
+}
+},
+{
+"id":"rn:R02739_552",
+"class": "rn:R02739",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_1042": -1,
+"cpd:C01172_1040": 1
+}
+},
+{
+"id":"rn:R03321_524",
+"class": "rn:R03321",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_1040": -1,
+"cpd:C05345_1660": 1
+}
+},
+{
+"id":"rn:R01049_827",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_1046": -1,
+"cpd:C00119_1291": 1
+}
+},
+{
+"id":"rn:R04173_906",
+"class": "rn:R04173",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01005_1346": -1,
+"cpd:C03232_1345": 1
+}
+},
+{
+"id":"rn:R00315_908",
+"class": "rn:R00315",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00033_1997": -1,
+"cpd:C00227_1996": 1
+}
+},
+{
+"id":"rn:R00230_909",
+"class": "rn:R00230",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_2102": -1,
+"cpd:C00227_1996": 1
+}
+},
+{
+"id":"rn:R00586_505",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_1426": -1,
+"cpd:C00979_1421": 1
+}
+},
+{
+"id":"rn:R00858 rn:R00859 rn:R00861 rn:R10146_208",
+"class": "rn:R00858 rn:R00859 rn:R00861 rn:R10146",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_2114": -1,
+"cpd:C00094_2113": 1
+}
+},
+{
+"id":"rn:R02021_1420",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_1425": -1,
+"cpd:C00094_2113": 1
+}
+},
+{
+"id":"rn:R02291_1672",
+"class": "rn:R02291",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_1694": -1,
+"cpd:C03082_1682": 1
+}
+},
+{
+"id":"rn:R10147_1684",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_1694": -1,
+"cpd:C20258_2091": 1
+}
+},
+{
+"id":"rn:R04198 rn:R04199_1685",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03972_1695": -1,
+"cpd:C20258_2091": 1
+}
+},
+{
+"id":"rn:R01068_348",
+"class": "rn:R01068",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_1041": -1,
+"cpd:C00111_2142": 1
+}
+},
+{
+"id":"rn:R01068_1935",
+"class": "rn:R01068",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00354_1939": -1,
+"cpd:C00118_1937": 1
+}
+},
+{
+"id":"rn:R00762 rn:R00756 rn:R05805_342",
+"class": "rn:R00762 rn:R00756 rn:R05805",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00085_1916": -1,
+"cpd:C00354_1939": 1
+}
+},
+{
+"id":"rn:R01829_159",
+"class": "rn:R01829",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00447_1893": -1,
+"cpd:C00111_2142": 1,
+"cpd:C00279_1044": 1
+}
+},
+{
+"id":"rn:R01067_346",
+"class": "rn:R01067",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00085_1916": -1,
+"cpd:C00118_1937": -1,
+"cpd:C00231_1039": 1,
+"cpd:C00279_1044": 1
+}
+},
+{
+"id":"rn:R00200 rn:R02320_1897",
+"class": "rn:R00200 rn:R02320",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_1913": -1,
+"cpd:C00074_1911": 1
+}
+},
+{
+"id":"rn:R00742_1953",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_2102": -1,
+"cpd:C00083_1992": 1
+}
+},
+{
+"id":"rn:R01196 rn:R10866_294",
+"class": "rn:R01196 rn:R10866",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_2102": -1,
+"cpd:C00011_2100": -1,
+"cpd:C00022_1995": 1
+}
+},
+{
+"id":"rn:R02568_126",
+"class": "rn:R02568",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01094_2168": -1,
+"cpd:C00111_2142": 1
+}
+},
+{
+"id":"rn:R05578_34",
+"class": "rn:R05578",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00025_1856": -1,
+"cpd:C02987_2253": 1
+}
+},
+{
+"id":"rn:R00084_38",
+"class": "rn:R00084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00931_2256": -1,
+"cpd:C01024_2257": 1
+}
+},
+{
+"id":"rn:R03165_39",
+"class": "rn:R03165",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01024_2257": -1,
+"cpd:C01051_2258": 1
+}
+},
+{
+"id":"rn:R03194_40",
+"class": "rn:R03194",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01051_2258": -1,
+"cpd:C02463_2259": 1
+}
+},
+{
+"id":"rn:R03947_41",
+"class": "rn:R03947",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02463_2259": -1,
+"cpd:C05778_2260": 1
+}
+}
+]
+},
+"Monobactam biosynthesis":{
+"reactions": [
+{
+"id":"rn:R04198 rn:R04199_96",
+"class": "rn:R04198 rn:R04199",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20258_57": -1,
+"cpd:C03972_61": 1
+}
+},
+{
+"id":"rn:R10147_97",
+"class": "rn:R10147",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00441_55": -1,
+"cpd:C00022_58": -1,
+"cpd:C20258_57": 1
+}
+}
+]
+},
+"Pantothenate and CoA biosynthesis":{
+"reactions": [
+{
+"id":"rn:R01625_63",
+"class": "rn:R01625",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03688_5": -1,
+"cpd:C00010_27": -1,
+"cpd:C00054_25": 1,
+"cpd:C00229_26": 1
+}
+},
+{
+"id":"rn:R02473_76",
+"class": "rn:R02473",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00522_19": -1,
+"cpd:C00099_29": -1,
+"cpd:C00864_20": 1
+}
+},
+{
+"id":"rn:R01226_78",
+"class": "rn:R01226",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00141_16": -1,
+"cpd:C00966_18": 1
+}
+}
+]
+},
+"Pentose phosphate pathway":{
+"reactions": [
+{
+"id":"rn:R02739_37",
+"class": "rn:R02739",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_99": -1,
+"cpd:C01172_121": 1
+}
+},
+{
+"id":"rn:R01049_43",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_110": -1,
+"cpd:C00119_111": 1
+}
+},
+{
+"id":"rn:R01641_46",
+"class": "rn:R01641",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05382_116": -1,
+"cpd:C00118_119": -1,
+"cpd:C00117_110": 1,
+"cpd:C00231_129": 1
+}
+},
+{
+"id":"rn:R01830_49",
+"class": "rn:R01830",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00118_119": -1,
+"cpd:C05345_124": -1,
+"cpd:C00279_114": 1,
+"cpd:C00231_129": 1
+}
+},
+{
+"id":"rn:R01070_50",
+"class": "rn:R01070",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05378_120": -1,
+"cpd:C00118_119": 1
+}
+},
+{
+"id":"rn:R04779_51",
+"class": "rn:R04779",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05345_124": -1,
+"cpd:C05378_120": 1
+}
+},
+{
+"id":"rn:R02740_53",
+"class": "rn:R02740",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00668_99": -1,
+"cpd:C05345_124": 1
+}
+},
+{
+"id":"rn:R02035_57",
+"class": "rn:R02035",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01236_122": -1,
+"cpd:C00345_106": 1
+}
+},
+{
+"id":"rn:R02736_58",
+"class": "rn:R02736",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_121": -1,
+"cpd:C01236_122": 1
+}
+},
+{
+"id":"rn:R02736 rn:R10907_157",
+"class": "rn:R02736 rn:R10907",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01172_121": -1,
+"cpd:C01236_122": 1
+}
+}
+]
+},
+"Peptidoglycan biosynthesis":{
+"reactions": [
+{
+"id":"rn:R05627_26",
+"class": "rn:R05627",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04574_39": -1,
+"cpd:C17556_40": 1
+}
+},
+{
+"id":"rn:R05662_27",
+"class": "rn:R05662",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04851_72": -1,
+"cpd:C05893_73": 1
+}
+},
+{
+"id":"rn:R05629_28",
+"class": "rn:R05629",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04702_71": -1,
+"cpd:C17556_40": -1,
+"cpd:C04851_72": 1
+}
+},
+{
+"id":"rn:R05630_35",
+"class": "rn:R05630",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04882_67": -1,
+"cpd:C17556_40": -1,
+"cpd:C05897_68": 1
+}
+},
+{
+"id":"rn:R05032_36",
+"class": "rn:R05032",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05897_68": -1,
+"cpd:C05898_69": 1
+}
+}
+]
+},
+"Phenylalanine, tyrosine and tryptophan biosynthesis":{
+"reactions": [
+{
+"id":"rn:R02722_51",
+"class": "rn:R02722",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_106": -1,
+"cpd:C00078_108": 1
+}
+},
+{
+"id":"rn:R02340_52",
+"class": "rn:R02340",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03506_106": -1,
+"cpd:C00463_107": 1
+}
+},
+{
+"id":"rn:R00674_53",
+"class": "rn:R00674",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00463_107": -1,
+"cpd:C00078_108": 1
+}
+},
+{
+"id":"rn:R03508_54",
+"class": "rn:R03508",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01302_105": -1,
+"cpd:C03506_106": 1
+}
+},
+{
+"id":"rn:R03509_55",
+"class": "rn:R03509",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_104": -1,
+"cpd:C01302_105": 1
+}
+},
+{
+"id":"rn:R01073_56",
+"class": "rn:R01073",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04302_104": -1,
+"cpd:C00119_102": 1,
+"cpd:C00108_103": 1
+}
+},
+{
+"id":"rn:R00985 rn:R00986_57",
+"class": "rn:R00985 rn:R00986",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00251_100": -1,
+"cpd:C00108_103": 1
+}
+},
+{
+"id":"rn:R02412_75",
+"class": "rn:R02412",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_97": -1,
+"cpd:C03175_98": 1
+}
+},
+{
+"id":"rn:R02413_76",
+"class": "rn:R02413",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00493_97": -1,
+"cpd:C02637_95": 1
+}
+},
+{
+"id":"rn:R03084_77",
+"class": "rn:R03084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00944_93": -1,
+"cpd:C02637_95": 1
+}
+}
+]
+},
+"Porphyrin and chlorophyll metabolism":{
+"reactions": [
+{
+"id":"rn:R02864_280",
+"class": "rn:R02864",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05778_123": -1,
+"cpd:C00748_449": 1
+}
+},
+{
+"id":"rn:R03947_281",
+"class": "rn:R03947",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02463_86": -1,
+"cpd:C05778_123": 1
+}
+},
+{
+"id":"rn:R03165_270",
+"class": "rn:R03165",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01024_91": -1,
+"cpd:C01051_93": 1
+}
+},
+{
+"id":"rn:R00084_273",
+"class": "rn:R00084",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00931_62": -1,
+"cpd:C01024_91": 1
+}
+},
+{
+"id":"rn:R05578_279",
+"class": "rn:R05578",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00025_87": -1,
+"cpd:C02987_88": 1
+}
+},
+{
+"id":"rn:R03194_271",
+"class": "rn:R03194",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C01051_93": -1,
+"cpd:C02463_86": 1
+}
+}
+]
+},
+"Propanoate metabolism":{
+"reactions": [
+{
+"id":"rn:R00921_52",
+"class": "rn:R00921",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C02876_80": -1,
+"cpd:C00100_85": 1
+}
+},
+{
+"id":"rn:R01353_68",
+"class": "rn:R01353",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00163_81": -1,
+"cpd:C02876_80": 1
+}
+},
+{
+"id":"rn:R00405_112",
+"class": "rn:R00405",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00042_115": -1,
+"cpd:C00091_106": 1
+}
+},
+{
+"id":"rn:R00742_14",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_121": -1,
+"cpd:C00083_31": 1
+}
+},
+{
+"id":"rn:R07618_185",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_181": -1,
+"cpd:C15972_182": 1
+}
+}
+]
+},
+"Purine metabolism":{
+"reactions": [
+{
+"id":"rn:R02019_137",
+"class": "rn:R02019",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00035_358": -1,
+"cpd:C00361_356": 1
+}
+},
+{
+"id":"rn:R01049_157",
+"class": "rn:R01049",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00117_307": -1,
+"cpd:C00119_308": 1
+}
+},
+{
+"id":"rn:R02017_175",
+"class": "rn:R02017",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00008_320": -1,
+"cpd:C00206_318": 1
+}
+},
+{
+"id":"rn:R00127_177",
+"class": "rn:R00127",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00020_321": -1,
+"cpd:C00008_320": 1
+}
+},
+{
+"id":"rn:R01547_279",
+"class": "rn:R01547",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00360_317": -1,
+"cpd:C00206_318": 1
+}
+},
+{
+"id":"rn:R00430_292",
+"class": "rn:R00430",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00044_376": -1,
+"cpd:C00035_358": 1
+}
+},
+{
+"id":"rn:R01858_293",
+"class": "rn:R01858",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00361_356": -1,
+"cpd:C00286_355": 1
+}
+},
+{
+"id":"rn:R01138_304",
+"class": "rn:R01138",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00131_319": -1,
+"cpd:C00206_318": 1
+}
+},
+{
+"id":"rn:R00200_305",
+"class": "rn:R00200",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00002_386": -1,
+"cpd:C00008_320": 1
+}
+}
+]
+},
+"Pyrimidine metabolism":{
+"reactions": [
+{
+"id":"rn:R02018_81",
+"class": "rn:R02018",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00015_214": -1,
+"cpd:C01346_216": 1
+}
+},
+{
+"id":"rn:R00575_88",
+"class": "rn:R00575",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00064_87": -1,
+"cpd:C00169_180": 1
+}
+},
+{
+"id":"rn:R02024_131",
+"class": "rn:R02024",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00112_213": -1,
+"cpd:C00705_221": 1
+}
+},
+{
+"id":"rn:R02100_288",
+"class": "rn:R02100",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00460_215": -1,
+"cpd:C00365_217": 1
+}
+}
+]
+},
+"Pyruvate metabolism":{
+"reactions": [
+{
+"id":"rn:R03270_55",
+"class": "rn:R03270",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15972_139": -1,
+"cpd:C05125_141": -1,
+"cpd:C16255_140": 1,
+"cpd:C00068_166": 1
+}
+},
+{
+"id":"rn:R00200 rn:R02320_65",
+"class": "rn:R00200 rn:R02320",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00074_143": -1,
+"cpd:C00022_164": 1
+}
+},
+{
+"id":"rn:R01736_74",
+"class": "rn:R01736",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C03451_160": -1,
+"cpd:C00256_159": 1
+}
+},
+{
+"id":"rn:R01196_85",
+"class": "rn:R01196",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_164": -1,
+"cpd:C00024_148": 1
+}
+},
+{
+"id":"rn:R00230_97",
+"class": "rn:R00230",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_148": -1,
+"cpd:C00227_149": 1
+}
+},
+{
+"id":"rn:R00742_116",
+"class": "rn:R00742",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_148": -1,
+"cpd:C00083_155": 1
+}
+},
+{
+"id":"rn:R00014_123",
+"class": "rn:R00014",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00068_166": -1,
+"cpd:C00022_164": -1,
+"cpd:C05125_141": 1
+}
+},
+{
+"id":"rn:R02569_124",
+"class": "rn:R02569",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_138": -1,
+"cpd:C00024_148": -1,
+"cpd:C16255_140": 1
+}
+},
+{
+"id":"rn:R07618_125",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_138": -1,
+"cpd:C15972_139": 1
+}
+},
+{
+"id":"rn:R00315_129",
+"class": "rn:R00315",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00033_157": -1,
+"cpd:C00227_149": 1
+}
+},
+{
+"id":"rn:R10866_177",
+"class": "rn:R10866",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00022_164": -1,
+"cpd:C00024_148": 1
+}
+}
+]
+},
+"Riboflavin metabolism":{
+"reactions": [
+{
+"id":"rn:R04457_41",
+"class": "rn:R04457",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04732_76": -1,
+"cpd:C15556_2": -1,
+"cpd:C04332_12": 1
+}
+},
+{
+"id":"rn:R00066_42",
+"class": "rn:R00066",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04332_12": -1,
+"cpd:C00255_14": 1,
+"cpd:C04732_76": 1
+}
+}
+]
+},
+"Selenocompound metabolism":{
+"reactions": [
+{
+"id":"rn:R03596_11",
+"class": "rn:R03596",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05684_18": -1,
+"cpd:C01528_16": 1
+}
+},
+{
+"id":"rn:R03599_60",
+"class": "rn:R03599",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05688_24": -1,
+"cpd:C01528_16": 1,
+"cpd:C00041_78": 1
+}
+},
+{
+"id":"rn:R04773_15",
+"class": "rn:R04773",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C05335_27": -1,
+"cpd:C05336_29": 1
+}
+},
+{
+"id":"rn:R09372_89",
+"class": "rn:R09372",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C18902_41": -1,
+"cpd:C05703_38": 1
+}
+}
+]
+},
+"Sulfur metabolism":{
+"reactions": [
+{
+"id":"rn:R00858_31",
+"class": "rn:R00858",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_33": -1,
+"cpd:C00094_25": 1
+}
+},
+{
+"id":"rn:R02021_48",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_45": -1,
+"cpd:C00094_25": 1
+}
+},
+{
+"id":"rn:R00586_109",
+"class": "rn:R00586",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00065_110": -1,
+"cpd:C00979_105": 1
+}
+},
+{
+"id":"rn:R00858_153",
+"class": "rn:R00858",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00283_187": -1,
+"cpd:C00094_157": 1
+}
+},
+{
+"id":"rn:R02021_150",
+"class": "rn:R02021",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00053_155": -1,
+"cpd:C00094_157": 1
+}
+}
+]
+},
+"Taurine and hypotaurine metabolism":{
+"reactions": [
+{
+"id":"rn:R00230_36",
+"class": "rn:R00230",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00024_40": -1,
+"cpd:C00227_37": 1
+}
+},
+{
+"id":"rn:R00315_58",
+"class": "rn:R00315",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00033_71": -1,
+"cpd:C00227_37": 1
+}
+}
+]
+},
+"Thiamine metabolism":{
+"reactions": [
+{
+"id":"rn:R07460_72",
+"class": "rn:R07460",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15811_21": -1,
+"cpd:C00097_22": -1,
+"cpd:C15812_20": 1
+}
+},
+{
+"id":"rn:R11319_59",
+"class": "rn:R11319",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C00068_37": -1,
+"cpd:C03028_38": 1
+}
+},
+{
+"id":"rn:R03223_93",
+"class": "rn:R03223",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C04327_34": -1,
+"cpd:C04752_32": -1,
+"cpd:C01081_35": 1
+}
+},
+{
+"id":"rn:R10712_97",
+"class": "rn:R10712",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C20247_95": -1,
+"cpd:C04752_32": -1,
+"cpd:C01081_35": 1
+}
+}
+]
+},
+"Valine, leucine and isoleucine degradation":{
+"reactions": [
+{
+"id":"rn:R07618_54",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_55": -1,
+"cpd:C15972_57": 1
+}
+},
+{
+"id":"rn:R07618_62",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_56": -1,
+"cpd:C15972_58": 1
+}
+},
+{
+"id":"rn:R07618_68",
+"class": "rn:R07618",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C15973_64": -1,
+"cpd:C15972_65": 1
+}
+}
+]
+},
+"Vitamin B6 metabolism":{
+"reactions": [
+{
+"id":"rn:R05838_94",
+"class": "rn:R05838",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C11638_103": -1,
+"cpd:C00627_30": 1
+}
+},
+{
+"id":"rn:R05681_84",
+"class": "rn:R05681",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C06055_41": -1,
+"cpd:C07335_9": 1
+}
+},
+{
+"id":"rn:R05085_85",
+"class": "rn:R05085",
+"lower_bound": -10,
+"metabolites": {
+"cpd:C06055_41": -1,
+"cpd:C06054_40": 1
+}
+}
+]
+}}

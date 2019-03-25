@@ -41,6 +41,7 @@ The following documentation describes all the tools available in SAMMI.
    floating
    shortcuts
    format
+   export
    copyright
    contact
 
