@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Structure Arrays &mdash; SAMMIM  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functions" href="functions.html" />
+    <link rel="prev" title="Welcome to SAMMIM" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAMMIM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Structure Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parser">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAMMIM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Structure Arrays</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/structs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structure-arrays">
+<h1>Structure Arrays<a class="headerlink" href="#structure-arrays" title="Permalink to this headline">¶</a></h1>
+<p>Three different structure arrays can be used to render visualizations using the SAMMIM package. To learn more about MATLAB structure arrays please refer to <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/struct.html">this</a> documentation. This section describes these variables. For details on how to use them and working examples please refer to the subsequent sections. These variables are the following:</p>
+<div class="section" id="parser">
+<h2>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h2>
+<p>Using SAMMI, models can be parsed into subgraphs upon rendering for more appealing visualizations. While there are many different ways to parse models (covered in the next section), one of the options is defining a structure array of length <code class="code docutils literal notranslate"><span class="pre">n</span></code> where a subgraph is plotted for each element of the array. Each element in the array should contain the following fields:</p>
+<ul class="simple">
+<li><strong>rxns</strong>: Cell array of strings. Reaction IDs of reactions to be included in the subgraph.</li>
+<li><strong>name</strong>: String. Name of the subgraph to be displayed in the visualization.</li>
+<li><strong>flux</strong>: Numerical vector. Optional. Values to be mapped as reaction colors. Defaults to all NaNs where no data is mapped.</li>
+</ul>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>The data structured array can be used to map different datasets, in different forms, onto the rendered illustration. This structured array can also be of length <code class="code docutils literal notranslate"><span class="pre">n</span></code>, where each element of the array will map a dataset differently. Each element of the array must contain the following fields:</p>
+<ul class="simple">
+<li><strong>type</strong>: Cell array of two strings. The first string should be either <code class="code docutils literal notranslate"><span class="pre">rxns</span></code>, <code class="code docutils literal notranslate"><span class="pre">mets</span></code>, or <code class="code docutils literal notranslate"><span class="pre">links</span></code>. This string defines where the data will be mapped. The second string should be either <code class="code docutils literal notranslate"><span class="pre">color</span></code> or <code class="code docutils literal notranslate"><span class="pre">size</span></code>. This string defines what kind of data to map onto the defined group. <code class="code docutils literal notranslate"><span class="pre">color</span></code> can be user with <code class="code docutils literal notranslate"><span class="pre">rxns</span></code> and <code class="code docutils literal notranslate"><span class="pre">mets</span></code> to define node and link color. <code class="code docutils literal notranslate"><span class="pre">color</span></code> cannot be used with <code class="code docutils literal notranslate"><span class="pre">links</span></code>, as link color matches the corresponding reaction node color. <code class="code docutils literal notranslate"><span class="pre">size</span></code> can be used with all options to define node radius or link width.</li>
+<li><strong>data</strong>: A MATLAB table object. To learn more about MATLAB tables please refer to <a class="reference external" href="https://www.mathworks.com/help/matlab/tables.html">this</a> documentation. <code class="code docutils literal notranslate"><span class="pre">VariableNames</span></code> (column names) will be translated into condition names, and <code class="code docutils literal notranslate"><span class="pre">RowNames</span></code> should be reaction IDs for <code class="code docutils literal notranslate"><span class="pre">rxns</span></code> and <code class="code docutils literal notranslate"><span class="pre">links</span></code> data or metabolite IDs for <code class="code docutils literal notranslate"><span class="pre">mets</span></code> data. <code class="code docutils literal notranslate"><span class="pre">NaN</span></code> values will not be mapped.</li>
+</ul>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>Optional structured array to change default rendering options. This is an array of length one with three optional fields:</p>
+<ul class="simple">
+<li><strong>htmlName</strong>: String. Name of html file where the output will be written. Defaults to <code class="code docutils literal notranslate"><span class="pre">index_load.html</span></code>. If this option is not defined, the file <code class="code docutils literal notranslate"><span class="pre">index_load.html</span></code> will be continuously overwritten every time a new visualization is generated. If users wish to save a visualization to a different file, or wish to visualize multiple maps at once, this parameter can be changed.</li>
+<li><strong>load</strong>: Boolean, defaults to <code class="code docutils literal notranslate"><span class="pre">True</span></code>. Whether or not to load the visualization on a new browser tab. If this parameter is set to false, new visualizations can be rendered by refreshing a previously loaded tab or by using the <code class="code docutils literal notranslate"><span class="pre">openSammi()</span></code> function.</li>
+<li><strong>jscode</strong>: String. Sequence of JavaScript commands to be run following the rendering of the visualization. This can be used, for example, to change colorscales and subgraphs upon loading the model. This options requires familiarity with JavaScript and the SAMMI html layout.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="functions.html" class="btn btn-neutral float-right" title="Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to SAMMIM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Andre Schultz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
