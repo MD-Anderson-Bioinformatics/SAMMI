@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; SAMMIM  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Functions" href="functions.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAMMIM
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="structs.html">Structure Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plot-entire-model">0. Plot entire model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#divide-the-model-into-subgraphs-using-model-annotation">1-2. Divide the model into subgraphs using model annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-and-visualize-multiple-maps">3. Plot and visualize multiple maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-only-user-defined-reactions">4. Plot only user-defined reactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shelve-secondary-metabolites-on-load">5. Shelve secondary metabolites on load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-multiple-user-defined-subgraphs">6. Plot multiple user-defined subgraphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-mapping">7-8. Data mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-map-upon-load">9. Change map upon load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-existing-map">10. Load Existing Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#type-iii-pathways">11. Type-III Pathways</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAMMIM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>Here we provide several simple examples for the use of SAMMIM. Each example is supposed to be more complex than the next, and is intended to exemplify as many different functionalities of SAMMIM as possible. To get started, install the COBRA toolbox as described in the documentation <a class="reference external" href="https://opencobra.github.io/cobratoolbox/stable/installation.html">here</a>. The examples described here are available through SAMMIM in the <code class="code docutils literal notranslate"><span class="pre">testSammi</span></code> function. To view the code for each example in MATLAB type <code class="code docutils literal notranslate"><span class="pre">edit</span> <span class="pre">testSammi</span></code>. To run each example run <code class="code docutils literal notranslate"><span class="pre">testSammi(n)</span></code> where <code class="code docutils literal notranslate"><span class="pre">n</span></code> ranges from zero to eleven, referring to the example number defined here.</p>
+<p>Make sure the COBRA toolbox is initialized and load variable to be used throughout these examples:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Initialize toolbox</span>
+<span class="n">initCobraToolbox</span>
+<span class="c">%Get COBRA directory</span>
+<span class="k">global</span> <span class="n">CBTDIR</span><span class="p">;</span>
+<span class="c">%Get SAMMIM folder</span>
+<span class="n">sammipath</span> <span class="p">=</span> <span class="n">strrep</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="s">&#39;sammi&#39;</span><span class="p">),</span><span class="s">&#39;\sammi.m&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="plot-entire-model">
+<h2>0. Plot entire model<a class="headerlink" href="#plot-entire-model" title="Permalink to this headline">¶</a></h2>
+<p>To plot the entire model simply call <code class="code docutils literal notranslate"><span class="pre">sammi</span></code> on the COBRA model. This is not advisable for medium to large models as the visualization may be too large to render.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Plot</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="divide-the-model-into-subgraphs-using-model-annotation">
+<h2>1-2. Divide the model into subgraphs using model annotation<a class="headerlink" href="#divide-the-model-into-subgraphs-using-model-annotation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Maps can be divided into subgraphs using model annotation. For instance, users can plot a subgraph for each annotated reaction subsystem:</li>
+</ol>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/Recon2.v04.mat&#39;</span><span class="p">])</span>
+<span class="c">%Plot a subgraph for each subsystem</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">modelR204</span><span class="p">,</span><span class="s">&#39;subSystems&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Or plot a map for each cellular compartment:</li>
+</ol>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>#<span class="n">Get</span> <span class="n">sample</span> <span class="n">model</span> <span class="n">to</span> <span class="n">plot</span>
+<span class="n">model</span> <span class="p">=</span> <span class="n">cobra</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">create_test_model</span><span class="p">(</span>&quot;<span class="n">textbook</span>&quot;<span class="p">)</span>
+#<span class="n">Plot</span>
+<span class="n">sammi</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;compartment&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-and-visualize-multiple-maps">
+<h2>3. Plot and visualize multiple maps<a class="headerlink" href="#plot-and-visualize-multiple-maps" title="Permalink to this headline">¶</a></h2>
+<p>By default, SAMMI outputs the visualization to a file names <code class="code docutils literal notranslate"><span class="pre">index.load.html</span></code> in the package folder. Therefore, by default, every time a new visualization is generated this file is overwritten. The name of the output file can be changed, however, in order to not overwrite files. For instance:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Initialize options</span>
+<span class="n">options</span><span class="p">.</span><span class="n">load</span> <span class="p">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="c">%Plot whole model in default file</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,[],[],[],</span><span class="n">options</span><span class="p">)</span>
+<span class="c">%Modify options to render map in different file</span>
+<span class="n">options</span><span class="p">.</span><span class="n">htmlName</span> <span class="p">=</span> <span class="s">&#39;index_load2.html&#39;</span><span class="p">;</span>
+<span class="c">%Plot model parsed by subsystem</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;subSystems&#39;</span><span class="p">,[],[],</span><span class="n">options</span><span class="p">)</span>
+<span class="c">%Open both visualizations</span>
+<span class="n">openSammi</span><span class="p">(</span><span class="s">&#39;index_load.html&#39;</span><span class="p">)</span>
+<span class="n">openSammi</span><span class="p">(</span><span class="s">&#39;index_load2.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-only-user-defined-reactions">
+<h2>4. Plot only user-defined reactions<a class="headerlink" href="#plot-only-user-defined-reactions" title="Permalink to this headline">¶</a></h2>
+<p>For a quick visualization of a given group of reactions users can plot only certain reactions in a single graph.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Get reactions to plot</span>
+<span class="n">tca</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">,</span><span class="s">&#39;ACONTb&#39;</span><span class="p">,</span><span class="s">&#39;AKGDH&#39;</span><span class="p">,</span><span class="s">&#39;CS&#39;</span><span class="p">,</span><span class="s">&#39;FUM&#39;</span><span class="p">,</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">,</span><span class="s">&#39;MDH&#39;</span><span class="p">,</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
+<span class="n">gly</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ENO&#39;</span><span class="p">,</span><span class="s">&#39;FBA&#39;</span><span class="p">,</span><span class="s">&#39;FBP&#39;</span><span class="p">,</span><span class="s">&#39;GAPD&#39;</span><span class="p">,</span><span class="s">&#39;PDH&#39;</span><span class="p">,</span><span class="s">&#39;PFK&#39;</span><span class="p">,</span><span class="s">&#39;PGI&#39;</span><span class="p">,</span><span class="s">&#39;PGK&#39;</span><span class="p">,</span><span class="s">&#39;PGM&#39;</span><span class="p">,</span><span class="s">&#39;PPS&#39;</span><span class="p">,</span><span class="s">&#39;PYK&#39;</span><span class="p">,</span><span class="s">&#39;TPI&#39;</span><span class="p">};</span>
+<span class="n">ppp</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;G6PDH2r&#39;</span><span class="p">,</span><span class="s">&#39;GND&#39;</span><span class="p">,</span><span class="s">&#39;PGL&#39;</span><span class="p">,</span><span class="s">&#39;RPE&#39;</span><span class="p">,</span><span class="s">&#39;RPI&#39;</span><span class="p">,</span><span class="s">&#39;TALA&#39;</span><span class="p">,</span><span class="s">&#39;TKT1&#39;</span><span class="p">,</span><span class="s">&#39;TKT2&#39;</span><span class="p">};</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="nb">cat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">tca</span><span class="p">,</span><span class="n">gly</span><span class="p">,</span><span class="n">ppp</span><span class="p">);</span>
+<span class="c">%Plot only desired reactions</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">dat</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shelve-secondary-metabolites-on-load">
+<h2>5. Shelve secondary metabolites on load<a class="headerlink" href="#shelve-secondary-metabolites-on-load" title="Permalink to this headline">¶</a></h2>
+<p>In order to shelve secondary metabolites upon rendering the model, define the <code class="code docutils literal notranslate"><span class="pre">secondaries</span></code> input to the plot function. If this argument is defined, any metabolite, matching any of the defined regular expressions, will be shelved. These metabolites can be returned to the graph using the floating menu window.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Get reactions to plot</span>
+<span class="n">tca</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">,</span><span class="s">&#39;ACONTb&#39;</span><span class="p">,</span><span class="s">&#39;AKGDH&#39;</span><span class="p">,</span><span class="s">&#39;CS&#39;</span><span class="p">,</span><span class="s">&#39;FUM&#39;</span><span class="p">,</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">,</span><span class="s">&#39;MDH&#39;</span><span class="p">,</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
+<span class="n">gly</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ENO&#39;</span><span class="p">,</span><span class="s">&#39;FBA&#39;</span><span class="p">,</span><span class="s">&#39;FBP&#39;</span><span class="p">,</span><span class="s">&#39;GAPD&#39;</span><span class="p">,</span><span class="s">&#39;PDH&#39;</span><span class="p">,</span><span class="s">&#39;PFK&#39;</span><span class="p">,</span><span class="s">&#39;PGI&#39;</span><span class="p">,</span><span class="s">&#39;PGK&#39;</span><span class="p">,</span><span class="s">&#39;PGM&#39;</span><span class="p">,</span><span class="s">&#39;PPS&#39;</span><span class="p">,</span><span class="s">&#39;PYK&#39;</span><span class="p">,</span><span class="s">&#39;TPI&#39;</span><span class="p">};</span>
+<span class="n">ppp</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;G6PDH2r&#39;</span><span class="p">,</span><span class="s">&#39;GND&#39;</span><span class="p">,</span><span class="s">&#39;PGL&#39;</span><span class="p">,</span><span class="s">&#39;RPE&#39;</span><span class="p">,</span><span class="s">&#39;RPI&#39;</span><span class="p">,</span><span class="s">&#39;TALA&#39;</span><span class="p">,</span><span class="s">&#39;TKT1&#39;</span><span class="p">,</span><span class="s">&#39;TKT2&#39;</span><span class="p">};</span>
+<span class="n">dat</span> <span class="p">=</span> <span class="nb">cat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">tca</span><span class="p">,</span><span class="n">gly</span><span class="p">,</span><span class="n">ppp</span><span class="p">);</span>
+<span class="c">%Define secondaries</span>
+<span class="n">secondaries</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;^h\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^h2o\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^o2\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^co2\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^atp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^adp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^pi\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^nadh\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadph\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nad\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadp\[.\]$&#39;</span><span class="p">};</span>
+<span class="c">%Plot only desired reactions</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">dat</span><span class="p">,[],</span><span class="n">secondaries</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-multiple-user-defined-subgraphs">
+<h2>6. Plot multiple user-defined subgraphs<a class="headerlink" href="#plot-multiple-user-defined-subgraphs" title="Permalink to this headline">¶</a></h2>
+<p>Users can also plot multiple subgraphs with their defined reactions. To do so, define the Parser structured array for each subgraph:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Get reactions to plot</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;TCA Cycle&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">;</span><span class="s">&#39;ACONTb&#39;</span><span class="p">;</span><span class="s">&#39;AKGDH&#39;</span><span class="p">;</span><span class="s">&#39;CS&#39;</span><span class="p">;</span><span class="s">&#39;FUM&#39;</span><span class="p">;</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">;</span><span class="s">&#39;MDH&#39;</span><span class="p">;</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Glycolysis&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ENO&#39;</span><span class="p">;</span><span class="s">&#39;FBA&#39;</span><span class="p">;</span><span class="s">&#39;FBP&#39;</span><span class="p">;</span><span class="s">&#39;GAPD&#39;</span><span class="p">;</span><span class="s">&#39;PDH&#39;</span><span class="p">;</span><span class="s">&#39;PFK&#39;</span><span class="p">;</span><span class="s">&#39;PGI&#39;</span><span class="p">;</span><span class="s">&#39;PGK&#39;</span><span class="p">;</span><span class="s">&#39;PGM&#39;</span><span class="p">;</span><span class="s">&#39;PPS&#39;</span><span class="p">;</span><span class="s">&#39;PYK&#39;</span><span class="p">;</span><span class="s">&#39;TPI&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Pentose Phosphate Pathway&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;G6PDH2r&#39;</span><span class="p">;</span><span class="s">&#39;GND&#39;</span><span class="p">;</span><span class="s">&#39;PGL&#39;</span><span class="p">;</span><span class="s">&#39;RPE&#39;</span><span class="p">;</span><span class="s">&#39;RPI&#39;</span><span class="p">;</span><span class="s">&#39;TALA&#39;</span><span class="p">;</span><span class="s">&#39;TKT1&#39;</span><span class="p">;</span><span class="s">&#39;TKT2&#39;</span><span class="p">};</span>
+<span class="c">%Plot only desired reactions</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">dat</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-mapping">
+<h2>7-8. Data mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="7">
+<li>Add data to plotted subgraphs. In this example we are generating random data and mapping it onto the desired reactions. Using the Parser structured array users can directly map data as reaction colors:</li>
+</ol>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Get reactions to plot</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;TCA Cycle&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ACONTa&#39;</span><span class="p">;</span><span class="s">&#39;ACONTb&#39;</span><span class="p">;</span><span class="s">&#39;AKGDH&#39;</span><span class="p">;</span><span class="s">&#39;CS&#39;</span><span class="p">;</span><span class="s">&#39;FUM&#39;</span><span class="p">;</span><span class="s">&#39;ICDHyr&#39;</span><span class="p">;</span><span class="s">&#39;MDH&#39;</span><span class="p">;</span><span class="s">&#39;SUCOAS&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Glycolysis&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;ENO&#39;</span><span class="p">;</span><span class="s">&#39;FBA&#39;</span><span class="p">;</span><span class="s">&#39;FBP&#39;</span><span class="p">;</span><span class="s">&#39;GAPD&#39;</span><span class="p">;</span><span class="s">&#39;PDH&#39;</span><span class="p">;</span><span class="s">&#39;PFK&#39;</span><span class="p">;</span><span class="s">&#39;PGI&#39;</span><span class="p">;</span><span class="s">&#39;PGK&#39;</span><span class="p">;</span><span class="s">&#39;PGM&#39;</span><span class="p">;</span><span class="s">&#39;PPS&#39;</span><span class="p">;</span><span class="s">&#39;PYK&#39;</span><span class="p">;</span><span class="s">&#39;TPI&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#39;Pentose Phosphate Pathway&#39;</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;G6PDH2r&#39;</span><span class="p">;</span><span class="s">&#39;GND&#39;</span><span class="p">;</span><span class="s">&#39;PGL&#39;</span><span class="p">;</span><span class="s">&#39;RPE&#39;</span><span class="p">;</span><span class="s">&#39;RPI&#39;</span><span class="p">;</span><span class="s">&#39;TALA&#39;</span><span class="p">;</span><span class="s">&#39;TKT1&#39;</span><span class="p">;</span><span class="s">&#39;TKT2&#39;</span><span class="p">};</span>
+<span class="c">%Add random flux</span>
+<span class="k">for</span> <span class="nb">i</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">;</span> <span class="n">dat</span><span class="p">(</span><span class="nb">i</span><span class="p">).</span><span class="n">flux</span> <span class="p">=</span> <span class="nb">randn</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">dat</span><span class="p">(</span><span class="nb">i</span><span class="p">).</span><span class="n">rxns</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span> <span class="k">end</span>
+<span class="c">%Plot only desired reactions</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">dat</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li>Alternatively, users can map data onto the map using the Data structured array. The following example maps five sets of random data, each in a different way, with five conditions each.</li>
+</ol>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Define number of conditions</span>
+<span class="n">n</span> <span class="p">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="c">%Make reaction table with random data</span>
+<span class="n">rxntbl</span> <span class="p">=</span> <span class="nb">randn</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">),</span><span class="n">n</span><span class="p">);</span>
+<span class="n">rxntbl</span><span class="p">(</span><span class="n">randsample</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="nb">floor</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)))</span> <span class="p">=</span> <span class="n">NaN</span><span class="p">;</span>
+<span class="n">rxntbl</span> <span class="p">=</span> <span class="n">array2table</span><span class="p">(</span><span class="n">rxntbl</span><span class="p">,</span><span class="s">&#39;VariableNames&#39;</span><span class="p">,</span><span class="n">sprintfc</span><span class="p">(</span><span class="s">&#39;condition_%d&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">),</span><span class="c">...</span>
+    <span class="s">&#39;RowNames&#39;</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">);</span>
+<span class="c">%Make metabolites table with random data</span>
+<span class="n">mettbl</span> <span class="p">=</span> <span class="nb">randn</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">),</span><span class="n">n</span><span class="p">);</span>
+<span class="n">mettbl</span><span class="p">(</span><span class="n">randsample</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="nb">floor</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">))))</span> <span class="p">=</span> <span class="n">NaN</span><span class="p">;</span>
+<span class="n">mettbl</span> <span class="p">=</span> <span class="n">array2table</span><span class="p">(</span><span class="n">mettbl</span><span class="p">,</span><span class="s">&#39;VariableNames&#39;</span><span class="p">,</span><span class="n">sprintfc</span><span class="p">(</span><span class="s">&#39;condition_%d&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">),</span><span class="c">...</span>
+    <span class="s">&#39;RowNames&#39;</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">);</span>
+<span class="c">%Make struct</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;color&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;size&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;mets&#39;</span> <span class="s">&#39;color&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">mettbl</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;mets&#39;</span> <span class="s">&#39;size&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">mettbl</span><span class="p">;</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;links&#39;</span> <span class="s">&#39;size&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
+<span class="c">%Define secondaries</span>
+<span class="n">secondaries</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;^h\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^h20\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^o2\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^co2\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^atp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^adp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^pi\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^nadh\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadph\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nad\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadp\[.\]$&#39;</span><span class="p">};</span>
+<span class="c">%Plot dividing up by subsystems</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;subSystems&#39;</span><span class="p">,</span><span class="n">dat</span><span class="p">,</span><span class="n">secondaries</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-map-upon-load">
+<h2>9. Change map upon load<a class="headerlink" href="#change-map-upon-load" title="Permalink to this headline">¶</a></h2>
+<p>SAMMI options also allow users to change visualization parameters upon loading the model. This can be done by adding JavaScript code to the end of the visualization. To use this advanced feature users need to be familiar with JavaScript and need to familiarize themselves with the SAMMI visualization html layout. The following code loads the previous map, changes the visualization to the Citric Acid Cycle subgraph, and changes the colorscale upon loading.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Define number of conditions</span>
+<span class="n">n</span> <span class="p">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="c">%Make reaction table with random data</span>
+<span class="n">rxntbl</span> <span class="p">=</span> <span class="nb">randn</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">),</span><span class="n">n</span><span class="p">);</span>
+<span class="n">rxntbl</span><span class="p">(</span><span class="n">randsample</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="nb">floor</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)))</span> <span class="p">=</span> <span class="n">NaN</span><span class="p">;</span>
+<span class="n">rxntbl</span> <span class="p">=</span> <span class="n">array2table</span><span class="p">(</span><span class="n">rxntbl</span><span class="p">,</span><span class="s">&#39;VariableNames&#39;</span><span class="p">,</span><span class="n">sprintfc</span><span class="p">(</span><span class="s">&#39;condition_%d&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">),</span><span class="c">...</span>
+    <span class="s">&#39;RowNames&#39;</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">);</span>
+<span class="c">%Make struct</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">type</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;rxns&#39;</span> <span class="s">&#39;color&#39;</span><span class="p">};</span>
+<span class="n">dat</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">data</span> <span class="p">=</span> <span class="n">rxntbl</span><span class="p">;</span>
+<span class="c">%Define secondaries</span>
+<span class="n">secondaries</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;^h\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^h20\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^o2\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^co2\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^atp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^adp\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^pi\[.\]$&#39;</span><span class="p">,</span><span class="c">...</span>
+    <span class="s">&#39;^nadh\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadph\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nad\[.\]$&#39;</span><span class="p">,</span><span class="s">&#39;^nadp\[.\]$&#39;</span><span class="p">};</span>
+<span class="c">%Define Javascript code</span>
+<span class="n">jscode</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#39;x = document.getElementById(&quot;onloadf1&quot;);&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;x.value = &quot;Citric Acid Cycle&quot;;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;onLoadSwitch(x);&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementById(&quot;fluxmin&quot;).valueAsNumber = -0.1;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementById(&quot;fluxmax&quot;).valueAsNumber = 0.1;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;fluxmin = -0.1; fluxmax = 0.1;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementById(&quot;edgemin&quot;).value = &quot;#ff0000&quot;;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementById(&quot;edgemax&quot;).value = &quot;#0000ff&quot;;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementById(&quot;addrxnbreak&quot;).click();&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementsByClassName(&quot;rxnbreakval&quot;)[0].value = 0;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;document.getElementsByClassName(&quot;rxnbreakcol&quot;)[0].value = &quot;#c0c0c0&quot;;&#39;</span> <span class="c">...</span>
+    <span class="s">&#39;defineFluxColorVectors();&#39;</span><span class="p">];</span>
+<span class="c">%Define options</span>
+<span class="n">options</span><span class="p">.</span><span class="n">jscode</span> <span class="p">=</span> <span class="n">jscode</span><span class="p">;</span>
+<span class="c">%Plot dividing up by subsystems</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;subSystems&#39;</span><span class="p">,</span><span class="n">dat</span><span class="p">,</span><span class="n">secondaries</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="load-existing-map">
+<h2>10. Load Existing Map<a class="headerlink" href="#load-existing-map" title="Permalink to this headline">¶</a></h2>
+<p>SAMMI makes it easy for users to share curated maps through the SAMMI Json export. To load existing maps, pass the file path to the <code class="code docutils literal notranslate"><span class="pre">parser</span></code> argument. The following example load a map included with the SAMMIM folder:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/ecoli_core_model.mat&#39;</span><span class="p">])</span>
+<span class="c">%Define zooming option</span>
+<span class="n">options</span><span class="p">.</span><span class="n">jscode</span> <span class="p">=</span> <span class="s">&#39;zoom.transform(gMain, d3.zoomIdentity.translate(-1149,-863).scale(2.64));&#39;</span><span class="p">;</span>
+<span class="c">%Load existing model</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,[</span><span class="n">sammipath</span> <span class="s">&#39;\demo.json&#39;</span><span class="p">],[],[],</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-iii-pathways">
+<h2>11. Type-III Pathways<a class="headerlink" href="#type-iii-pathways" title="Permalink to this headline">¶</a></h2>
+<p>Type-III pathways are thermodynamically infeasible, flux-balanced distributions that do not include exchange reactions. In this example we use SAMMI to visualize type-III pathways in the iJO1366 model. We first block all exchange reactions, then perform FVA to determine which reactions remain active. We then loop through the active reactions using FBA to determine loops where they are active.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Load and tailor model</span>
+<span class="n">load</span><span class="p">([</span><span class="n">CBTDIR</span> <span class="s">&#39;/test/models/mat/iJO1366.mat&#39;</span><span class="p">])</span>
+<span class="n">model</span> <span class="p">=</span> <span class="n">iJO1366</span><span class="p">;</span>
+<span class="n">model</span> <span class="p">=</span> <span class="n">changeRxnBounds</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">(</span><span class="n">findExcRxns</span><span class="p">(</span><span class="n">model</span><span class="p">)),</span><span class="mi">0</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<span class="n">model</span> <span class="p">=</span> <span class="n">changeRxnBounds</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;ATPM&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&#39;l&#39;</span><span class="p">);</span>
+<span class="n">model</span><span class="p">.</span><span class="n">csense</span> <span class="p">=</span> <span class="nb">repmat</span><span class="p">(</span><span class="s">&#39;E&#39;</span><span class="p">,</span><span class="nb">length</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">mets</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">model</span><span class="p">.</span><span class="n">c</span> <span class="p">=</span> <span class="n">model</span><span class="p">.</span><span class="n">c</span><span class="o">*</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c">%Do FVA</span>
+<span class="p">[</span><span class="n">fluxmin</span><span class="p">,</span><span class="n">fluxmax</span><span class="p">]</span> <span class="p">=</span> <span class="n">fastFVA</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="c">%Clear numerical error</span>
+<span class="n">fluxmax</span><span class="p">(</span><span class="n">fluxmax</span> <span class="o">&lt;</span> <span class="mf">1e-7</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">fluxmin</span><span class="p">(</span><span class="n">fluxmin</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">1e-7</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c">%Parse</span>
+<span class="n">count</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="c">%For each positive flux</span>
+<span class="k">for</span> <span class="n">id</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">fluxmax</span><span class="p">)</span><span class="o">&#39;</span>
+    <span class="c">%Set as objective</span>
+    <span class="n">model</span> <span class="p">=</span> <span class="n">changeObjective</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">{</span><span class="n">id</span><span class="p">},</span><span class="mi">1</span><span class="p">);</span>
+    <span class="c">%Calculate fluxes</span>
+    <span class="n">flux</span> <span class="p">=</span> <span class="n">optimizeCbModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;max&#39;</span><span class="p">,</span><span class="s">&#39;one&#39;</span><span class="p">);</span>
+    <span class="c">%Clear numerical error</span>
+    <span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-7</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c">%Save results for plot</span>
+    <span class="n">count</span> <span class="p">=</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">ind</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="n">num2str</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">(</span><span class="n">ind</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">flux</span> <span class="p">=</span> <span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">ind</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="c">%For each negative flux</span>
+<span class="k">for</span> <span class="n">id</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">fluxmin</span><span class="p">)</span><span class="o">&#39;</span>
+    <span class="c">%Set as objective</span>
+    <span class="n">model</span> <span class="p">=</span> <span class="n">changeObjective</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">{</span><span class="n">id</span><span class="p">},</span><span class="mi">1</span><span class="p">);</span>
+    <span class="c">%Calculate fluxes</span>
+    <span class="n">flux</span> <span class="p">=</span> <span class="n">optimizeCbModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;min&#39;</span><span class="p">,</span><span class="s">&#39;one&#39;</span><span class="p">);</span>
+    <span class="c">%Clear numerical error</span>
+    <span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-7</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c">%Save results for plot</span>
+    <span class="n">count</span> <span class="p">=</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">ind</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">name</span> <span class="p">=</span> <span class="n">num2str</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">rxns</span> <span class="p">=</span> <span class="n">model</span><span class="p">.</span><span class="n">rxns</span><span class="p">(</span><span class="n">ind</span><span class="p">);</span>
+    <span class="n">dat</span><span class="p">(</span><span class="n">count</span><span class="p">).</span><span class="n">flux</span> <span class="p">=</span> <span class="n">flux</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="n">ind</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="c">%Plot</span>
+<span class="n">sammi</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="functions.html" class="btn btn-neutral" title="Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Andre Schultz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

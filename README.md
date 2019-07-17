@@ -1,5 +1,7 @@
 # SAMMI
-The Semi-Automated Metabolic Map Illustrator (SAMMI) is a tool for the visualization of metabolic networks. You can acces SAMMI at [www.sammitool.com](https://www.sammitool.com). You can also view the documentation [here](https://sammi.readthedocs.io/en/latest/index.html)
+The Semi-Automated Metabolic Map Illustrator (SAMMI) is a tool for the visualization of metabolic networks. You can access SAMMI at [www.sammitool.com](https://www.sammitool.com) and you can view the documentation [here](https://sammi.readthedocs.io/en/latest/index.html).
+
+SAMMI has also been extended to MATLAB through the SAMMIM plugin, available [here](https://sammim.readthedocs.io/en/latest/index.html), and to Python through the SAMMIpy plugin, available [here](https://sammipy.readthedocs.io/en/latest/index.html).
 
 # License
 SAMMI is a tool for visualization of metabolic networks

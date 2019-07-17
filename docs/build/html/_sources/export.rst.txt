@@ -1,4 +1,4 @@
-COBRA Exports
+COBRA Compatibility
 =======================================
 
 The COnstraint-Based Reconstruction and Analysis (COBRA) toolbox is one of the most popular toolboxes for modeling metabolic networks. COBRA has been developed for MATLAB (`Heirendt et. al.
@@ -7,10 +7,18 @@ The COnstraint-Based Reconstruction and Analysis (COBRA) toolbox is one of the m
 <https://www.ncbi.nlm.nih.gov/pubmed/28453682>`_) programming languages, all of which can be accessed through `this link
 <https://opencobra.github.io/.>`_.
 
-The MATLAB and Python versions of COBRA offer tools for exporting metabolic models in versions compatible with SAMMI. In this section we cover these options and offer alternative scripts to do so. Support for Julia will be added once the toolbox is made compatible with Julia 1.0. It is worth noting that all of these options export models in version that should first be loaded as SBML models, not SAMMI specific formats (e.g. using the "Load Single Model" or "Load Model to Parse" options in the SAMMI home page).
+SAMMI users can visualize metabolic models directly from the MATLAB and Python command line using the `SAMMIM
+<https://sammim.readthedocs.io/en/latest/index.html>`_ and `SAMMIpy
+<https://sammipy.readthedocs.io/en/latest/index.html>`_ plugins respectively. Please refer to the documentation of each of these tools for more information.
+
+The MATLAB and Python versions of COBRA also offer tools for exporting metabolic models in versions compatible with SAMMI. In this section we cover these options and offer alternative scripts to do so for users who wish to use the standalone version of SAMMI at `www.sammitool.com
+<http://www.sammitool.com>`_. It is worth noting that all of these options export models in version that should first be loaded as SBML models, not SAMMI specific formats (e.g. using the "Load Single Model" or "Load Model to Parse" options in the SAMMI home page).
 
 MATLAB
 -----------------
+
+To visualize maps directly from MATLAB please refer to the `SAMMIM
+<https://sammim.readthedocs.io/en/latest/index.html>`_ plugin.
 
 MATLAB COBRA models are defined by a struct variable. The COBRA toolbox offers the function ``writeCbModel`` to export models in a variety of formats. Files can be exported in the SBML format for SAMMI compatibility:
 
@@ -41,6 +49,9 @@ You can test the given function with following bit of code that will generate th
 
 Python
 -----------------
+
+To visualize models directly from Python please refer to the `SAMMIpy
+<https://sammipy.readthedocs.io/en/latest/index.html>`_ plugin.
 
 Metabolic models is COBRApy are defined by a toolbox specific ``cobra.DictList`` class variable. COBRApy offers the function ``save_json_model`` that exports models to a SAMMI compatible JSON file with the function call:
 

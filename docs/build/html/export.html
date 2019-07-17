@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>COBRA Exports &mdash; SAMMI 0.0.1 documentation</title>
+  <title>COBRA Compatibility &mdash; SAMMI 0.0.1 documentation</title>
   
 
   
@@ -92,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="floating.html">Floating Menu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Keyboard Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="format.html">SAMMI Map Format</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">COBRA Exports</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">COBRA Compatibility</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#matlab">MATLAB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
 </ul>
@@ -145,7 +145,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>COBRA Exports</li>
+      <li>COBRA Compatibility</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,12 +164,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="cobra-exports">
-<h1>COBRA Exports<a class="headerlink" href="#cobra-exports" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="cobra-compatibility">
+<h1>COBRA Compatibility<a class="headerlink" href="#cobra-compatibility" title="Permalink to this headline">¶</a></h1>
 <p>The COnstraint-Based Reconstruction and Analysis (COBRA) toolbox is one of the most popular toolboxes for modeling metabolic networks. COBRA has been developed for MATLAB (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30787451">Heirendt et. al.</a>), Python (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23927696">Ebrahim et. al.</a>) and Julia (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28453682">Heirendt et. al. (b)</a>) programming languages, all of which can be accessed through <a class="reference external" href="https://opencobra.github.io/.">this link</a>.</p>
-<p>The MATLAB and Python versions of COBRA offer tools for exporting metabolic models in versions compatible with SAMMI. In this section we cover these options and offer alternative scripts to do so. Support for Julia will be added once the toolbox is made compatible with Julia 1.0. It is worth noting that all of these options export models in version that should first be loaded as SBML models, not SAMMI specific formats (e.g. using the “Load Single Model” or “Load Model to Parse” options in the SAMMI home page).</p>
+<p>SAMMI users can visualize metabolic models directly from the MATLAB and Python command line using the <a class="reference external" href="https://sammim.readthedocs.io/en/latest/index.html">SAMMIM</a> and <a class="reference external" href="https://sammipy.readthedocs.io/en/latest/index.html">SAMMIpy</a> plugins respectively. Please refer to the documentation of each of these tools for more information.</p>
+<p>The MATLAB and Python versions of COBRA also offer tools for exporting metabolic models in versions compatible with SAMMI. In this section we cover these options and offer alternative scripts to do so for users who wish to use the standalone version of SAMMI at <a class="reference external" href="http://www.sammitool.com">www.sammitool.com</a>. It is worth noting that all of these options export models in version that should first be loaded as SBML models, not SAMMI specific formats (e.g. using the “Load Single Model” or “Load Model to Parse” options in the SAMMI home page).</p>
 <div class="section" id="matlab">
 <h2>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
+<p>To visualize maps directly from MATLAB please refer to the <a class="reference external" href="https://sammim.readthedocs.io/en/latest/index.html">SAMMIM</a> plugin.</p>
 <p>MATLAB COBRA models are defined by a struct variable. The COBRA toolbox offers the function <code class="docutils literal notranslate"><span class="pre">writeCbModel</span></code> to export models in a variety of formats. Files can be exported in the SBML format for SAMMI compatibility:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">writeCbModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s">&#39;format&#39;</span><span class="p">,</span><span class="s">&#39;sbml&#39;</span><span class="p">)</span>
 </pre></div>
@@ -192,6 +194,7 @@
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>To visualize models directly from Python please refer to the <a class="reference external" href="https://sammipy.readthedocs.io/en/latest/index.html">SAMMIpy</a> plugin.</p>
 <p>Metabolic models is COBRApy are defined by a toolbox specific <code class="docutils literal notranslate"><span class="pre">cobra.DictList</span></code> class variable. COBRApy offers the function <code class="docutils literal notranslate"><span class="pre">save_json_model</span></code> that exports models to a SAMMI compatible JSON file with the function call:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cobra</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">save_json_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;test.json&quot;</span><span class="p">)</span>
 </pre></div>
