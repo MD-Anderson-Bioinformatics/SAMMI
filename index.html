@@ -74,6 +74,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
                     <button class="topmenubtn" onclick='removeData("metsizescroll")'>Remove</button><br/>
                     <button class="topmenubtn" onclick='loadWrapper("fileinputwidth")'>Load Link Width Data</button>
                     <button class="topmenubtn" onclick='removeData("widthscroll")'>Remove</button><br/>
+                    <button class="topmenubtn" onclick='loadGeneData()'>Load Gene Data</button><br/><br/>
                     <button class="topmenubtn" onclick='loadWrapper("fileinputsecondary")'>Load Metabolites to Shelve</button><br/>
                     <button class="topmenubtn" onclick='shelveStandard()'>Shelve Standard Metabolites</button><br/>
 
@@ -206,6 +207,19 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
                             <option>Both Ways</option>
                             <option>Diamond Arrowheads</option>
                         </select>
+
+                        <h3>Node Shape</h3>
+                        <select id="rxnshape" onchange="reDefineSimulation()">
+                            <option value="rect" selected="selected">Square</option>
+                            <option value="circle">Circle</option>
+                        </select>
+                        - Reaction Nodes<br/>
+                        <select id="metshape" onchange="reDefineSimulation()">
+                            <option value="rect">Square</option>
+                            <option value="circle" selected="selected">Circle</option>
+                        </select>
+                        - Metabolite Nodes
+
                 </div>
             </div>
             <!-- <div class="dropdown">
@@ -315,6 +329,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
             <div class="wrapper">
             <button onclick="groupNodes()" class="menubutton">Group Nodes</button>
             <button onclick="unGroupNodes()" class="menubutton">Ungroup Nodes</button>
+            <button onclick="collapse()" class="menubutton">Collapse</button>
             </div>
 
             <div class="wrapper">
@@ -396,10 +411,10 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
         //document.getElementById("savePNG").addEventListener('click', savePNG);    
 
         //setTimeout(function(){document.getElementById("dialog").style = "display:none;"},100)
-        setTimeout(function(){defineFluxColorVectors()},1000)
-        setTimeout(function(){defineFluxColorBar()},2000)
-        setTimeout(function(){defineMetColorVectors()},1000)
-        setTimeout(function(){defineMetColorBar()},2000)
+        setTimeout(function(){defineFluxColorVectors()},500)
+        setTimeout(function(){defineFluxColorBar()},1000)
+        setTimeout(function(){defineMetColorVectors()},500)
+        setTimeout(function(){defineMetColorBar()},1000)
 
         //Background Drag
         var dialogxy = [0,0];
@@ -432,6 +447,8 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
 
         //Define selecteddocument.getElementById("onloadf1top")
         document.getElementById("onloadf1top").selectedIndex=0;
+
+        //setTimeout(function(){loadDemo()},2000)
 
     </script>
 </body>

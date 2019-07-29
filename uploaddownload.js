@@ -267,7 +267,7 @@ function receivedJSON(e) {
     loadInitialGraph()
     reDefineSimulation()
 }
-var tmp;
+
 function loadFile() {
 
     if (gMain) {
@@ -1361,7 +1361,95 @@ function loadFileFlux() {
         fr.onload = receivedTextFlux;
         fr.readAsText(file);
 }
+function loadFileGene() {
+    var input, file, fr;
+    input = document.getElementById('fileinputgene');
+        file = input.files[0];
+        fr = new FileReader();
+        fr.onload = receivedTextGene;
+        fr.readAsText(file);
+}
+var tmp;
+function receivedTextGene(e) {
+    e = e.target.result.split(/\r\n|\r|\n/);
+    //Gell all reactions and genes
+    allrx = [];
+    allgr = [];
+    //Get gene-reaction rule field
+    grr = document.getElementById("gexfield").value;
+    //get characters to remove
+    grrem = document.getElementById("gexrem").value;
+    grrem = '(' + grrem.replace(/;/g,')|(') + ')'
+    var grrem = new RegExp(grrem,'g');
+    //get characters to split
+    grspl = document.getElementById("gexsplit").value;
+    grspl = '[' + grspl.replace(/;/g,',') + ']'
+    var grspl = new RegExp(grspl,'i');
+    //parse
+    for (var g in parsedmodels) {
+        for (n in parsedmodels[g].nodes) { 
+            d = parsedmodels[g].nodes[n];
+            if (d.group == 2) {continue;}
+            if (allrx.indexOf(d.id) == -1){
+                allrx.push(d.id)
+                tmp = d[grr]
+                tmp = tmp.replace(grrem,'')
+                tmp = tmp.split(grspl)
+                for (var i = tmp.length - 1; i >= 0; i--) {
+                    if (tmp[i] == "") {tmp.splice(i,1); continue}
+                    tmp[i] = tmp[i].trim()
+                }
+                allgr.push(tmp.filter(onlyUnique))
+            }
+        }
+    }
+    //make gex object
+    gex = {};
+    for (var i = 1; i < e.length; i++) {
+        tmp = e[i].split('\t')
+        if(tmp.length == 1) {continue}
+        tmp = tmp.map(function(d,i){if(i == 0){return d}else{return Number(d)}})
+        lab = tmp.shift();
+        gex[lab] = tmp;
+    }
+    n = gex[Object.keys(gex)[1]].length
 
+    //Map to reaction values
+    tmp = e[0];
+    for (var i = 0; i < allrx.length; i++) {
+        if (allgr[i].length == 0) {continue}
+        var z = [];
+        for (var j = 0; j < n; j++){z.push([])};
+        allgr[i].map(function(d){if (d in gex) {gex[d].map(function(l,j){z[j].push(l)})}})
+        
+        mapfun = document.getElementById('gexmap').value;
+        if (mapfun == "Max") {
+            z = z.map(function(d){return Math.max(...d)})
+        } else if (mapfun == "Min") {
+            z = z.map(function(d){return Math.min(...d)})
+        } else if (mapfun == "Mean") {
+            z = z.map(function(d){
+                sum = d.reduce(function(a, b) { return a + b; });
+                return sum / d.length;
+            })
+        } else if (mapfun == "Median") {
+            z = z.map(function(d){
+                d = d.sort()
+                if (d.length % 2 == 1) {
+                    return d[d.length/2 - 0.5]
+                } else {
+                    return (d[d.length/2] + d[d.length/2 -1])/2
+                }
+            })
+        }
+        tmp = tmp + '\n' + allrx[i] + '\t' + z.join('\t')
+    }
+    var e = {};
+    e.target = {};
+    e.target.result = tmp;
+    receivedTextFlux(e)
+    closeEdit()
+}
 function downloadEscher() {
     var escher1 = {
         map_name: "new_map",

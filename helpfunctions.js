@@ -567,8 +567,7 @@ function getSearchNodes(e,nodeid) {
 
         //If it is present on other subgraphs
         if (Object.keys(parsedmodels).length == 1) {return;}
-        wd = document.getElementById("dialog2");
-        while (wd.hasChildNodes()) {wd.children[0].remove()}
+        wd = openEdit()
 
         var sgs = [],
         ct = [];
@@ -935,9 +934,9 @@ function reDefineSimulationParameters() {
 
     nodedegree()
 
-    node.attr("r", function(d){
-        return d.r;
-    })
+    circlenode.attr("r", function(d){return d.r;})
+    rectnode.attr("width", function(d){return 2*d.r;})
+    rectnode.attr("height", function(d){return 2*d.r;})
 }
 
 function setdisplay() {
@@ -1477,9 +1476,7 @@ function renameNodes() {
 }
 function editNodeProperties(d) {
 
-    wd = document.getElementById("dialog2");
-
-    while (wd.hasChildNodes()) {wd.children[0].remove()}
+    wd = openEdit()
 
     for (j in d) {
         if (noshowedit.indexOf(j) != -1) {continue;}
@@ -1538,19 +1535,6 @@ function editNodeProperties(d) {
         br.style = "line-height:22px;";
         wd.appendChild(br)
     }
-
-    wd.style = "display:block;";
-    document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:block;";
-
-    if (document.getElementsByClassName("ui-dialog-titlebar")[1].childElementCount == 2) {
-        span = document.createElement("span")
-        span.id = "ui-id-2"
-        span.className = "ui-dialog-title"
-        span.innerHTML = "X"
-        span.onclick = function(){closeEdit()}
-        span.style = "cursor: context-menu;position: absolute;right: 10px;"
-        document.getElementsByClassName("ui-dialog-titlebar")[1].appendChild(span)
-    }
 }
 
 function editAttribute(node) {
@@ -1585,6 +1569,26 @@ function editAttribute(node) {
 function closeEdit() {
     document.getElementById("dialog2").style = "display:none;";
     document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:none;";
+}
+function openEdit() {
+    wd = document.getElementById("dialog2");
+
+    while (wd.hasChildNodes()) {wd.children[0].remove()}
+
+    wd.style = "display:block;";
+    document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:block;";
+
+    if (document.getElementsByClassName("ui-dialog-titlebar")[1].childElementCount == 2) {
+        var span = document.createElement("span")
+        span.id = "ui-id-2"
+        span.className = "ui-dialog-title"
+        span.innerHTML = "X"
+        span.onclick = function(){closeEdit()}
+        span.style = "cursor: context-menu;position: absolute;right: 10px;"
+        document.getElementsByClassName("ui-dialog-titlebar")[1].appendChild(span)
+    }
+
+    return wd
 }
 
 function addReactionColorBreak(btn) {
@@ -2040,12 +2044,8 @@ function getPdf() {
             y.appendChild(text)
 
             //Draw Cicles
-            // if (gDraw.attr("transform") == null) {
-            //     pos = 1;
-            // } else {
-                //pos = Number(gDraw.attr("transform").split(/[\\(,\\,,\\)]/g)[4]);
             pos = curtr[2];
-            // }
+
             rs = [minmetsize*Number(document.getElementById("metsizescale").value)*pos,
                 maxmetsize*Number(document.getElementById("metsizescale").value)*pos,
                 minrxnsize*Number(document.getElementById("rxnsizescale").value)*pos,
@@ -2057,10 +2057,15 @@ function getPdf() {
             ys = [rs[0]+sf, 2*rs[0]+rs[1]+sf+10,
                 2*rs[0]+2*rs[1]+rs[2]+sf+20,2*rs[0]+2*rs[1]+2*rs[2]+rs[3]+sf+30]
             for (var i = 0; i < 4; i++) {
-                var circle = document.createElement('circle')
+                if (i <= 1) {shape = document.getElementById("metshape").value} else {shape = document.getElementById("rxnshape").value}
+                var circle = document.createElement(shape)
                 circle.setAttribute("cx",mr+5)
                 circle.setAttribute("cy",ys[i])
+                circle.setAttribute("x",mr+5-rs[i])
+                circle.setAttribute("y",ys[i]-rs[i])
                 circle.setAttribute("r",rs[i])
+                circle.setAttribute("width",2*rs[i])
+                circle.setAttribute("height",2*rs[i])
                 circle.setAttribute("fill","white")
                 circle.setAttribute("stroke","black")
                 circle.setAttribute("stroke-width",4);
@@ -2194,22 +2199,7 @@ function unGroupNodes() {
 
 function joinSubGraphs() {
     if(tracking){trackMet()}
-    wd = document.getElementById("dialog2");
-
-    while (wd.hasChildNodes()) {wd.children[0].remove()}
-
-    wd.style = "display:block;";
-    document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:block;";
-
-    if (document.getElementsByClassName("ui-dialog-titlebar")[1].childElementCount == 2) {
-        var span = document.createElement("span")
-        span.id = "ui-id-2"
-        span.className = "ui-dialog-title"
-        span.innerHTML = "X"
-        span.onclick = function(){closeEdit()}
-        span.style = "cursor: context-menu;position: absolute;right: 10px;"
-        document.getElementsByClassName("ui-dialog-titlebar")[1].appendChild(span)
-    }
+    wd = openEdit()
 
     var a = document.createElement("a")
     a.innerHTML = "Name: ";
@@ -2368,12 +2358,7 @@ function joinSubGraphs2() {
 
 function renameSubgraph() {
     if(tracking){trackMet()}
-    wd = document.getElementById("dialog2");
-
-    while (wd.hasChildNodes()) {wd.children[0].remove()}
-
-    wd.style = "display:block;";
-    document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:block;";
+    wd = openEdit()
 
     input = document.createElement("input")
     input.type = "text";
@@ -3027,8 +3012,14 @@ function loadWrapper(id) {
             loadFileSecondary();
         }
     }
+    else if (id == 'fileinputgene') {
+        input.id = 'fileinputgene';
+        input.onchange = function() {
+            return loadFileGene();
+        }
+    }
     div.appendChild(input);
-    input.click();
+        input.click();
 }
 
 function openDocs(pg) {
@@ -3553,20 +3544,7 @@ function toDataUrl(src, callback, outputFormat) {
 
 shelveStandard = () => {
     //Open dialog
-    wd = document.getElementById("dialog2");
-    while (wd.hasChildNodes()) {wd.children[0].remove()}
-    wd.style = "display:block;";
-    document.getElementsByClassName("ui-dialog-titlebar")[1].style = "display:block;";
-
-    if (document.getElementsByClassName("ui-dialog-titlebar")[1].childElementCount == 2) {
-        span = document.createElement("span")
-        span.id = "ui-id-2"
-        span.className = "ui-dialog-title"
-        span.innerHTML = "X"
-        span.onclick = function(){closeEdit()}
-        span.style = "cursor: context-menu;position: absolute;right: 10px;"
-        document.getElementsByClassName("ui-dialog-titlebar")[1].appendChild(span)
-    }
+    wd = openEdit()
 
     var smet = ["h","h2o","nad","nadh","nadp","nadph","atp","adp","pi","na1","o2","co2",
     "nh4","coa","fad","fadh2","ppi","amp","q10","q10h2","cl","gtp","gdp","dadp","datp"];
@@ -3646,9 +3624,6 @@ shelveStandard3 = () => {
 }
 
 function shelveList(vec) {
-    //e = e.target.result.split(/\r\n|\r|\n/)
-    //e = e.join(')|(?:')
-    //e = '(?:' + e + ')'
 
     var re = new RegExp(vec, "i");
     selected = [];
@@ -3698,6 +3673,7 @@ function shelveList(vec) {
 loadDemo = () => {
     setdisplay()
     $.getJSON("sammidemo.json", function(e) {
+    //$.getJSON("Recon1.json", function(e) {
         var tmp = {"target": {"result": JSON.stringify(e)}};
         receivedTextSammi(tmp);
         zoom.transform(gMain, d3.zoomIdentity.translate(-1149,-863).scale(2.64));
@@ -3716,4 +3692,168 @@ selectConnected = () => {
     })
     reDefineSimulation()
     simulation.alpha(0)
+}
+
+collapse = () => {
+    //Get only selected reactions
+    graph.nodes.filter(function(d){return d.group == 2}).forEach(function(d){d.selected = false})
+    //Select their metabolites
+    selectConnected()
+    //Go through metabolite nodes and get ones to remove
+    torm = [];
+    graph.nodes.filter(function(d){return d.selected && d.group == 2}).forEach(function(n){
+        var vec = graph.links.filter(function(l){return l.source.id == n.id}).map(function(x){return x.target.selected}).concat(
+        graph.links.filter(function(l){return l.target.id == n.id}).map(function(x){return x.source.selected}));
+        if (vec.every(function(n){return n})) {torm.push(n.id)}
+    })
+    //remove links
+    vec = graph.links.filter(function(n){return torm.indexOf(n.source.id) != -1 || torm.indexOf(n.target.id) != -1}).map(function(n){return n.index}).reverse()
+    vec.forEach(function(n){graph.links.splice(n,1)})
+    for (i = 0; i < graph.links.length; i++) {graph.links[i].index = i}
+    //remove nodes
+    vec = graph.nodes.filter(function(d){return torm.indexOf(d.id) != -1}).map(function(d){return d.index}).reverse()
+    vec.forEach(function(n){graph.nodes.splice(n,1)})
+    for (i = 0; i < graph.nodes.length; i++) {graph.nodes[i].index = i}
+    //make new node
+    var newnode = Object.assign(newnodetemp("NewNode" + count,5),{class: "collapsed",group: 1});
+    graph.nodes.push(newnode);
+    newnode = graph.nodes[graph.nodes.length-1];
+    count++;
+    //connect links to new node
+    torm = [];
+    graph.links.forEach(function(n){
+        if (n.source.selected && n.source.group == 1) {
+            if (isConnectedID(newnode,n.target)) {
+                torm.push(n.index)
+            } else {
+                n.source = newnode;
+                redefineLBID()
+            }
+            return;
+        }
+        if (n.target.selected && n.target.group == 1) {
+            if (isConnectedID(newnode,n.source)) {
+                torm.push(n.index)
+            } else {
+                n.target = newnode;
+                redefineLBID()
+            }
+            return;
+        }
+    })
+    //remove repeated ones
+    torm.reverse().forEach(function(n){graph.links.splice(n,1)})
+    for (i = 0; i < graph.links.length; i++) {graph.links[i].index = i}
+    //Remove reactions
+    var tmpx = 0,
+    tmpy = 0,
+    tmp = 0;
+    for (i = graph.nodes.length-1; i >= 0; i--) {
+        if (graph.nodes[i].selected && graph.nodes[i].group == 1) {
+            tmpx += graph.nodes[i].x;
+            tmpy += graph.nodes[i].y;
+            tmp++
+            graph.nodes.splice(i,1);
+        }
+    }
+    for (i = 0; i < graph.nodes.length; i++) {graph.nodes[i].index = 1}
+    newnode.x = tmpx/tmp;
+    newnode.y = tmpy/tmp;
+    //Select
+    graph.nodes.forEach(function(d){d.selected = false})
+    graph.nodes[graph.nodes.length-1].selected = true;
+    selected = [graph.nodes.length-1];
+    //Re-define
+    reDefineSimulation()
+    simulation.alpha(0)
+    editNodeProperties(graph.nodes[selected[0]])
+}
+redefineLBID = () => {
+    linkedByID = {};
+    graph.links.forEach(function(d) {
+    linkedByID[d.source.id + "," + d.target.id] = true;
+    });
+}
+loadGeneData = () => {
+    wd = openEdit()
+    //Field
+    field = document.createElement('input');
+    field.onfocus = function(){typing=true;};
+    field.id = 'gexfield'
+    field.value = 'gene_reaction_rule';
+    a = document.createElement('a');
+    a.text = 'Gene Expression Rule Field:'
+    a.style = "font-weight: bold;"
+    wd.append(a)
+    wd.append(document.createElement('br'))
+    wd.append(field)
+    wd.append(document.createElement('br'))
+    //Split
+    field = document.createElement('input');
+    field.onfocus = function(){typing=true;};
+    field.id = 'gexsplit'
+    field.value = 'and;or';
+    a = document.createElement('a');
+    a.text = 'Regular Expressions to split:'
+    a.style = "font-weight: bold;"
+    wd.append(a)
+    wd.append(document.createElement('br'))
+    wd.append(field)
+    wd.append(document.createElement('br'))
+    //Split
+    field = document.createElement('input');
+    field.onfocus = function(){typing=true;};
+    field.id = 'gexrem'
+    field.value = '_AT[0-9]*;\\(;\\)';
+    a = document.createElement('a');
+    a.text = 'Regular Expressions to remove:'
+    a.style = "font-weight: bold;"
+    wd.append(a)
+    wd.append(document.createElement('br'))
+    wd.append(field)
+    wd.append(document.createElement('br'))
+    //Calculate by
+    a = document.createElement('a');
+    a.text = 'Select mapping function:'
+    a.style = "font-weight: bold;"
+    wd.append(a)
+    wd.append(document.createElement('br'))
+
+    select = document.createElement('select');
+    select.id = 'gexmap';
+
+    option = document.createElement('option');
+    option.value = 'Max';
+    option.innerHTML = 'Max';
+    select.append(option)
+
+    option1 = document.createElement('option');
+    option1.value = 'Min';
+    option1.innerHTML = 'Min';
+    select.append(option1)
+
+    option2 = document.createElement('option');
+    option2.value = 'Mean';
+    option2.innerHTML = 'Mean';
+    select.append(option2)
+
+    option3 = document.createElement('option');
+    option3.value = 'Median';
+    option3.innerHTML = 'Median';
+    select.append(option3)
+    wd.append(select)
+    wd.append(document.createElement('br'))
+    //Run
+    a = document.createElement('a');
+    a.text = 'Map data:'
+    a.style = "font-weight: bold;"
+    wd.append(a)
+    wd.append(document.createElement('br'))
+    button = document.createElement('button');
+    button.innerHTML = 'Map';
+    button.onclick =  () => {loadWrapper("fileinputgene")}
+    wd.append(button)
+    
+
+    //onclick = loadWrapper("fileinputgene")
 }
