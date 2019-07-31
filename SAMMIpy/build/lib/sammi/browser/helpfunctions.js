@@ -2853,7 +2853,7 @@ function drawSizeReference() {
         ht = text.node().getBBox().height+2;
         pos = curtr;
         pos[0]+=2;
-        tr = [(-pos[0]/pos[2])+mr, (-pos[1]/pos[2])+ht+5];
+        tr = [(-pos[0]/pos[2])+mr+5, (-pos[1]/pos[2])+ht+5];
         sminw = minwidth*document.getElementById("widthscale").value;
         smaxw = maxwidth*document.getElementById("widthscale").value;
         mlp = (tr[1]+(2*r1)+(2*r2)+(2*r3)+(2*r4)+22+(2*ht)+(sminw/2))
@@ -2864,26 +2864,46 @@ function drawSizeReference() {
                 {
                     cx: tr[0],
                     cy: tr[1]+r1,
+                    x: tr[0]-r1,
+                    y: tr[1],
                     r: r1,
-                    label: minmetsize
+                    width: 2*r1,
+                    height: 2*r1,
+                    label: minmetsize,
+                    shape: document.getElementById("metshape").value
                 },
                 {
                     cx: tr[0],
                     cy: tr[1]+(2*r1)+r2+3,
+                    x: tr[0] - r2,
+                    y: tr[1]+(2*r1)+3,
                     r: r2,
-                    label: maxmetsize
+                    width: 2*r2,
+                    height: 2*r2,
+                    label: maxmetsize,
+                    shape: document.getElementById("metshape").value
                 },
                 {
                     cx: tr[0],
                     cy: tr[1]+(2*r1)+(2*r2)+r3+10+ht,
+                    y: tr[1]+(2*r1)+(2*r2)+10+ht,
+                    x: tr[0]-r3,
                     r: r3,
-                    label: minrxnsize
+                    width: 2*r3,
+                    height: 2*r3,
+                    label: minrxnsize,
+                    shape: document.getElementById("rxnshape").value
                 },
                 {
                     cx: tr[0],
                     cy: tr[1]+(2*r1)+(2*r2)+(2*r3)+r4+13+ht,
+                    x: tr[0]-r4,
+                    y: tr[1]+(2*r1)+(2*r2)+(2*r3)+13+ht,
                     r: r4,
-                    label: maxrxnsize
+                    width: 2*r4,
+                    height: 2*r4,
+                    label: maxrxnsize,
+                    shape: document.getElementById("rxnshape").value
                 }
             ],
         "links": [
@@ -2920,13 +2940,26 @@ function drawSizeReference() {
                 }
             ]
         }
-
         sscale = gDraw.append('g')
             .attr("id","sscale");
+
         ref = sscale.append("g")
-            .selectAll("circle")
+            .selectAll("#sscale")
             .data(refdata.references)
-            .enter().append("circle")
+            .enter()
+
+        rectref = ref.filter(function(d){return d.shape == "rect"})
+        .append("rect")
+            .attr("x",function(d){return d.x})
+            .attr("y",function(d){return d.y})
+            .attr("width",function(d){return d.width})
+            .attr("height",function(d){return d.height})
+            .attr("fill","white")
+            .attr("stroke","black")
+            .attr("stroke-width",2);
+        
+        circleref = ref.filter(function(d){return d.shape == "circle"})
+        .append("circle")
             .attr("cx", function(d){return d.cx;})
             .attr("cy", function(d){return d.cy;})
             .attr("r", function(d){return d.r;})
