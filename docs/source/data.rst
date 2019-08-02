@@ -53,3 +53,30 @@ The scale of node sizes and edge widths can be defined also under the sizing men
 The third parameter *Size Scale* is a multiplying factor that defines the final node size and edge width. That is, large scale parameters will lead to overall large nodes or thicker edges, while low scale parameters will lead to overall smaller nodes and thinner edges. This allows users to size nodes and edges appropriately independently or the magnitude of the values loaded. These scales are set globally for all data conditions loaded.
 
 The final node size and edge thickness displayed depends on the zoom level of the graph. To load a size reference scale, click on the checkbox *View Size Reference* under the sizing menu. This option will load a reference scale on the top left portion of the graph area which will adjust according to the zoom level.
+
+Mapping Other Types of Omics Data
+=====================================
+
+SAMMI offers the functionality of converting gene or protein expression data into associated reaction data directly within the SAMMi interface. This function can be accessed using the *Load Gene Data* in the *Upload/Download* tab in the top menu. Since gene-reaction rules can be expressed in several different ways between different metabolic models, SAMMI offes a number of different tools to convert gene to reaction data. Once this options is selected the supporting menu window will open with the following options:
+
+- **Gene Expression Rule Field**: This option defines which reaction field is to be used in this data mapping (e.g. grRules).
+- **Regular Expression to Split**: This field defines a series of regular expressions that can be used to split the string in the field defined above into substrings. These regular expressions should be separated by a semicolon.
+- **Regular Expressions to Remove**: This field defines a series of regular expressions that should be removed from the string in the defined field. These should also be separated by semicolons.
+- **Select Mapping Function**: Define the function to be used in mapping the associated gene or protein data.
+
+Once these fields are defined, users can push the **Map** button to select the data file to be mapped. The uploaded file should be similar to the reaction and metabolite tab delimited files, where the top row defines multiple conditions and the first column defines the genes to be mapped. Once the file is loaded a series of steps convert the defined field into a vector of associated gene names. These steps are:
+
+1. Remove any characters or substrings matching any of the regular expressions defined under *Regular Expressions to Remove*.
+2. Split the resulting string in any of the regular expressions defined under *Regular Expression to Split*.
+3. Trim trailing and leading empty spaces.
+4. Take unique elements.
+
+For instance, given the gene-reaction rule *100760573 or (100760573 and 100765276)* from the reaction *MAN1PT* in the iCHOv1 reconstruction(`Hefzi et. al.
+<https://www.ncbi.nlm.nih.gov/pubmed/27883890>`_), this string can be processed as:
+
+1. Defining *"\\(;\\)"* as the expression to remove we can remove the parenthesis leaving *100760573 or 100760573 and 100765276*.
+2. Using *"and;or"* as the splitting expression we can split the string into *[''100760573 '','' 100760573 '','' 100765276'']*.
+3. Trimming extra spaces we get *[''100760573'',''100760573'',''100765276'']*.
+4. And taking unique entries, finally, we get *[''100760573'',''100765276'']*.
+
+Once the final vector of gene entries is obtained, gene names are replaced by uploaded numerical values, genes for which no value was uploaded are removed, and the defined function is used to obtain a final value for the reaction.

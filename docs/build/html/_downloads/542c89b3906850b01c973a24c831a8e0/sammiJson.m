@@ -1,4 +1,14 @@
-function jsonstr = makeSAMMIJson(model)
+% sammiJson(model,fname) writes the given model to a JSON file of name
+% fname. Second parameter is optional with the default value 'SAMMI'json'
+
+function sammiJson(model,fname)
+    %Tailor name
+    if nargin < 1
+        fname = 'SAMMI.json';
+    end
+    if isempty(regexp(fname,'\.json$','match'))
+        fname = [fname '.json'];
+    end
     %Check rxns and mets
     if isrow(model.mets); model.mets = model.mets'; end
     if isrow(model.rxns); model.rxns = model.rxns'; end
@@ -64,6 +74,11 @@ function jsonstr = makeSAMMIJson(model)
     %Join all
     fd = strjoin(fd,',');
     jsonstr = strcat(jsonstr,fd,']}');
+    %Write to file
+    fid = fopen(fname,'w');
+    C = regexp(jsonstr, '.{1,100000}', 'match');
+    fprintf(fid,'%s',C{:});
+    fclose(fid);
 end
 
 function otp = joinmets(s,mets)

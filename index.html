@@ -74,9 +74,11 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
                     <button class="topmenubtn" onclick='removeData("metsizescroll")'>Remove</button><br/>
                     <button class="topmenubtn" onclick='loadWrapper("fileinputwidth")'>Load Link Width Data</button>
                     <button class="topmenubtn" onclick='removeData("widthscroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadGeneData()'>Load Gene Data</button><br/><br/>
+                    <button class="topmenubtn" onclick='loadGeneData()'>Load Gene Data</button>
+
+                    <h3>Secondaries</h3>
                     <button class="topmenubtn" onclick='loadWrapper("fileinputsecondary")'>Load Metabolites to Shelve</button><br/>
-                    <button class="topmenubtn" onclick='shelveStandard()'>Shelve Standard Metabolites</button><br/>
+                    <button class="topmenubtn" onclick='shelveStandard()'>Shelve Standard Metabolites</button>
 
                     <h3>Model Downloads</h3>
                     <button onclick="downloadSammi();" class="topmenubtn">Download SAMMI</button><br/>
@@ -329,7 +331,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
             <div class="wrapper">
             <button onclick="groupNodes()" class="menubutton">Group Nodes</button>
             <button onclick="unGroupNodes()" class="menubutton">Ungroup Nodes</button>
-            <button onclick="collapse()" class="menubutton">Collapse</button>
+            <button onclick="defineBackupGraph(); collapse()" class="menubutton">Collapse</button>
             </div>
 
             <div class="wrapper">

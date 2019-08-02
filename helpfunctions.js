@@ -1621,11 +1621,11 @@ function addReactionColorBreak(btn) {
     //defineFluxColorVectors()
     //defineFluxColorBar()
 }
-function deleteReactionColorBreak(node) {
-    node.previousSibling.previousSibling.remove()
-    node.previousSibling.remove()
-    node.nextSibling.remove()
-    node.remove()
+function deleteReactionColorBreak(tmp) {
+    tmp.previousSibling.previousSibling.remove()
+    tmp.previousSibling.remove()
+    tmp.nextSibling.remove()
+    tmp.remove()
     defineFluxColorVectors()
     defineFluxColorBar()
 }
@@ -1643,21 +1643,16 @@ function defineFluxColorVectors() {
         rxncolor.push(hexToRgb(brks[i].nextSibling.value))
     }
 
-    // var list = [];
-    // for (var j = 0; j < rxncolor.length; j++) {list.push({'val': rxncolorbreaks[j], 'color': rxncolor[j]})};
-    // list.sort(function(a, b) {return ((a.val < b.val) ? -1 : ((a.val == b.val) ? 0 : 1));});
-    // for (var k = 0; k < list.length; k++) {
-    //     rxncolor[k] = list[k].color;
-    //     rxncolorbreaks[k] = list[k].val;
-    // }
     list = sortTwo(rxncolorbreaks,rxncolor)
     rxncolorbreaks = list[0];
     rxncolor = list[1];
-    // if (Object.keys(fluxobj).length > 0) {
-    //     id = fluxobj.ttls.indexOf(document.getElementById("fluxscroll").value);
-    //     fluxobj.rcs[id] = rxncolor;
-    //     fluxobj.rcbs[id] = rxncolorbreaks;
-    // }
+
+    if (document.getElementById("fluxscroll") != null) {
+        id = document.getElementById("fluxscroll").selectedIndex;
+        fluxobj.rcbs[id] = rxncolorbreaks;
+        fluxobj.rcs[id] = rxncolor;
+    }
+
     if (Object.keys(graph).length > 0) {reDefineColors()}
     defineFluxColorBar()
 }
@@ -1744,21 +1739,16 @@ function defineMetColorVectors() {
         metcolor.push(hexToRgb(brks[i].nextSibling.value))
     }
 
-    // var list = [];
-    // for (var j = 0; j < metcolor.length; j++) {list.push({'val': metcolorbreaks[j], 'color': metcolor[j]})};
-    // list.sort(function(a, b) {return ((a.val < b.val) ? -1 : ((a.val == b.val) ? 0 : 1));});
-    // for (var k = 0; k < list.length; k++) {
-    //     metcolor[k] = list[k].color;
-    //     metcolorbreaks[k] = list[k].val;
-    // }
     list = sortTwo(metcolorbreaks,metcolor)
     metcolorbreaks = list[0];
     metcolor = list[1];
-    // if (Object.keys(concobj).length > 0) {
-    //     var id = concobj.ttls.indexOf(document.getElementById("concscroll").value);
-    //     concobj.mcs[id] = metcolor;
-    //     concobj.mcbs[id] = metcolorbreaks;
-    // }
+
+    if (document.getElementById("concscroll") != null) {
+        id = document.getElementById("concscroll").selectedIndex;
+        concobj.mcbs[id] = metcolorbreaks;
+        concobj.mcs[id] = metcolor;
+    }
+
     if (Object.keys(graph).length > 0) {reDefineColors()}
     defineMetColorBar()
 }
@@ -1907,7 +1897,6 @@ function lineFunctionBezi(d,currev,curstepx,curstepy) {
     d.bezi[2] = - d.bezi[0];
     d.bezi[3] = - d.bezi[1];
 }
-var tmp
 function getPdf() {
     //Add circle to selected nodes
     node.filter(function(d){return d.selected}).attr("stroke","black")
@@ -2152,8 +2141,9 @@ function manageTooltips(){
 }
 function manageArrows() {
     //Remove previous
-    x = document.getElementsByClassName("arrows");
+    var x = document.getElementsByClassName("arrows");
     for (var i = x.length-1; i >=0; i--) {x[i].remove()}
+    delete x
 
     if (document.getElementById("arrows").checked) {
         arrows = gDraw.append("g")
@@ -3244,13 +3234,13 @@ function drawSizeReference() {
 
 function makeColorScaleGlobal(cs) {
     if (cs == "rxn") {
-        id = fluxobj.ttls.indexOf(document.getElementById("fluxscroll").value);
+        id = document.getElementById("fluxscroll").selectedIndex;
         for (var i = 0; i < fluxobj.ttls.length; i++) {
             fluxobj.rcbs[i] = fluxobj.rcbs[id];
             fluxobj.rcs[i] = fluxobj.rcs[id];
         }
     } else if (cs = "met"){
-        id = concobj.ttls.indexOf(document.getElementById("concscroll").value);
+        id = document.getElementById("concscroll").selectedIndex;
         for (var i = 0; i < concobj.ttls.length; i++) {
             concobj.mcbs[i] = concobj.mcbs[id];
             concobj.mcs[i] = concobj.mcs[id];
@@ -3890,4 +3880,10 @@ loadGeneData = () => {
     
 
     //onclick = loadWrapper("fileinputgene")
+}
+
+clearBackup = () => {
+    backupgraph = [];
+    backupgraphcount = -1;
+    backupparsing = false;
 }

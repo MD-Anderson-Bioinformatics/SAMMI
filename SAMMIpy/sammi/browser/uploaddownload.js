@@ -178,7 +178,6 @@ function receivedTextSammi(e) {
         wind.appendChild(br);
         var select = document.createElement("select");
         select.id = "fluxscroll"
-        select.setAttribute('oldvalue',ttls[0]);
         select.onchange = function() {FluxSetSwitch(this)};
         for (var i = 0; i < ttls.length; i++) {
             var option = document.createElement("option");
@@ -214,7 +213,6 @@ function receivedTextSammi(e) {
         wind.appendChild(br);
         var select = document.createElement("select");
         select.id = "concscroll"
-        select.setAttribute('oldvalue',ttls[0]);
         select.onchange = function() {ConcSetSwitch(this)};
         for (var i = 0; i < ttls.length; i++) {
             var option = document.createElement("option");
@@ -616,6 +614,7 @@ function onLoadSwitch(d) {
     simulation.restart()
 
     defineSuspended()
+    clearBackup()
 
     if (document.getElementById("dialog2").style.display == "block") {joinSubGraphs()}
 }
@@ -754,16 +753,19 @@ function previousScrollF(nodeid) {
 }
 function FluxSetSwitch(opt) {
     if(tracking){trackMet()}
-    //Save color
-    var id = fluxobj.ttls.indexOf(opt.attributes.oldvalue.value);
-    fluxobj.rcs[id] = rxncolor;
-    fluxobj.rcbs[id] = rxncolorbreaks;
-    //Define index to switch it to
-    opt.setAttribute('oldvalue',opt.value);
-    var id = fluxobj.ttls.indexOf(opt.value);
-    //Remove previous color breaks
-    x = document.getElementsByClassName("rxnbreakcol");
-    while (x.length > 0) {x[0].nextElementSibling.click()}
+   //Define index to switch it to
+   var id = opt.selectedIndex;
+   //Remove previous color breaks
+   var x = document.getElementsByClassName("rxnbreakcol");
+   while (x.length > 0) {
+       var tmp = x[0].nextSibling
+       tmp.previousSibling.previousSibling.remove()
+       tmp.previousSibling.remove()
+       tmp.nextSibling.remove()
+       tmp.remove()
+       delete tmp;
+       var x = document.getElementsByClassName("rxnbreakcol");
+   }
     //Reset color breaks
     rxncolorbreaks = fluxobj.rcbs[id];
     rxncolor = fluxobj.rcs[id]
@@ -783,7 +785,6 @@ function FluxSetSwitch(opt) {
         }
     }
     defineFluxColorBar()
-
     //Reset all values to null
     for (j in parsedmodels) {
         parsedmodels[j].nodes.forEach(function(d){
@@ -1227,16 +1228,20 @@ function previousScrollC(nodeid) {
 }
 function ConcSetSwitch(opt) {
     if(tracking){trackMet()}
-    //Save color
-    var id = concobj.ttls.indexOf(opt.attributes.oldvalue.value);
-    concobj.mcs[id] = metcolor;
-    concobj.mcbs[id] = metcolorbreaks;
     //Define index to switch it to
-    opt.setAttribute('oldvalue',opt.value);
-    var id = concobj.ttls.indexOf(opt.value);
+    //Define index to switch it to
+    var id = opt.selectedIndex;
     //Remove previous color breaks
-    x = document.getElementsByClassName("metbreakcol");
-    while (x.length > 0) {x[0].nextElementSibling.click()}
+    var x = document.getElementsByClassName("metbreakcol");
+    while (x.length > 0) {
+        var tmp = x[0].nextSibling
+        tmp.previousSibling.previousSibling.remove()
+        tmp.previousSibling.remove()
+        tmp.nextSibling.remove()
+        tmp.remove()
+        delete tmp;
+        var x = document.getElementsByClassName("metbreakcol");
+    }
     //Reset color breaks
     metcolorbreaks = concobj.mcbs[id];
     metcolor = concobj.mcs[id]

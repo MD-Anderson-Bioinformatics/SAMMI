@@ -473,7 +473,6 @@ function receivedTextSammi(e) {
         wind.appendChild(br);
         var select = document.createElement("select");
         select.id = "fluxscroll"
-        select.setAttribute('oldvalue',ttls[0]);
         select.onchange = function() {FluxSetSwitch(this)};
         for (var i = 0; i < ttls.length; i++) {
             var option = document.createElement("option");
@@ -509,7 +508,6 @@ function receivedTextSammi(e) {
         wind.appendChild(br);
         var select = document.createElement("select");
         select.id = "concscroll"
-        select.setAttribute('oldvalue',ttls[0]);
         select.onchange = function() {ConcSetSwitch(this)};
         for (var i = 0; i < ttls.length; i++) {
             var option = document.createElement("option");
@@ -1006,6 +1004,7 @@ function onLoadSwitch(d) {
     simulation.restart()
 
     defineSuspended()
+    clearBackup()
 
     if (document.getElementById("dialog2").style.display == "block") {joinSubGraphs()}
 }
@@ -1197,16 +1196,19 @@ function previousScrollF(nodeid) {
 }
 function FluxSetSwitch(opt) {
     if(tracking){trackMet()}
-    //Save color
-    var id = fluxobj.ttls.indexOf(opt.attributes.oldvalue.value);
-    fluxobj.rcs[id] = rxncolor;
-    fluxobj.rcbs[id] = rxncolorbreaks;
     //Define index to switch it to
-    opt.setAttribute('oldvalue',opt.value);
-    var id = fluxobj.ttls.indexOf(opt.value);
+    var id = opt.selectedIndex;
     //Remove previous color breaks
-    x = document.getElementsByClassName("rxnbreakcol");
-    while (x.length > 0) {x[0].nextElementSibling.click()}
+    var x = document.getElementsByClassName("rxnbreakcol");
+    while (x.length > 0) {
+        var tmp = x[0].nextSibling
+        tmp.previousSibling.previousSibling.remove()
+        tmp.previousSibling.remove()
+        tmp.nextSibling.remove()
+        tmp.remove()
+        delete tmp;
+        var x = document.getElementsByClassName("rxnbreakcol");
+    }
     //Reset color breaks
     rxncolorbreaks = fluxobj.rcbs[id];
     rxncolor = fluxobj.rcs[id]
@@ -1226,7 +1228,6 @@ function FluxSetSwitch(opt) {
         }
     }
     defineFluxColorBar()
-
     //Reset all values to null
     for (j in parsedmodels) {
         parsedmodels[j].nodes.forEach(function(d){
@@ -1267,7 +1268,7 @@ function receivedTextFlux(e) {
     for (var i = 1; i < e.length; i++) {
         //Parse and save
         tmp = e[i].split('\t');
-        if (ttls.length > (tmp.length+1)) {ttls.shift();fluxobj.ttls = ttls;}
+        if (ttls.length >= tmp.length) {ttls.shift();fluxobj.ttls = ttls;}
         var rxn = tmp[0];
         if (rxn == "") {continue;}
         tmp.shift();
@@ -1291,7 +1292,6 @@ function receivedTextFlux(e) {
     wind.appendChild(br);
     var select = document.createElement("select");
     select.id = "fluxscroll"
-    select.setAttribute('oldvalue',ttls[0]);
     select.onchange = function() {FluxSetSwitch(this)};
     for (var i = 0; i < ttls.length; i++) {
         var option = document.createElement("option");
@@ -1675,16 +1675,20 @@ function previousScrollC(nodeid) {
 }
 function ConcSetSwitch(opt) {
     if(tracking){trackMet()}
-    //Save color
-    var id = concobj.ttls.indexOf(opt.attributes.oldvalue.value);
-    concobj.mcs[id] = metcolor;
-    concobj.mcbs[id] = metcolorbreaks;
     //Define index to switch it to
-    opt.setAttribute('oldvalue',opt.value);
-    var id = concobj.ttls.indexOf(opt.value);
+    //Define index to switch it to
+    var id = opt.selectedIndex;
     //Remove previous color breaks
-    x = document.getElementsByClassName("metbreakcol");
-    while (x.length > 0) {x[0].nextElementSibling.click()}
+    var x = document.getElementsByClassName("metbreakcol");
+    while (x.length > 0) {
+        var tmp = x[0].nextSibling
+        tmp.previousSibling.previousSibling.remove()
+        tmp.previousSibling.remove()
+        tmp.nextSibling.remove()
+        tmp.remove()
+        delete tmp;
+        var x = document.getElementsByClassName("metbreakcol");
+    }
     //Reset color breaks
     metcolorbreaks = concobj.mcbs[id];
     metcolor = concobj.mcs[id]
@@ -1746,7 +1750,7 @@ function receivedTextConcentration(e) {
     for (var i = 1; i < e.length; i++) {
         //Parse and save
         tmp = e[i].split('\t');
-        if (ttls.length > (tmp.length+1)) {ttls.shift();concobj.ttls = ttls;}
+        if (ttls.length >= tmp.length) {ttls.shift();concobj.ttls = ttls;}
         var met = tmp[0];
         if (met == "") {continue;}
         tmp.shift();
@@ -1770,7 +1774,6 @@ function receivedTextConcentration(e) {
     wind.appendChild(br);
     var select = document.createElement("select");
     select.id = "concscroll";
-    select.setAttribute('oldvalue',ttls[0]);
     select.onchange = function() {ConcSetSwitch(this)};
     for (var i = 0; i < ttls.length; i++) {
         var option = document.createElement("option");
@@ -1835,50 +1838,6 @@ function receivedTextSecondary(e) {
     e = e.join(')|(?:')
     e = '(?:' + e + ')'
     shelveList(e)
-
-    // var re = new RegExp(e, "i");
-    // selected = [];
-
-    // for (j in parsedmodels) {
-    //     //select right ones
-    //     for (var i = parsedmodels[j].nodes.length-1; i > -1; i--) {
-    //         var d = parsedmodels[j].nodes[i];
-    //         if (re.test(d.class) && d.group == 2 ){
-    //             var linktodel = [];
-    //             var cursel = [d.id];
-
-    //             for (var k = 0; k < parsedmodels[j].links.length; k++){
-    //                 if (parsedmodels[j].links[k].target.id == d.id) {
-    //                     linktodel.push(parsedmodels[j].links[k].index);
-    //                     cursel.push(parsedmodels[j].links[k].source.id + "t")
-    //                 } else if (parsedmodels[j].links[k].source.id == d.id) {
-    //                     linktodel.push(parsedmodels[j].links[k].index);
-    //                     cursel.push(parsedmodels[j].links[k].target.id + "s")
-    //                 }
-    //             }
-    //             cursel.push(JSON.stringify(d))
-    //             parsedmodels[j].suspended.push(cursel);
-
-    //             for (var k = linktodel.length - 1; k > -1; k--){
-    //                 parsedmodels[j].links.splice(linktodel[k],1)
-    //             }
-
-    //             parsedmodels[j].nodes.splice(d.index,1)
-    
-    //             for (var k = 0; k < parsedmodels[j].links.length; k++){
-    //                 parsedmodels[j].links[k].index = k;
-    //             }
-    //             for (var k = 0; k < parsedmodels[j].nodes.length; k++){
-    //                 parsedmodels[j].nodes[k].index = k;
-    //             }
-    //         } 
-    //     }
-    // }
-
-    // defineSuspended()
-    // reDefineSimulation()
-    // node.classed("selected",function(d){return d.selected})
-    // simulation.restart()
 }
 function loadFileSecondary() {
     defineBackupGraph()
@@ -2129,7 +2088,7 @@ function receivedTextSizeRxn(e) {
     for (var i = 1; i < e.length; i++) {
         //Parse and save
         tmp = e[i].split('\t');
-        if (ttls.length > (tmp.length+1)) {ttls.shift();sizerxnobj.ttls = ttls;}
+        if (ttls.length >= tmp.length) {ttls.shift();sizerxnobj.ttls = ttls;}
         var rxn = tmp[0];
         if (rxn == "") {continue;}
         tmp.shift();
@@ -2251,7 +2210,7 @@ function receivedTextSizeMet(e) {
     for (var i = 1; i < e.length; i++) {
         //Parse and save
         tmp = e[i].split('\t');
-        if (ttls.length > (tmp.length+1)) {ttls.shift();sizemetobj.ttls = ttls;}
+        if (ttls.length >= tmp.length) {ttls.shift();sizemetobj.ttls = ttls;}
         var met = tmp[0];
         if (met == "") {continue;}
         tmp.shift();
@@ -2386,7 +2345,7 @@ function receivedTextWidth(e) {
     for (var i = 1; i < e.length; i++) {
         //Parse and save
         tmp = e[i].split('\t');
-        if (ttls.length > (tmp.length+1)) {ttls.shift();linkwidthobj.ttls = ttls;}
+        if (ttls.length >= tmp.length) {ttls.shift();linkwidthobj.ttls = ttls;}
         var rxn = tmp[0];
         if (rxn == "") {continue;}
         tmp.shift();

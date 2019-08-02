@@ -34,6 +34,11 @@ To use the package add the following code to your python script:
 
     import sammi
 
+Some of the functionality available in SAMMI, such as PDF download and data upload, are not directly available though this plugin. To use these functions download the model in a SAMMI format and upload the file in the SAMMI web interface at `www.SammiTool.com
+<https://bioinformatics.mdanderson.org/Software/SAMMI/>`_.
+
+For a full description of this plugin please refer to the remaining sections of this documentation.
+
 Documentation
 =================
 

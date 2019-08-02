@@ -47,6 +47,7 @@ Several parameters used in the force-directed graph simulation, as well as other
 - **Pretify Size**: The pretify option organizes orphan reactions into an aesthetically pleasing format. This option defines the size of the area in which they are organized. Higher values will lead reactions to be arranged in a more spread out manner.
 - **Naming**: These options are populated based on data available in the uploaded reconstruction. Changing this option will re-label the nodes in the graph. The search function will search for nodes based on the values in the field defined here. That is, if nodes are labeled by ID, the search function will search the node IDs, if they are labels by name, it will search for names.
 - **Reversibility**: Defines how the edge arrows are drawn to indicate reversibility. Reactions are considered reversible if they have a lower bound value of less than zero. Different metabolic reconstructions may use different field names to defined reaction lower bound (e.g. *lower_bound* or simply *lb*). To define the field that should be used for reaction lower bound change the value of the *LB Field* field under the *Upload/Download* tab.
+
    - **None**: Indicates no reversibility. Arrows are drawn to indicate the directionality in which the reaction is annotated.
    - **Both Ways**: Draws arrows in both ends of the edges related to reversible reactions. While this option indicates reversibility, it does not indicate the direction in which the reaction is annotated.
    - **Diamond Arrows**: Draws a diamond shape at the target end only of edges related to reversible reactions. This option allows for both the identification of reversibility and directionality of annotation.
@@ -56,3 +57,5 @@ Several parameters used in the force-directed graph simulation, as well as other
    :align: center
 
    Six reaction visualization formats. Columns indicate the reversibility visualization type, available in the top menu *Settings* tab, and rows indicate the visualization of reaction nodes, available in the floating menu.
+
+- **Node Shape**: Defines whether nodes are represented as circles or squares. By default, reactions are usually represented as squares and metabolites as circles in order to easily differentiate between the two node types.

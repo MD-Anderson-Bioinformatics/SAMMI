@@ -17,13 +17,19 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -31,21 +37,16 @@
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="next" title="Secondary Metabolites" href="secondaries.html" />
     <link rel="prev" title="Graph Settings" href="graphSettings.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -86,6 +87,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Associated Graph Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#node-and-edge-coloring">Node and Edge Coloring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#node-and-edge-sizing">Node and Edge Sizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#mapping-other-types-of-omics-data">Mapping Other Types of Omics Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="secondaries.html">Secondary Metabolites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Graph Navigation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a></li>
@@ -200,6 +202,31 @@
 <p>The third parameter <em>Size Scale</em> is a multiplying factor that defines the final node size and edge width. That is, large scale parameters will lead to overall large nodes or thicker edges, while low scale parameters will lead to overall smaller nodes and thinner edges. This allows users to size nodes and edges appropriately independently or the magnitude of the values loaded. These scales are set globally for all data conditions loaded.</p>
 <p>The final node size and edge thickness displayed depends on the zoom level of the graph. To load a size reference scale, click on the checkbox <em>View Size Reference</em> under the sizing menu. This option will load a reference scale on the top left portion of the graph area which will adjust according to the zoom level.</p>
 </div>
+<div class="section" id="mapping-other-types-of-omics-data">
+<h1>Mapping Other Types of Omics Data<a class="headerlink" href="#mapping-other-types-of-omics-data" title="Permalink to this headline">¶</a></h1>
+<p>SAMMI offers the functionality of converting gene or protein expression data into associated reaction data directly within the SAMMi interface. This function can be accessed using the <em>Load Gene Data</em> in the <em>Upload/Download</em> tab in the top menu. Since gene-reaction rules can be expressed in several different ways between different metabolic models, SAMMI offes a number of different tools to convert gene to reaction data. Once this options is selected the supporting menu window will open with the following options:</p>
+<ul class="simple">
+<li><strong>Gene Expression Rule Field</strong>: This option defines which reaction field is to be used in this data mapping (e.g. grRules).</li>
+<li><strong>Regular Expression to Split</strong>: This field defines a series of regular expressions that can be used to split the string in the field defined above into substrings. These regular expressions should be separated by a semicolon.</li>
+<li><strong>Regular Expressions to Remove</strong>: This field defines a series of regular expressions that should be removed from the string in the defined field. These should also be separated by semicolons.</li>
+<li><strong>Select Mapping Function</strong>: Define the function to be used in mapping the associated gene or protein data.</li>
+</ul>
+<p>Once these fields are defined, users can push the <strong>Map</strong> button to select the data file to be mapped. The uploaded file should be similar to the reaction and metabolite tab delimited files, where the top row defines multiple conditions and the first column defines the genes to be mapped. Once the file is loaded a series of steps convert the defined field into a vector of associated gene names. These steps are:</p>
+<ol class="arabic simple">
+<li>Remove any characters or substrings matching any of the regular expressions defined under <em>Regular Expressions to Remove</em>.</li>
+<li>Split the resulting string in any of the regular expressions defined under <em>Regular Expression to Split</em>.</li>
+<li>Trim trailing and leading empty spaces.</li>
+<li>Take unique elements.</li>
+</ol>
+<p>For instance, given the gene-reaction rule <em>100760573 or (100760573 and 100765276)</em> from the reaction <em>MAN1PT</em> in the iCHOv1 reconstruction(<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27883890">Hefzi et. al.</a>), this string can be processed as:</p>
+<ol class="arabic simple">
+<li>Defining <em>“\(;\)”</em> as the expression to remove we can remove the parenthesis leaving <em>100760573 or 100760573 and 100765276</em>.</li>
+<li>Using <em>“and;or”</em> as the splitting expression we can split the string into <em>[‘‘100760573 ‘’,’’ 100760573 ‘’,’’ 100765276’‘]</em>.</li>
+<li>Trimming extra spaces we get <em>[‘‘100760573’‘,’‘100760573’‘,’‘100765276’‘]</em>.</li>
+<li>And taking unique entries, finally, we get <em>[‘‘100760573’‘,’‘100765276’‘]</em>.</li>
+</ol>
+<p>Once the final vector of gene entries is obtained, gene names are replaced by uploaded numerical values, genes for which no value was uploaded are removed, and the defined function is used to obtain a final value for the reaction.</p>
+</div>
 
 
            </div>
@@ -212,7 +239,7 @@
         <a href="secondaries.html" class="btn btn-neutral float-right" title="Secondary Metabolites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="graphSettings.html" class="btn btn-neutral" title="Graph Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="graphSettings.html" class="btn btn-neutral float-left" title="Graph Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -238,35 +265,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'0.0.1',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

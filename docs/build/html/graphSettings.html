@@ -17,13 +17,19 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -31,21 +37,16 @@
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="next" title="Associated Graph Data" href="data.html" />
     <link rel="prev" title="SAMMI Interface" href="interface.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -91,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data.html">Associated Graph Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html#node-and-edge-coloring">Node and Edge Coloring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html#node-and-edge-sizing">Node and Edge Sizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html#mapping-other-types-of-omics-data">Mapping Other Types of Omics Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="secondaries.html">Secondary Metabolites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Graph Navigation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a></li>
@@ -199,32 +201,44 @@
 <div class="section" id="settings">
 <h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
 <p>Several parameters used in the force-directed graph simulation, as well as other SAMMI functionalities, can be tailored for better visualization and execution purposes. These parameters can be changed under the <strong>Settings</strong> tab in the top menu. Node labeling can also be changed here using model data.</p>
-<ul class="simple">
-<li><strong>Link Repulsion Strength</strong>: Force-directing layout aims to make each edge a given length defined by this parameter. Higher values will lead to overall longer edges, and lower values to overall smaller edges.</li>
-<li><strong>Node Collision Buffer</strong>: The graph layout simulation aims to make the nodes not overlap with each other. Setting this value to a positive number will add an additional space between nodes. This will not increase the repulsion between each node, but simply add space between nodes that would otherwise be touching or overlapping.</li>
-<li><strong>Node Repulsion Strength</strong>: Increase the strength with which nodes repeal each other. Higher values will lead to more spread-out graphs, while lower values will lead to more compact maps.</li>
-<li><strong>Inertia</strong>: Speed with which the simulation takes place. Lower values will lead the simulation to respond very quickly to node dragging and rearranging, while high value will make the force-directing take place very slowly.</li>
-<li><strong>Center Strength</strong>: In order for graph components to not drift too far from each other, all nodes are attracted to the center of the graph with a force relative to this parameter. Setting this value to zero will allow any independent components to drift far away from our view, and setting this parameter to high values will bring all nodes to the center of the graph.</li>
-<li><strong>Secondary Strength</strong>: Metabolite nodes tagged as secondary are not attracted to the center of the graph, but to a point calculated relative to their associated reaction. This parameter defines the strength of this attraction.</li>
-<li><strong>Path Execution Timeout (s)</strong>: One of the options in the floating menu calculates a long path in the graph between two nodes. The calculation of the longest path between two nodes in a graph is an NP hard problem, however. In SAMMI, this long path is calculated by a modified Breadth First Search algorithm that finds increasingly longer paths. While this algorithm does have a stopping condition, it can take an extremely long time to reach it, and it can lead to memory overload in the browser if allowed to run for a long time in large, highly connected graphs. This parameter defines in seconds how long this algorithm can run for. Higher values can return longer paths, but will take longer to run.</li>
-<li><strong>Center Size</strong>: This option adds a black dot to the center of the graph with size relative to this parameter. This point is added solely for the user’s reference, and does not affect the force directed layout. Make this parameter a positive value to visualize the center point to which nodes are attracted to in the force-directing.</li>
-<li><strong>Pretify Size</strong>: The pretify option organizes orphan reactions into an aesthetically pleasing format. This option defines the size of the area in which they are organized. Higher values will lead reactions to be arranged in a more spread out manner.</li>
-<li><strong>Naming</strong>: These options are populated based on data available in the uploaded reconstruction. Changing this option will re-label the nodes in the graph. The search function will search for nodes based on the values in the field defined here. That is, if nodes are labeled by ID, the search function will search the node IDs, if they are labels by name, it will search for names.</li>
-<li><dl class="first docutils">
-<dt><strong>Reversibility</strong>: Defines how the edge arrows are drawn to indicate reversibility. Reactions are considered reversible if they have a lower bound value of less than zero. Different metabolic reconstructions may use different field names to defined reaction lower bound (e.g. <em>lower_bound</em> or simply <em>lb</em>). To define the field that should be used for reaction lower bound change the value of the <em>LB Field</em> field under the <em>Upload/Download</em> tab.</dt>
-<dd><ul class="first last">
+<ul>
+<li><p class="first"><strong>Link Repulsion Strength</strong>: Force-directing layout aims to make each edge a given length defined by this parameter. Higher values will lead to overall longer edges, and lower values to overall smaller edges.</p>
+</li>
+<li><p class="first"><strong>Node Collision Buffer</strong>: The graph layout simulation aims to make the nodes not overlap with each other. Setting this value to a positive number will add an additional space between nodes. This will not increase the repulsion between each node, but simply add space between nodes that would otherwise be touching or overlapping.</p>
+</li>
+<li><p class="first"><strong>Node Repulsion Strength</strong>: Increase the strength with which nodes repeal each other. Higher values will lead to more spread-out graphs, while lower values will lead to more compact maps.</p>
+</li>
+<li><p class="first"><strong>Inertia</strong>: Speed with which the simulation takes place. Lower values will lead the simulation to respond very quickly to node dragging and rearranging, while high value will make the force-directing take place very slowly.</p>
+</li>
+<li><p class="first"><strong>Center Strength</strong>: In order for graph components to not drift too far from each other, all nodes are attracted to the center of the graph with a force relative to this parameter. Setting this value to zero will allow any independent components to drift far away from our view, and setting this parameter to high values will bring all nodes to the center of the graph.</p>
+</li>
+<li><p class="first"><strong>Secondary Strength</strong>: Metabolite nodes tagged as secondary are not attracted to the center of the graph, but to a point calculated relative to their associated reaction. This parameter defines the strength of this attraction.</p>
+</li>
+<li><p class="first"><strong>Path Execution Timeout (s)</strong>: One of the options in the floating menu calculates a long path in the graph between two nodes. The calculation of the longest path between two nodes in a graph is an NP hard problem, however. In SAMMI, this long path is calculated by a modified Breadth First Search algorithm that finds increasingly longer paths. While this algorithm does have a stopping condition, it can take an extremely long time to reach it, and it can lead to memory overload in the browser if allowed to run for a long time in large, highly connected graphs. This parameter defines in seconds how long this algorithm can run for. Higher values can return longer paths, but will take longer to run.</p>
+</li>
+<li><p class="first"><strong>Center Size</strong>: This option adds a black dot to the center of the graph with size relative to this parameter. This point is added solely for the user’s reference, and does not affect the force directed layout. Make this parameter a positive value to visualize the center point to which nodes are attracted to in the force-directing.</p>
+</li>
+<li><p class="first"><strong>Pretify Size</strong>: The pretify option organizes orphan reactions into an aesthetically pleasing format. This option defines the size of the area in which they are organized. Higher values will lead reactions to be arranged in a more spread out manner.</p>
+</li>
+<li><p class="first"><strong>Naming</strong>: These options are populated based on data available in the uploaded reconstruction. Changing this option will re-label the nodes in the graph. The search function will search for nodes based on the values in the field defined here. That is, if nodes are labeled by ID, the search function will search the node IDs, if they are labels by name, it will search for names.</p>
+</li>
+<li><p class="first"><strong>Reversibility</strong>: Defines how the edge arrows are drawn to indicate reversibility. Reactions are considered reversible if they have a lower bound value of less than zero. Different metabolic reconstructions may use different field names to defined reaction lower bound (e.g. <em>lower_bound</em> or simply <em>lb</em>). To define the field that should be used for reaction lower bound change the value of the <em>LB Field</em> field under the <em>Upload/Download</em> tab.</p>
+<blockquote>
+<div><ul class="simple">
 <li><strong>None</strong>: Indicates no reversibility. Arrows are drawn to indicate the directionality in which the reaction is annotated.</li>
 <li><strong>Both Ways</strong>: Draws arrows in both ends of the edges related to reversible reactions. While this option indicates reversibility, it does not indicate the direction in which the reaction is annotated.</li>
 <li><strong>Diamond Arrows</strong>: Draws a diamond shape at the target end only of edges related to reversible reactions. This option allows for both the identification of reversibility and directionality of annotation.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 </ul>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/reversibility.jpg"><img alt="_images/reversibility.jpg" src="_images/reversibility.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">Six reaction visualization formats. Columns indicate the reversibility visualization type, available in the top menu <em>Settings</em> tab, and rows indicate the visualization of reaction nodes, available in the floating menu.</span></p>
 </div>
+<ul class="simple">
+<li><strong>Node Shape</strong>: Defines whether nodes are represented as circles or squares. By default, reactions are usually represented as squares and metabolites as circles in order to easily differentiate between the two node types.</li>
+</ul>
 </div>
 </div>
 
@@ -239,7 +253,7 @@
         <a href="data.html" class="btn btn-neutral float-right" title="Associated Graph Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="interface.html" class="btn btn-neutral" title="SAMMI Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface.html" class="btn btn-neutral float-left" title="SAMMI Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -265,35 +279,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'0.0.1',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

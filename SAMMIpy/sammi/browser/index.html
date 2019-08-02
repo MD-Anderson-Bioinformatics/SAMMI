@@ -60,19 +60,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
             <div class="dropdown">
                 <button class="dropbtn" onclick="selectOpenMenu(this);">Upload/Download</button>
                 <div class="dropdown-content">
-                    <h3>Data Uploads</h3>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputflux")'>Load Reaction Color Data</button>
-                    <button class="topmenubtn" onclick='removeData("fluxscroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputconcentration")'>Load Metabolite Color Data</button>
-                    <button class="topmenubtn" onclick='removeData("concscroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputsizerxn")'>Load Reaction Size Data</button>
-                    <button class="topmenubtn" onclick='removeData("rxnsizescroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputsizemet")'>Load Metabolite Size Data</button>
-                    <button class="topmenubtn" onclick='removeData("metsizescroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputwidth")'>Load Link Width Data</button>
-                    <button class="topmenubtn" onclick='removeData("widthscroll")'>Remove</button><br/>
-                    <button class="topmenubtn" onclick='loadGeneData()'>Load Gene Data</button><br/><br/>
-                    <button class="topmenubtn" onclick='loadWrapper("fileinputsecondary")'>Load Metabolites to Shelve</button><br/>
+                    <h3>Secondaries</h3>
                     <button class="topmenubtn" onclick='shelveStandard()'>Shelve Standard Metabolites</button><br/>
 
                     <h3>Model Downloads</h3>
@@ -278,7 +266,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
             <div class="wrapper">
             <button onclick="groupNodes()" class="menubutton">Group Nodes</button>
             <button onclick="unGroupNodes()" class="menubutton">Ungroup Nodes</button>
-            <button onclick="collapse()" class="menubutton">Collapse</button>
+            <button onclick="defineBackupGraph(); collapse()" class="menubutton">Collapse</button>
             </div>
 
             <div class="wrapper">
