@@ -268,7 +268,7 @@ function receivedJSON(e) {
     reDefineSimulation()
 }
 var tmpy
-function receivedOWL(e) {
+function receivedOWL(e,file) {
     //Read in file
     fex = e.target.result;
     parser = new DOMParser();
@@ -395,15 +395,28 @@ function receivedOWL(e) {
         return;
     }
 
-    nm = document.getElementById('fileinput').value.split("\\");
-    nm = nm[nm.length-1];
+    nm = file.name;
+    // nm = nm[nm.length-1];
     nm = nm.replace(/\..*$/i,"");
     parsedmodels[nm] = graph;
     currentparsed = nm;
 
-    loadExistingReactionToAdd(parsedmodels)
-    loadInitialGraph()
-    reDefineSimulation()
+    if (Object.keys(parsedmodels).length === numfiles) {
+        select = document.getElementById("onloadf1")
+        select.onchange = function() {onLoadSwitch(this)};
+        select.selectedIndex = 0;
+        currentparsed = select.value;
+        graph = parsedmodels[currentparsed];
+
+        setdisplay()
+        loadExistingReactionToAdd(parsedmodels)
+        loadInitialGraph()
+        reDefineSimulation()
+        node.classed("selected",function(d){return d.selected})
+        simulation.restart()
+
+        setTimeout(function(){document.getElementsByClassName("myProgress")[0].remove()},100)
+    }
 }
 
 function loadFile() {
@@ -422,8 +435,6 @@ function loadFile() {
         fr.onload = receivedJSON;
     } else if (file.name.match(/\.(.*)$/i)[0] == '.xml' || file.name.match(/\.(.*)$/i)[0] == '.sbml') {
         fr.onload = receivedXML;
-    } else if (file.name.match(/\.(.*)$/i)[0] == '.owl') {
-        fr.onload = receivedOWL;
     } else {
         return;
     }
@@ -448,6 +459,66 @@ function loadFile2() {
         return;
     }
     fr.readAsText(file);
+}
+
+function loadFile3(file) {
+    if (gMain) {
+        gMain.remove();
+        simulation.stop();
+    }
+
+    var input, file, fr;
+    input = document.getElementById('fileinput3');
+    numfiles = input.files.length;
+
+    document.getElementById("onloadoptionmid").style.display = "none";
+    document.getElementById("onloadoption2").style.display = "none";
+
+    var place = document.getElementById("onloadoptions");
+    var select = document.createElement("select");
+    select.id = "onloadf1";
+    place.appendChild(select);
+
+    a = document.createElement("a")
+    a.innerHTML = "&#8249";
+    a.className = "scrollopts";
+    a.onclick = function(){previousScroll("onloadf1")}
+    place.appendChild(a)
+    a = document.createElement("a")
+    a.innerHTML = "&#8250";
+    a.className = "scrollopts";
+    a.onclick = function(){nextScroll("onloadf1")}
+    place.appendChild(a)
+
+    var i = 0;
+    (function doSort() {
+
+        fr = new FileReader();
+
+        fr.onloadend = (function(file) {
+            return function(e) {
+                receivedOWL(e, file)
+            };
+        })(input.files[i]);
+
+        fr.readAsText(input.files[i])
+
+        var option = document.createElement("option")
+        option.innerHTML = input.files[i].name.replace(/\..*$/i,"");
+        option.id = input.files[i].name.replace(/\..*$/i,"");
+        select.appendChild(option)
+
+        i++
+        if (i < input.files.length) {setTimeout(doSort,0)}
+    })();
+
+    // if (file.name.match(/\.(.*)$/i)[0] == '.owl') {
+    //     fr.onload = receivedOWL;
+    // } else {
+    //     return;
+    // }
+
+    // fr.readAsText(file);
 }
 
 //Load in SAMMI model

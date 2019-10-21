@@ -24,6 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -221,9 +222,9 @@
 <p>For instance, given the gene-reaction rule <em>100760573 or (100760573 and 100765276)</em> from the reaction <em>MAN1PT</em> in the iCHOv1 reconstruction(<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27883890">Hefzi et. al.</a>), this string can be processed as:</p>
 <ol class="arabic simple">
 <li>Defining <em>“\(;\)”</em> as the expression to remove we can remove the parenthesis leaving <em>100760573 or 100760573 and 100765276</em>.</li>
-<li>Using <em>“and;or”</em> as the splitting expression we can split the string into <em>[‘‘100760573 ‘’,’’ 100760573 ‘’,’’ 100765276’‘]</em>.</li>
-<li>Trimming extra spaces we get <em>[‘‘100760573’‘,’‘100760573’‘,’‘100765276’‘]</em>.</li>
-<li>And taking unique entries, finally, we get <em>[‘‘100760573’‘,’‘100765276’‘]</em>.</li>
+<li>Using <em>“and;or”</em> as the splitting expression we can split the string into <em>[‘’100760573 ‘’,’’ 100760573 ‘’,’’ 100765276’’]</em>.</li>
+<li>Trimming extra spaces we get <em>[‘’100760573’’,’’100760573’’,’’100765276’’]</em>.</li>
+<li>And taking unique entries, finally, we get <em>[‘’100760573’’,’’100765276’’]</em>.</li>
 </ol>
 <p>Once the final vector of gene entries is obtained, gene names are replaced by uploaded numerical values, genes for which no value was uploaded are removed, and the defined function is used to obtain a final value for the reaction.</p>
 </div>

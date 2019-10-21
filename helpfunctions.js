@@ -2958,7 +2958,14 @@ function loadWrapper(id) {
             onloadfilter=true;
             loadFile2();
         }
-    } else if (id == "fileinputsammi") {
+    } else if (id == "fileinput3") {console.log("here")
+        input.id='fileinput3';
+        input.multiple = true;
+        input.onchange = function(){
+            setdisplay();
+            loadFile3();
+        }
+    }else if (id == "fileinputsammi") {
         input.id='fileinputsammi';
         input.onchange = function(){
             setdisplay();
