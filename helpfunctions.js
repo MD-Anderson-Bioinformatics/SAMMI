@@ -3441,6 +3441,12 @@ function loadKEGGmodel2(org) {
                 loadExistingReactionToAdd(parsedmodels)
                 loadInitialGraph()
                 reDefineSimulation()
+
+                document.getElementById("metNameOpts").value = "name";
+                document.getElementById("rxnNameOpts").value = "name";
+                loadExistingReactionToAdd(parsedmodels);
+                renameNodes();
+                behave()
             });
         });
     });

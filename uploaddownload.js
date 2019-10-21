@@ -267,6 +267,144 @@ function receivedJSON(e) {
     loadInitialGraph()
     reDefineSimulation()
 }
+var tmpy
+function receivedOWL(e) {
+    //Read in file
+    fex = e.target.result;
+    parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(fex,"text/xml");
+    
+    //Initialize
+    graph = {
+        nodes: [],
+        links: [],
+        suspended: [],
+        text: [],
+        shapes: []
+    };
+
+    //Get metabolites to include
+    metlist = []
+    y = xmlDoc.getElementsByTagName('bp:BiochemicalReaction')
+    for (var i = 0; i < y.length; i++) {
+        //Get reactants
+        z = y[i].getElementsByTagName('bp:left')
+        for (var j = 0; j < z.length; j++) {
+            if (z[j].attributes.length == 0) {
+                id = z[j].children[0].attributes[0].value
+            } else {
+                id = z[j].attributes[0].value.substr(1)
+            }
+            if (metlist.indexOf(id) == -1) {metlist.push(id)}
+        }
+        //Get products
+        z = y[i].getElementsByTagName('bp:right')
+        for (var j = 0; j < z.length; j++) {
+            if (z[j].attributes.length == 0) {
+                id = z[j].children[0].attributes[0].value
+            } else {
+                id = z[j].attributes[0].value.substr(1)
+            }
+            if (metlist.indexOf(id) == -1) {metlist.push(id)}
+        }
+    }
+
+    //Get metabolite data
+    var allmets = [];
+    z = xmlDoc.getElementsByTagName('bp:SmallMolecule')
+    for (var i = 0; i < z.length; i++) {
+        if (metlist.indexOf(z[i].attributes[0].value) == -1) {continue}
+        var newnode = Object.assign({},newnodetemp("id",2))
+        newnode.name = z[i].attributes[0].value
+        newnode.id = z[i].attributes[0].value
+        for (var j = 0; j < z[i].children.length; j++) {
+            newnode[z[i].children[j].localName] = z[i].children[j].textContent;
+        }
+        newnode.name = newnode.name.replace(/(&.*?;)|(<.*?>)/g,'')
+        newnode.standardName = newnode.standardName.replace(/(&.*?;)|(<.*?>)/g,'')
+        newnode.class = newnode.id;
+        newnode.index = i;
+        graph.nodes.push(newnode)
+        allmets.push(newnode.id)
+    }
+  
+    let metcount = allmets.length;
+    //Read in reactions
+    y = xmlDoc.getElementsByTagName('bp:BiochemicalReaction')
+    tmpy = y
+    var linkcount = 0,
+    allrxns = [];
+    for (var i = 0; i < y.length; i++) {
+        var newnode = Object.assign({},newnodetemp("id",1))
+        newnode.name = y[i].attributes[0].value
+        newnode.id = y[i].attributes[0].value
+        for (var j = 0; j < y[i].children.length; j++) {
+            if (y[i].children[j].children.length > 0) {continue;}
+            newnode[y[i].children[j].localName] = y[i].children[j].textContent;
+        }
+        newnode.name = newnode.name.replace(/(&.*?;)|(<.*?>)/g,'')
+        newnode.standardName = newnode.standardName.replace(/(&.*?;)|(<.*?>)/g,'')
+        newnode.class = newnode.id;
+        newnode.index = i + metcount;;
+
+        //Get reactants
+        z = y[i].getElementsByTagName('bp:left')
+        for (var j = 0; j < z.length; j++) {
+            if (z[j].attributes.length == 0) {
+                id = z[j].children[0].attributes[0].value
+            } else {
+                id = z[j].attributes[0].value.substr(1)
+            }
+            var newlink = {index: linkcount, flux: null, refx: 0, refy: 0, width: null, reversed: 1}
+            linkcount++
+            newlink.source = graph.nodes[allmets.indexOf(id)];
+            newlink.target = newnode;
+            graph.links.push(newlink)
+        }
+
+        //Get products
+        z = y[i].getElementsByTagName('bp:right')
+        for (var j = 0; j < z.length; j++) {
+            if (z[j].attributes.length == 0) {
+                id = z[j].children[0].attributes[0].value
+            } else {
+                id = z[j].attributes[0].value.substr(1)
+            }
+            var newlink = {index: linkcount, flux: null, refx: 0, refy: 0, width: null, reversed: 1}
+            linkcount++
+            newlink.target = graph.nodes[allmets.indexOf(id)];
+            newlink.source = newnode;
+            graph.links.push(newlink)
+        }
+
+        graph.nodes.push(newnode)
+        allrxns.push(newnode.id)
+    }
+
+    defineNameOptions()
+    
+    //load
+    if (onloadfilter) {
+        document.getElementById("onloadoptionstop").style.display = "block";
+        for (var k = 0; k < document.getElementsByClassName("topopt").length; k++) {
+            document.getElementsByClassName("topopt")[k].style="display:none;";
+        }
+        for (var k = 0; k < document.getElementsByClassName("topbr").length; k++) {
+            document.getElementsByClassName("topbr")[k].style="display:none;";
+        }
+        return;
+    }
+
+    nm = document.getElementById('fileinput').value.split("\\");
+    nm = nm[nm.length-1];
+    nm = nm.replace(/\..*$/i,"");
+    parsedmodels[nm] = graph;
+    currentparsed = nm;
+
+    loadExistingReactionToAdd(parsedmodels)
+    loadInitialGraph()
+    reDefineSimulation()
+}
 
 function loadFile() {
 
@@ -284,6 +422,8 @@ function loadFile() {
         fr.onload = receivedJSON;
     } else if (file.name.match(/\.(.*)$/i)[0] == '.xml' || file.name.match(/\.(.*)$/i)[0] == '.sbml') {
         fr.onload = receivedXML;
+    } else if (file.name.match(/\.(.*)$/i)[0] == '.owl') {
+        fr.onload = receivedOWL;
     } else {
         return;
     }
