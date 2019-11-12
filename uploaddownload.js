@@ -71,7 +71,11 @@ function receivedXML(e) {
 
         z = x[i].getElementsByTagName('parameter');
         for (var j = 0; j < z.length; j++) {
-            newnode[z[j].attributes.id.value] = z[j].attributes.value.value;
+            if ('name' in z[j].attributes) {
+                newnode[z[j].attributes.name.value] = z[j].attributes.value.value;
+            } else {
+                newnode[z[j].attributes.id.value] = z[j].attributes.value.value;
+            }
         }
 
         graph.nodes.push(newnode)
@@ -95,17 +99,19 @@ function receivedXML(e) {
             for (var j = 0; j < z[0].childElementCount; j++) {
                 var newlink = {index: linkcount, flux: null, refx: 0, refy: 0, width: null, reversed: 1}
                 linkcount++
-                newlink.source = graph.nodes[allmets.indexOf(z[0].children[j].attributes['species'].value)];
+                metnode = graph.nodes[allmets.indexOf(z[0].children[j].attributes['species'].value)];
+                newlink.source = metnode;
                 newlink.target = newnode;
                 graph.links.push(newlink)
             }
+            z = y[i].getElementsByTagName('listOfProducts')
         }
-        z = y[i].getElementsByTagName('listOfProducts')
         if (z.length > 0) {
             for (var j = 0; j < z[0].childElementCount; j++) {
                 var newlink = {index: linkcount, flux: null, refx: 0, refy: 0, width: null, reversed: 1}
                 linkcount++
-                newlink.target = graph.nodes[allmets.indexOf(z[0].children[j].attributes['species'].value)];
+                metnode = graph.nodes[allmets.indexOf(z[0].children[j].attributes['species'].value)];
+                newlink.target = metnode;
                 newlink.source = newnode;
                 graph.links.push(newlink)
             }
@@ -127,7 +133,11 @@ function receivedXML(e) {
 
         z = y[i].getElementsByTagName('parameter');
         for (var j = 0; j < z.length; j++) {
-            newnode[z[j].attributes.id.value] = z[j].attributes.value.value;
+            if ('name' in z[j].attributes) {
+                newnode[z[j].attributes.name.value] = z[j].attributes.value.value;
+            } else {
+                newnode[z[j].attributes.id.value] = z[j].attributes.value.value;
+            }
         }
 
         graph.nodes.push(newnode)
@@ -222,6 +232,7 @@ function receivedJSON(e) {
             reversed: 1,
             width: null
         });
+
         newnode.class = newnode.id;
         
         graph.nodes.push(newnode)
@@ -268,11 +279,13 @@ function receivedJSON(e) {
     reDefineSimulation()
 }
 var tmpy
+var xmlall
 function receivedOWL(e,file) {
     //Read in file
     fex = e.target.result;
     parser = new DOMParser();
     var xmlDoc = parser.parseFromString(fex,"text/xml");
+    xmlall = xmlDoc
     
     //Initialize
     graph = {
@@ -345,7 +358,7 @@ function receivedOWL(e,file) {
         newnode.name = newnode.name.replace(/(&.*?;)|(<.*?>)/g,'')
         newnode.standardName = newnode.standardName.replace(/(&.*?;)|(<.*?>)/g,'')
         newnode.class = newnode.id;
-        newnode.index = i + metcount;;
+        newnode.index = i + metcount;
 
         //Get reactants
         z = y[i].getElementsByTagName('bp:left')
@@ -361,7 +374,6 @@ function receivedOWL(e,file) {
             newlink.target = newnode;
             graph.links.push(newlink)
         }
-
         //Get products
         z = y[i].getElementsByTagName('bp:right')
         for (var j = 0; j < z.length; j++) {
@@ -414,8 +426,6 @@ function receivedOWL(e,file) {
         reDefineSimulation()
         node.classed("selected",function(d){return d.selected})
         simulation.restart()
-
-        setTimeout(function(){document.getElementsByClassName("myProgress")[0].remove()},100)
     }
 }
 
@@ -511,14 +521,6 @@ function loadFile3(file) {
         i++
         if (i < input.files.length) {setTimeout(doSort,0)}
     })();
-
-    // if (file.name.match(/\.(.*)$/i)[0] == '.owl') {
-    //     fr.onload = receivedOWL;
-    // } else {
-    //     return;
-    // }
-
-    // fr.readAsText(file);
 }
 
 //Load in SAMMI model

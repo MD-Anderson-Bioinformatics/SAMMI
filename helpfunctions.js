@@ -989,10 +989,23 @@ function autocomplete(inp, arr) {
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
             b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-            b.addEventListener("click", function(e) {
-                inp.value = this.getElementsByTagName("input")[0].value;
-                closeAllLists();
-            });
+            if (inp.id == "existingReactions") {
+                b.addEventListener("click", function(e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    e = {}
+                    e.keyCode = 13
+                    addExistingReaction(e)
+                    closeAllLists();
+                });
+            } else if (inp.id == "existingMetabolites") {
+                b.addEventListener("click", function(e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    e = {}
+                    e.keyCode = 13
+                    addExistingMetabolite(e)
+                    closeAllLists();
+                });
+            }
             a.appendChild(b);
           }
         }
@@ -1110,6 +1123,7 @@ function autocomplete2(inp, arr) {
 
 function addExistingReaction(e) {
     if (e.keyCode == 13) {
+
         var rxnfield = document.getElementById("rxnNameOpts").value;
         defineBackupGraph(); 
         setTimeout(function() {
@@ -1121,10 +1135,9 @@ function addExistingReaction(e) {
                         graph.nodes.push(JSON.parse(JSON.stringify(parsedmodels[j].nodes[i])))
                         graph.nodes[graph.nodes.length-1].id = graph.nodes[graph.nodes.length-1].id + "." + count;
                         count++;
-                        if (graph.nodes[graph.nodes.length-1].fx !=null) {
-                            graph.nodes[graph.nodes.length-1].fx += 10;
-                            graph.nodes[graph.nodes.length-1].fy += 10;
-                        }
+                        graph.nodes[graph.nodes.length-1].fx = (-curtr[0] + parentWidth/2)/curtr[2]
+                        graph.nodes[graph.nodes.length-1].fy = (-curtr[1] + parentHeight/2)/curtr[2]
+                        graph.nodes[graph.nodes.length-1].isfixed = true;
                         nodeadded = true;
                         break;
                     }
@@ -1198,6 +1211,9 @@ function addExistingReaction(e) {
                 }
             } else {
                 var newnode = newnodetemp(rx,1)
+                newnode.fx = (-curtr[0] + parentWidth/2)/curtr[2]
+                newnode.fy = (-curtr[1] + parentHeight/2)/curtr[2]
+                newnode.isfixed = true;
                 graph.nodes.push(newnode)
             }
             reDefineSimulation()
@@ -1217,14 +1233,21 @@ function addExistingMetabolite(e) {
                     if (parsedmodels[j].nodes[i][metfield] == rx) {
                         graph.nodes.push(JSON.parse(JSON.stringify(parsedmodels[j].nodes[i])))
                         graph.nodes[graph.nodes.length-1].id = graph.nodes[graph.nodes.length-1].id + "." + count;
+                        graph.nodes[graph.nodes.length-1].fx = (-curtr[0] + parentWidth/2)/curtr[2]
+                        graph.nodes[graph.nodes.length-1].fy = (-curtr[1] + parentHeight/2)/curtr[2]
+                        graph.nodes[graph.nodes.length-1].isfixed = true;
                         count++;
                         reDefineSimulation()
+                        document.getElementById("existingMetabolites").value = "";
                         return
                     }
                 }
             }
 
             var newnode = newnodetemp(rx,2)
+            newnode.fx = (-curtr[0] + parentWidth/2)/curtr[2]
+            newnode.fy = (-curtr[1] + parentHeight/2)/curtr[2]
+            newnode.isfixed = true;
             graph.nodes.push(newnode)
             reDefineSimulation()
             document.getElementById("existingMetabolites").value = "";
@@ -1343,6 +1366,7 @@ function addAs(condition) {
     if (condition == "substrate") {
         for (var i = 0; i < rxns.length; i++) {
             for (var j = 0; j < mets.length; j++) {
+                if (isConnectedID(graph.nodes[rxns[i]],graph.nodes[mets[j]])) {continue}
                 var newlink = {
                     flux: null,
                     width: null,
@@ -1356,6 +1380,7 @@ function addAs(condition) {
     } else {
         for (var i = 0; i < rxns.length; i++) {
             for (var j = 0; j < mets.length; j++) {
+                if (isConnectedID(graph.nodes[rxns[i]],graph.nodes[mets[j]])) {continue}
                 var newlink = {
                     flux: null,
                     width: null,
@@ -2958,7 +2983,7 @@ function loadWrapper(id) {
             onloadfilter=true;
             loadFile2();
         }
-    } else if (id == "fileinput3") {console.log("here")
+    } else if (id == "fileinput3") {
         input.id='fileinput3';
         input.multiple = true;
         input.onchange = function(){
@@ -3384,6 +3409,7 @@ function loadKEGGmodel2(org) {
 
                     linkcount = 0;
                     for (var j = 0; j < tmp[maps[i]].reactions.length; j++) {
+                        tmp[maps[i]].reactions[j].class = tmp[maps[i]].reactions[j].class.replace(/^rn:/g,'')
                         var newnode = Object.assign(tmp[maps[i]].reactions[j],{
                             index: tmp[maps[i]].metabolites.length + j,
                             group: 1,
@@ -3448,12 +3474,11 @@ function loadKEGGmodel2(org) {
                 loadExistingReactionToAdd(parsedmodels)
                 loadInitialGraph()
                 reDefineSimulation()
-
                 document.getElementById("metNameOpts").value = "name";
                 document.getElementById("rxnNameOpts").value = "name";
                 loadExistingReactionToAdd(parsedmodels);
                 renameNodes();
-                behave()
+                reDefineSimulation()
             });
         });
     });

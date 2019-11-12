@@ -451,7 +451,9 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
         //Define selecteddocument.getElementById("onloadf1top")
         document.getElementById("onloadf1top").selectedIndex=0;
 
-        //setTimeout(function(){loadDemo()},2000)
+        document.addEventListener("contextmenu",function(e){
+            e.preventDefault();    
+        },false);
 
     </script>
 </body>
