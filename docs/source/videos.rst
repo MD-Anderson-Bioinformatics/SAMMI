@@ -4,52 +4,161 @@ Video Tutorials
 This section provides several video tutorials exemplifying a number of different functionalities present in SAMMI.
 
 
-Upload/Download models
+Upload Maps
 -------------------------
 
-Cover different formats (SBML with and without parsing, BioPAX and KEGG). Make sure to show that the formatting remains when we download and re-upload SAMMI formats. Download also Escher and MEV and PDF.
+Upload SBML and BioPAX annotated models as well as metabolic pathways from KEGG.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zPfl1Q5zVBY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Download Maps
+--------------------
+
+Download SAMMI maps in SAMMI specific format, as well as formats compatible with other platforms and static images.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BJp3TxG2Pfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Shelving Metabolites
+------------------------
+
+This tutorial covers different ways to shelve, or temporarily remove nodes from the map, as well as how to put them back.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r6YbTrqtb-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
 
 Positioning Nodes and Edges
 ------------------------------------
 
-Fixing and releasing nodes. Scale, make line, circle. Curve node, uncurve and autocurve. Pretify.
+How to fix nodes in positions, arrange them in different shapes, and curve edges.
 
-Finding Paths and Components
---------------------------------
+.. raw:: html
 
-Shortest Path, Long Path, Component and Neighbors.
-
-Annotating Text and Shapes
-------------------------------
-
-Annotate Text, edit node data, add shape and trap.
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JvGBYCv6OZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
 
 
-Adding, Removing and Editing Nodes and Edges
+Adding, Removing and Editing Nodes
 -------------------------------------------------
 
-Change default looks. Make sure to show how to label nodes differently.
+How to split, duplicate, and join nodes, and how to add new or existing nodes.
 
-Visualizing omics data
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FUMjcV48s1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+
+Navigating Graph
+------------------------
+
+How to navigate between different subgraphs, search for nodes, see which reactions nodes participate in, and track metabolic pathways between different subgraphs.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RPI9kNnLjWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Visualizing Data
 ---------------------------
 
-Use real dataset. Make colorscale global.
+How to plot data onto the model and change color and size scales.
 
-Making Visually Appealing Maps
----------------------------------
+.. raw:: html
 
-Urea cycle example.
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0GINa6oPaM8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> 
+    <br/>
+
+Selecting Paths and Components
+--------------------------------
+
+How to automatically select relevant pathways and components within your map.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h6anPYoXptg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
 
 Combining Subgraphs
 ------------------------
 
-combine subgraph and edit name.
+How to combine and rename subgraphs.
 
-Changing Simulation Settings
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/V7zcPqfeU9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Changing Default Settings
 -------------------------------
 
-Go over each setting and what they do.
+Change default look node and edge settings as well as simulation parameters to change the map appearance and automated node positioning.
 
-Navigating Graph
-------------------------
-Node highlight, search, focus, hold ctrl click
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mWk-o5p9THU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Undo Map Edits
+--------------------
+
+How to save different map states and return to different iterations of your visualization.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/T-b-nDaGRik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+Annotating Text and Shapes
+------------------------------
+
+Add annotation text and rectangular shapes to your graph.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/G1jzE0lgXXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/>
+
+COBRA Plugins
+--------------------
+
+Introduction to COBRA plugins. Load SAMMI models directly from within the Python and MATLAB command lines.
+
+.. raw:: html
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gno4Nuz52ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+

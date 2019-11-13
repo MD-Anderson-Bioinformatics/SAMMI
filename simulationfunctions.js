@@ -1063,32 +1063,37 @@ function ticked() {
                             d.ppath = "M" + p1[0] + "," + p1[1] + "L" + p3[0] + "," + p3[1] + "L" + p2[0] + "," + p2[1] + "L" + p5[0] + "," + p5[1];
                     }
                 } else {
-                    if ((d.target.group == 1 && rxnshape) || (d.target.group == 2 && metshape)) { //If target its a circle calculate ofset
-                        var cst = r - d.target.r - as;
-                        var p3 = [(sp[0]+((r-d.target.r-0.8)*x/r)),(sp[1]+((r-d.target.r-0.8)*y/r))];
+                    if (document.getElementById("hiderxns").checked && d.source.group == 2) {
+                        var p4 = [d.target.x,d.target.y];
+                        d.ppath = "";
                     } else {
-                        if (x < y) {
-                            if (x > -y) {
-                                var cst = r - (d.target.r*r/y) - as;
-                                var p3 = [(sp[0]+(x*(1 - (d.target.r+0.8)/y))),(sp[1]+(y-d.target.r-0.8))];
-                            } else {
-                                var cst = r + (d.target.r*r/x) - as;
-                                var p3 = [(sp[0]+(x+d.target.r+0.8)),(sp[1]+(y*(1 + (d.target.r+0.8)/x)))];
-                            }
+                        if ((d.target.group == 1 && rxnshape) || (d.target.group == 2 && metshape)) { //If target its a circle calculate ofset
+                            var cst = r - d.target.r - as;
+                            var p3 = [(sp[0]+((r-d.target.r-0.8)*x/r)),(sp[1]+((r-d.target.r-0.8)*y/r))];
                         } else {
-                            if (x > -y) {
-                                var cst = r - (d.target.r*r/x) - as;
-                                var p3 = [(sp[0]+(x-d.target.r-0.8)),(sp[1]+(y*(1 - (d.target.r+0.8)/x)))];
+                            if (x < y) {
+                                if (x > -y) {
+                                    var cst = r - (d.target.r*r/y) - as;
+                                    var p3 = [(sp[0]+(x*(1 - (d.target.r+0.8)/y))),(sp[1]+(y-d.target.r-0.8))];
+                                } else {
+                                    var cst = r + (d.target.r*r/x) - as;
+                                    var p3 = [(sp[0]+(x+d.target.r+0.8)),(sp[1]+(y*(1 + (d.target.r+0.8)/x)))];
+                                }
                             } else {
-                                var cst = r + (d.target.r*r/y) - as;
-                                var p3 = [(sp[0]+(x*(1 + (d.target.r+0.8)/y))),(sp[1]+(y+d.target.r+0.8))];
+                                if (x > -y) {
+                                    var cst = r - (d.target.r*r/x) - as;
+                                    var p3 = [(sp[0]+(x-d.target.r-0.8)),(sp[1]+(y*(1 - (d.target.r+0.8)/x)))];
+                                } else {
+                                    var cst = r + (d.target.r*r/y) - as;
+                                    var p3 = [(sp[0]+(x*(1 + (d.target.r+0.8)/y))),(sp[1]+(y+d.target.r+0.8))];
+                                }
                             }
                         }
+                        var p1 = [(sp[0]+(cst*x-y*asfr-0.8)/r) , (sp[1]+(cst*y+x*asfr-0.8)/r)],
+                            p2 = [(sp[0]+(cst*x+y*asfr-0.8)/r) , (sp[1]+(cst*y-x*asfr-0.8)/r)];
+                            var p4 = [((p1[0]+p2[0]+0.1*p3[0])/2.1),((p1[1]+p2[1]+0.1*p3[1])/2.1)];
+                            d.ppath = "M" + p1[0] + "," + p1[1] + "L" + p2[0] + "," + p2[1] + "L" + p3[0] + "," + p3[1]
                     }
-                    var p1 = [(sp[0]+(cst*x-y*asfr-0.8)/r) , (sp[1]+(cst*y+x*asfr-0.8)/r)],
-                        p2 = [(sp[0]+(cst*x+y*asfr-0.8)/r) , (sp[1]+(cst*y-x*asfr-0.8)/r)];
-                        var p4 = [((p1[0]+p2[0]+0.1*p3[0])/2.1),((p1[1]+p2[1]+0.1*p3[1])/2.1)];
-                        d.ppath = "M" + p1[0] + "," + p1[1] + "L" + p2[0] + "," + p2[1] + "L" + p3[0] + "," + p3[1]
                 }
                 //Define path
                 if (d.source.bezi[0] != null && d.target.bezi[0] != null) {
