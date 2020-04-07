@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -96,9 +96,11 @@
 <li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Keyboard Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="format.html">SAMMI Map Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="export.html">COBRA Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Video Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright and License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html#acknowledgments">Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
 </ul>
 
             
@@ -169,13 +171,13 @@
 <p>While the functionalities of deleting, making multiple copies, and representing secondary metabolites by smaller nodes are all available in SAMMI, an additional functionality of <strong>Shelving</strong> metabolites is also available. By shelving a metabolite, that node is temporarily removed from the graph, but can be re-introduced at a later point. By using this functionality, secondary metabolite nodes can be temporarily removed while primary nodes are arranged in an aesthetically pleasing layout, then reintroduced, split into multiple copies, and labeled as secondary.</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/secondaries.jpg"><img alt="_images/secondaries.jpg" src="_images/secondaries.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">On the far left, graph with shelved secondary metabolites has been arranged in a visually pleasing layout. Following that, secondary metabolite nodes are re-introduced, one copy of each secondary node is made for each reaction, and the nodes are labeled as secondary.</span></p>
+<p class="caption"><span class="caption-text">On the far left, graph with shelved secondary metabolites has been arranged in a visually pleasing layout. Following that, secondary metabolite nodes are re-introduced, one copy of each secondary node is made for each reaction, and the nodes are labeled as secondary.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Metabolites can be shelved one of three different ways:</p>
 <ul class="simple">
-<li><em>One at a time</em>: Selected metabolites can be shelved one at a time using the <strong>Shelve Metabolite</strong> functionality in the floating menu, or using the keyboard shortcut <strong>s</strong>. Both of these actions will shelve all selected metabolite nodes in the current graph.</li>
-<li><em>From user defined input</em>: Metabolites can also be shelved in a more high throughput manner by uploading a text file containing a list of regular expressions (one expression per line) using the <strong>Load Metabolites to Shelve</strong> option in the <strong>Upload/Download</strong> tab in the top menu. By using this functionality, all metabolites, in all subgraphs, with class matching any of the uploaded regular expressions will be shelved.</li>
-<li><em>From standard List</em>: Under the <strong>Shelve Standard Metabolites</strong> option in the <strong>Upload/Download</strong> tab, users can also select from a list of metabolites commonly considered to be secondary. Once this option is selected, the supporting menu window opens. First, select the compartment annotation syntax in your model. Next, select all metabolites you wish to shelve and click <em>Shelve</em> at the bottom of the window. This option also shelves metabolites with class matching any of the options in all subgraphs. If you wish to add to to this standard list of secondary metabolites or to the list of compartment annotation syntaxes please contact us.</li>
+<li><p><em>One at a time</em>: Selected metabolites can be shelved one at a time using the <strong>Shelve Metabolite</strong> functionality in the floating menu, or using the keyboard shortcut <strong>s</strong>. Both of these actions will shelve all selected metabolite nodes in the current graph.</p></li>
+<li><p><em>From user defined input</em>: Metabolites can also be shelved in a more high throughput manner by uploading a text file containing a list of regular expressions (one expression per line) using the <strong>Load Metabolites to Shelve</strong> option in the <strong>Upload/Download</strong> tab in the top menu. By using this functionality, all metabolites, in all subgraphs, with class matching any of the uploaded regular expressions will be shelved.</p></li>
+<li><p><em>From standard List</em>: Under the <strong>Shelve Standard Metabolites</strong> option in the <strong>Upload/Download</strong> tab, users can also select from a list of metabolites commonly considered to be secondary. Once this option is selected, the supporting menu window opens. First, select the compartment annotation syntax in your model. Next, select all metabolites you wish to shelve and click <em>Shelve</em> at the bottom of the window. This option also shelves metabolites with class matching any of the options in all subgraphs. If you wish to add to to this standard list of secondary metabolites or to the list of compartment annotation syntaxes please contact us.</p></li>
 </ul>
 <p>Metabolites can be returned to the current graph under the <strong>Shelved Metabolites</strong> section of the floating menu.</p>
 </div>

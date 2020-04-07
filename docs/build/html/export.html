@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="copyright" title="Copyright" href="copyright.html" />
-    <link rel="next" title="Copyright and License" href="copyright.html" />
+    <link rel="next" title="Video Tutorials" href="videos.html" />
     <link rel="prev" title="SAMMI Map Format" href="format.html" /> 
 </head>
 
@@ -100,9 +100,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Video Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright and License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html#acknowledgments">Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
 </ul>
 
             
@@ -181,7 +183,7 @@
 </div>
 <p>This will generate an XML file that can be uploaded in the SAMMI interface. To define other function call arguments please refer to the <code class="docutils literal notranslate"><span class="pre">writeCbModel</span></code> documentation.</p>
 <p>While this option provides an SBML compatible model, user defined fields are not exported, and reaction and metabolite IDs may be altered in the export process. To account for these issues, we provide the following script defining the <code class="docutils literal notranslate"><span class="pre">sammiJson</span></code> function, which exports the model to a SAMMI compatible JSON file. Here, all struct fields with the same size as the <code class="docutils literal notranslate"><span class="pre">rxns</span></code> field are exported as reaction-associated data, and all fields with the same size as the <code class="docutils literal notranslate"><span class="pre">mets</span></code> field are exported as metabolite associated data.</p>
-<p>Download script here: <a class="reference download internal" download="" href="_downloads/a7762299b19fae38215f7c150aeb7b16/sammiJson.m"><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.m</span></code></a></p>
+<p>Download script here: <a class="reference download internal" download="" href="_downloads/cb4b5e097e998a589ed02cfe337fff2b/sammiJson.m"><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.m</span></code></a></p>
 <p>You can test the given function with following bit of code that will generate the <code class="docutils literal notranslate"><span class="pre">e_coli_core.json</span></code> file:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%Get COBRA directory</span>
 <span class="k">global</span> <span class="n">CBTDIR</span><span class="p">;</span>
@@ -203,7 +205,7 @@
 </pre></div>
 </div>
 <p>This function call also does not export user-defined fields, however. For that we provide the following alternative script defining the <code class="docutils literal notranslate"><span class="pre">sammiJson</span></code> function that exports to a JSON file all reaction and metabolite fields defined by a string, float, int or bool. It is worth noting that this approach will generate larger files with perhaps unwanted fields.</p>
-<p>Download script here: <a class="reference download internal" download="" href="_downloads/1b6d64a503d017d1e2ad8b9cd10142de/sammiJson.py"><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.py</span></code></a></p>
+<p>Download script here: <a class="reference download internal" download="" href="_downloads/2aff84cf443ece3e8bd4fc3f665c9cec/sammiJson.py"><code class="xref download docutils literal notranslate"><span class="pre">sammiJson.py</span></code></a></p>
 <p>Once the function is loaded you can test it with the following bit of script.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Read in model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">cobra</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">create_test_model</span><span class="p">(</span><span class="s2">&quot;salmonella&quot;</span><span class="p">)</span>
@@ -230,7 +232,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="copyright.html" class="btn btn-neutral float-right" title="Copyright and License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="videos.html" class="btn btn-neutral float-right" title="Video Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="format.html" class="btn btn-neutral float-left" title="SAMMI Map Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -1,7 +1,7 @@
 SAMMI Map Format
 =======================
 
-As described in the *Loading a Map* section, SAMMI takes files in the SBML format, either in XML, JSON, or SBML file extensions. To load a personalized file, however, users can generate a JSON file with minimal requirements. The file must define a single object with two fields: **reactions** and **metabolites**, each defining a vector of objects. Each object in each of these vectors define a single reaction or metabolite respectively.
+As described in the *Loading a Map* section, SAMMI takes files in the SBML format, either in XML, JSON, or SBML file extensions, a well as BioPAX annotated models. To load a personalized file, however, users can generate a JSON file with minimal requirements. The file must define a single object with two fields: **reactions** and **metabolites**, each defining a vector of objects. Each object in each of these vectors define a single reaction or metabolite respectively.
 
 Metabolite objects may contain a single field **id** defining a unique metabolite ID. These fields will be extended to metabolite classes when the model is first uploaded into SAMMI. As metabolite nodes are duplicated, unique IDs will be generated for new nodes, but the class field will remain the same defined here. This unique ID generation holds true for all uploaded models. Additional fields may be added to each metabolite (e.g. name or database ID), which will be imported as metabolite data.
 

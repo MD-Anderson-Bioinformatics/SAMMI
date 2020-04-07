@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -105,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright and License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html#acknowledgments">Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
 </ul>
 
             
@@ -177,18 +178,18 @@
 <p>To load a single map for the entire reconstruction, Click on <strong>Load Single Model</strong> at the home screen and select the metabolic reconstruction file.</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/uploadSBML.jpg"><img alt="_images/uploadSBML.jpg" src="_images/uploadSBML.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">In order to load the entire reconstruction on a single map choose <em>Load Single Model</em>.</span></p>
+<p class="caption"><span class="caption-text">In order to load the entire reconstruction on a single map choose <em>Load Single Model</em>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>This option will load every reaction and metabolite in the reconstruction. This functionality is recommended only for relatively small models, as large networks will yield slow-rendering and convoluted maps. For large reconstructions, users can parse the model into multiple subgraphs during the upload process. In order to do so,click on <strong>Load Model to Parse</strong> at the home screen. This will bring you to a second menu where you can select whether to parse the graph based on model annotation or user-defined input. To generate a map based on model data, select either <strong>Reactions</strong> or <strong>Metabolites</strong> from the dropdown menu. This will populate a new dropdown menu with annotation categories from the model. Select a category and SAMMI will build a subgraph for each value under that data type. For instance, select <strong>Reactions</strong> then <strong>Subsystem</strong> to make a subgraph for each subsystem defined in the reconstruction, or select <strong>Metabolite</strong> then <strong>Compartment</strong> to make a map for each cellular compartment.</p>
 <p>Parsing a model through reaction annotation can lead to the inclusion of metabolites in multiple subgraphs, but no more than one copy of each metabolite is initially loaded in each subgraph. If parsing a model through metabolite annotation, all reactions containing a metabolite with that annotation will be included in each subgraph. This can lead to the inclusion of metabolites with a different annotation in the subgraph. For instance, if parsing a reconstruction based on metabolite compartments, the mitochondria compartment will also include transport reactions through the mitochondrial membrane, which in turn will lead to the inclusion of cytosolic metabolites.</p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/uploadSBML2.jpg"><img alt="_images/uploadSBML2.jpg" src="_images/uploadSBML2.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Models can be parsed in two different ways. Either using reaction or metabolite data annotated in the reconstruction (bottom) or using user-defined lists of reaction IDs.</span></p>
+<p class="caption"><span class="caption-text">Models can be parsed in two different ways. Either using reaction or metabolite data annotated in the reconstruction (bottom) or using user-defined lists of reaction IDs.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The second option is to parse the model based on user-defined inputs. To use this option, users should define any number of tab-delimited text files with two columns: reaction IDs and optional associated numerical values. No header should be included. After defining the files and selecting <strong>Load Model to Parse</strong>, click on <strong>Select Parsing Files</strong> and select all the desired files. SAMMI will make a subgraph for each file selected. Here, reactions can be included in multiple subgraphs or no subgraph at all. Reactions with an associated value will retain that value as reaction color data. Reactions with no associate value will be included in the model but will have no associated data.</p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/parselist.jpg"><img alt="_images/parselist.jpg" src="_images/parselist.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Two valid examples of model parsing files. The file on the left will load a map including only the reactions in that file, with no associated data. The line UNEXISTENT will be ignored since no such reaction is present in the model. The file on the right will load associated reaction data where those values are defined.</span></p>
+<p class="caption"><span class="caption-text">Two valid examples of model parsing files. The file on the left will load a map including only the reactions in that file, with no associated data. The line UNEXISTENT will be ignored since no such reaction is present in the model. The file on the right will load associated reaction data where those values are defined.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="load-biopax-model">
@@ -196,7 +197,7 @@
 <p>In oder to load BioPAX models select <em>Load BioPAX Model</em> in the SAMMI home screen. For this options users can select multiple files, each of which are loaded as a different subgraph. File names will be used to name each subgraph, although these names can be changed after models are loaded.</p>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/uploadSBML4.jpg"><img alt="_images/uploadSBML4.jpg" src="_images/uploadSBML4.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">BioPAX models can be loaded multiple at a time, and each loaded model will be rendered as a subgraph.</span></p>
+<p class="caption"><span class="caption-text">BioPAX models can be loaded multiple at a time, and each loaded model will be rendered as a subgraph.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="load-kegg-pathway">
@@ -204,7 +205,7 @@
 <p>The metabolic pathways for over 5,000 organisms have been made readily available in SAMMI. These pathways were obtained from KEGG in January of 2019 and contain associated metabolite and reaction annotations. To load a metabolic map from KEGG click on <strong>Load KEGG Pathway</strong> in the home screen. Next, type the name of the desired organism and matching names will be autocompleted. Organisms can be searched by binomial nomenclature, informal name, and organism KEGG IDs. Select the desired organism from the autocomplete list and hit enter to load the desired map.</p>
 <div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/uploadKEGG.jpg"><img alt="_images/uploadKEGG.jpg" src="_images/uploadKEGG.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">To upload a metabolic map from KEGG choose <em>Load KEGG Pathway</em> from the home screen. Next, type the name of the organism, choose one of the autocomplete options, and hit <em>Enter</em>. This option will load all metabolic pathways available in KEGG for the selected organism.</span></p>
+<p class="caption"><span class="caption-text">To upload a metabolic map from KEGG choose <em>Load KEGG Pathway</em> from the home screen. Next, type the name of the organism, choose one of the autocomplete options, and hit <em>Enter</em>. This option will load all metabolic pathways available in KEGG for the selected organism.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

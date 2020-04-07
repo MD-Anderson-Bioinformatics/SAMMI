@@ -50,4 +50,4 @@ The following documentation describes all the tools available in SAMMI.
    videos
    copyright
    contact
-
+   citation

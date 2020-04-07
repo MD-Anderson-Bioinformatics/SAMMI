@@ -55,7 +55,7 @@ In oder to load BioPAX models select *Load BioPAX Model* in the SAMMI home scree
    BioPAX models can be loaded multiple at a time, and each loaded model will be rendered as a subgraph.
 
 Load KEGG Pathway
------------
+---------------------
 
 The metabolic pathways for over 5,000 organisms have been made readily available in SAMMI. These pathways were obtained from KEGG in January of 2019 and contain associated metabolite and reaction annotations. To load a metabolic map from KEGG click on **Load KEGG Pathway** in the home screen. Next, type the name of the desired organism and matching names will be autocompleted. Organisms can be searched by binomial nomenclature, informal name, and organism KEGG IDs. Select the desired organism from the autocomplete list and hit enter to load the desired map.
 
